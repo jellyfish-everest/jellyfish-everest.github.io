@@ -140,9 +140,7 @@
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
             }
             $.getJSON("watchlist.json", function (data) {
-                console.log(data);
-                _userSettings.watchingStocks = data['watchingStocks'];
-                setUserSettings();
+                userSettings.watchingStocks = data['watchingStocks'];
             });
 
             _userSettings = userSettings;

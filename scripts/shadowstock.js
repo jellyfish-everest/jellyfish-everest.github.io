@@ -127,6 +127,18 @@
             var userSettings = $.cookie(_appId);
             if (!userSettings) {
                 _userSettings = defaultUserSettings;
+
+                // 读取watchlist.json if cookie doesn't have a stored list yet
+                $.ajax({
+                    dataType: "json",
+                    url: "watchlist.json",
+                    data: undefined,
+                    async: false,
+                    success: function (data) {
+                        _userSettings.watchingStocks = data['watchingStocks'];
+                        setUserSettings();
+                    }
+                });
                 return;
             }
 
@@ -370,17 +382,6 @@
             initColumnEngines();
             // 用户设置
             getUserSettings();
-            // 读取watchlist.json
-            $.ajax({
-                dataType: "json",
-                url: "watchlist.json",
-                data: undefined,
-                async: false,   
-                success: function (data) {
-                    _userSettings.watchingStocks = data['watchingStocks'];
-                    setUserSettings();
-                }
-            });
         },
         _start = function () {
             // 启动

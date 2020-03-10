@@ -889,6 +889,7 @@
         if (_elements.resetWatchlistButton) {
             _elements.resetWatchlistButton.click(function () {
                 $.getJSON("watchlist.json", function (data) {
+                    console.log(data);
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
                 });

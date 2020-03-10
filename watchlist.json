@@ -1,15 +1,1 @@
-{"watchingStocks":
-[{"sinaSymbol":"sh000001","type":"11","name":"上证指数"},
-{"sinaSymbol":"sh600345","type":"11","name":"长江通信","cost":23.82,"quantity":100},
-{"sinaSymbol":"sz002003","type":"11","name":"伟星股份","cost":6.55,"quantity":100},
-{"sinaSymbol":"sz002928","type":"11","name":"华夏航空","cost":6.02,"quantity":100},
-{"sinaSymbol":"sh601208","type":"11","name":"东材科技","cost":6.19,"quantity":100},
-{"sinaSymbol":"sh600579","type":"11","name":"克劳斯","cost":10.9,"quantity":100},
-{"sinaSymbol":"sz000710","type":"11","name":"贝瑞基因","cost":45,"quantity":100},
-{"sinaSymbol":"sz000404","type":"11","name":"长虹华意","cost":3.83,"quantity":100},
-{"sinaSymbol":"sh600130","type":"11","name":"波导股份"},
-{"sinaSymbol":"sh600069","type":"11","name":"银鸽投资"},
-{"sinaSymbol":"sh603633","type":"11","name":"徕木股份"},
-{"sinaSymbol":"sz300452","type":"11","name":"山河药辅"},
-{"sinaSymbol":"sz000521","type":"11","name":"长虹美菱"},
-{"sinaSymbol":"sh601375","type":"11","name":"中原证券"}]}
+{"watchingStocks": [{"sinaSymbol": "sz000567", "type": "11", "name": "海德股份"}, {"sinaSymbol": "sz000667", "type": "11", "name": "美好置业"}, {"sinaSymbol": "sz000783", "type": "11", "name": "长江证券"}, {"sinaSymbol": "sz002075", "type": "11", "name": "沙钢股份"}, {"sinaSymbol": "sz002860", "type": "11", "name": "星帅尔"}, {"sinaSymbol": "sz300229", "type": "11", "name": "拓尔思"}, {"sinaSymbol": "sh603118", "type": "11", "name": "共进股份"}, {"sinaSymbol": "sh603758", "type": "11", "name": "秦安股份"}]}

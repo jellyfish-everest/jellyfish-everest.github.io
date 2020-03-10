@@ -370,6 +370,17 @@
             initColumnEngines();
             // 用户设置
             getUserSettings();
+            // 读取watchlist.json
+            $.ajax({
+                dataType: "json",
+                url: "watchlist.json",
+                data: undefined,
+                async: false,   
+                success: function (data) {
+                    _userSettings.watchingStocks = data['watchingStocks'];
+                    setUserSettings();
+                }
+            });
         },
         _start = function () {
             // 启动
@@ -889,7 +900,6 @@
         if (_elements.resetWatchlistButton) {
             _elements.resetWatchlistButton.click(function () {
                 $.getJSON("watchlist.json", function (data) {
-                    console.log(data)
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
                     showAlert('重置股票列表已重置');

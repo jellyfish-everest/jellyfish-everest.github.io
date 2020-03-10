@@ -3,15 +3,15 @@
         _appId = 'ShadowStock_SH_SZ',
         _appName = 'ShadowStock 影子证券',
         _appVersion = '2.1',
-        _appUrl = 'https://github.com/heddaz/shadowin',
+        //_appUrl = 'https://github.com/heddaz/shadowin',
 
         /******************** 配置 ********************/
         _appSettings = {
             cookieExpires: 365,
             minRefreshInterval: 3000,
             maxWatchingStockCount: 22,
-            suggestionUrl: 'http://suggest2.sinajs.cn/suggest/?type=11,12,72,73,81,31,41&key={1}&name={0}',
-            stockUrl: 'http://hq.sinajs.cn/?rn={0}&list={1}',
+            suggestionUrl: 'https://suggest2.sinajs.cn/suggest/?type=11,12,72,73,81,31,41&key={1}&name={0}',
+            stockUrl: 'https://hq.sinajs.cn/?rn={0}&list={1}',
             stockColumns: '名称,今开,昨收,最新价,最高,最低,买入,卖出,成交量,成交额,买①量,买①,买②量,买②,买③量,买③,买④量,买④,买⑤量,买⑤,卖①量,卖①,卖②量,卖②,卖③量,卖③,卖④量,卖④,卖⑤量,卖⑤,日期,时间,市盈率'
                 .split(','),
             /*
@@ -260,7 +260,7 @@
                 getClass: getClassDefault,
                 getText: function (data) {
                     if (this._text == undefined) {
-                        this._text = _formatString('{2} <a title="新浪股票" href="http://biz.finance.sina.com.cn/suggest/lookup_n.php?q={0}" target="_blank">{1}</a>',
+                        this._text = _formatString('{2} <a title="新浪股票" href="https://biz.finance.sina.com.cn/suggest/lookup_n.php?q={0}" target="_blank">{1}</a>',
                             this.siblings[_appSettings.symbolColumnId].getText(data),
                             this.siblings[_appSettings.nameColumnId].getText(data),
                             this.siblings[_appSettings.symbolColumnId].getText(data));
@@ -890,14 +890,14 @@
                     return false;
                 });
         }
-            if (_elements.aboutButton) {
-                _elements.aboutButton.click(function () {
-                    if (confirm(_formatString('谢谢您使用 {0} ！\n\n作者：{1}\n项目：{2}\nQQ：{3}\n\n(尊重开源、尊重分享，再发布请保留以上信息，谢谢)',
-                        _appName, 'HEDDAZ(大飞飞)', _appUrl, '9812152'))) {
-                        window.open(_appUrl);
-                }
-                });
-        }
+        //    if (_elements.aboutButton) {
+        //        _elements.aboutButton.click(function () {
+        //            if (confirm(_formatString('谢谢您使用 {0} ！\n\n作者：{1}\n项目：{2}\nQQ：{3}\n\n(尊重开源、尊重分享，再发布请保留以上信息，谢谢)',
+        //                _appName, 'HEDDAZ(大飞飞)', _appUrl, '9812152'))) {
+        //                window.open(_appUrl);
+        //        }
+        //        });
+        //}
     },
 
         stockTimer,

@@ -338,8 +338,8 @@
                     if (this._text == undefined) {
                         this._text = _formatString(
                             ' <a title="成交" href="http://gu.qq.com/{0}/gp/detail" target="_blank">细</a>'
-                            + ' <a title="股吧" href="http://guba.sina.com.cn/?s=bar&name={0}" target="_blank">论</a>'
-                            + ' <a title="分红" href="http://stockpage.10jqka.com.cn/{1}/bonus/#bonuslist" target="_blank">红</a>'
+                            //+ ' <a title="股吧" href="http://guba.sina.com.cn/?s=bar&name={0}" target="_blank">论</a>'
+                            //+ ' <a title="分红" href="http://stockpage.10jqka.com.cn/{1}/bonus/#bonuslist" target="_blank">红</a>'
                             + ' <a title="曲线" href="TI.htm?{0}" target="_blank">线</a>',
                             this.siblings[_appSettings.sinaSymbolColumnId].getText(data),
                             this.siblings[_appSettings.symbolColumnId].getText(data),

@@ -139,6 +139,12 @@
             if (!userSettings.watchingStocks) {
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
             }
+            $.getJSON("watchlist.json", function (data) {
+                console.log(data);
+                _userSettings.watchingStocks = data['watchingStocks'];
+                setUserSettings();
+            });
+
             _userSettings = userSettings;
             return;
         },

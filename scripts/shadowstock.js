@@ -892,6 +892,7 @@
                     console.log(data)
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
+                    showAlert('重置股票列表已重置');
                 });
             });
         }

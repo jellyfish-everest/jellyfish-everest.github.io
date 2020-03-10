@@ -7,8 +7,8 @@
         /******************** 配置 ********************/
         _appSettings = {
             cookieExpires: 365,
-            minRefreshInterval: 3000,
-            maxWatchingStockCount: 22,
+            minRefreshInterval: 6000,
+            maxWatchingStockCount: 50,
             suggestionUrl: 'https://suggest2.sinajs.cn/suggest/?type=11,12,72,73,81,31,41&key={1}&name={0}',
             stockUrl: 'https://hq.sinajs.cn/?rn={0}&list={1}',
             stockColumns: '名称,今开,昨收,最新价,最高,最低,买入,卖出,成交量,成交额,买①量,买①,买②量,买②,买③量,买③,买④量,买④,买⑤量,买⑤,卖①量,卖①,卖②量,卖②,卖③量,卖③,卖④量,卖④,卖⑤量,卖⑤,日期,时间,市盈率'
@@ -120,10 +120,7 @@
             ],
             watchingStocks: [
                 { sinaSymbol: 'sh000001', type: '11', name: '上证指数' },
-                { sinaSymbol: 'sz399006', type: '11', name: '创业板指' },
-                { sinaSymbol: 'sz000002', type: '11', name: '万科A' },
-                { sinaSymbol: 'rt_hk00700', type: '31', name: '腾讯控股' },
-                { sinaSymbol: 'gb_msft', type: '41', name: '微软' }
+                { sinaSymbol: 'sz399006', type: '11', name: '创业板指' }
             ]
         },
         getUserSettings = function () {
@@ -142,6 +139,9 @@
             if (!userSettings.watchingStocks) {
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
             }
+            $.getJSON("watchlist.json", function (data) {
+                userSettings.watchingStocks = data['watchingStocks'];
+            });
             _userSettings = userSettings;
             return;
         },

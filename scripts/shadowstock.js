@@ -139,9 +139,6 @@
             if (!userSettings.watchingStocks) {
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
             }
-            $.getJSON("watchlist.json", function (data) {
-                userSettings.watchingStocks = data['watchingStocks'];
-            });
             _userSettings = userSettings;
             return;
         },
@@ -870,6 +867,7 @@
                             availableColumns: availableColumnsKey,
                             actionsColumnId: _appSettings.actionsColumnId
                     })))).popover('show');
+                    return false;
                 });
         }
             if (_elements.impexpButton) {

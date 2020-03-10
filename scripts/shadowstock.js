@@ -7,7 +7,7 @@
         /******************** 配置 ********************/
         _appSettings = {
             cookieExpires: 365,
-            minRefreshInterval: 6000,
+            minRefreshInterval: 3000,
             maxWatchingStockCount: 50,
             suggestionUrl: 'https://suggest2.sinajs.cn/suggest/?type=11,12,72,73,81,31,41&key={1}&name={0}',
             stockUrl: 'https://hq.sinajs.cn/?rn={0}&list={1}',
@@ -867,25 +867,32 @@
                             availableColumns: availableColumnsKey,
                             actionsColumnId: _appSettings.actionsColumnId
                     })))).popover('show');
-                    return false;
                 });
         }
-            if (_elements.impexpButton) {
-                _elements.impexpButton.popover({
-                        container: 'body',
-                        html: true,
-                        trigger: 'manual',
-                        placement: 'bottom'
-                }).click(function () {
-                    var userSettingsKey = 'cookieUserSettings';
-                    $.cookie(userSettingsKey, _userSettings);
-                    $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
-                            token: _appId,
-                            callback: 'ShadowStock.impexpCallback',
-                            userSettings: userSettingsKey
-                    })))).popover('show');
-                    return false;
+        if (_elements.impexpButton) {
+            _elements.impexpButton.popover({
+                    container: 'body',
+                    html: true,
+                    trigger: 'manual',
+                    placement: 'bottom'
+            }).click(function () {
+                var userSettingsKey = 'cookieUserSettings';
+                $.cookie(userSettingsKey, _userSettings);
+                $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
+                        token: _appId,
+                        callback: 'ShadowStock.impexpCallback',
+                        userSettings: userSettingsKey
+                })))).popover('show');
+                return false;
+            });
+        }
+        if (_elements.resetWatchlistButton) {
+            _elements.resetWatchlistButton.click(function () {
+                $.getJSON("watchlist.json", function (data) {
+                    _userSettings.watchingStocks = data['watchingStocks'];
+                    setUserSettings();
                 });
+            });
         }
     },
 

@@ -1,4 +1,5 @@
-{"watchingStocks":[{"sinaSymbol":"sh000001","type":"11","name":"上证指数"},
+{"watchingStocks":
+[{"sinaSymbol":"sh000001","type":"11","name":"上证指数"},
 {"sinaSymbol":"sh600345","type":"11","name":"长江通信"},
 {"sinaSymbol":"sz002003","type":"11","name":"伟星股份"},
 {"sinaSymbol":"sz002928","type":"11","name":"华夏航空"},
@@ -11,4 +12,4 @@
 {"sinaSymbol":"sh603633","type":"11","name":"徕木股份"},
 {"sinaSymbol":"sz300452","type":"11","name":"山河药辅"},
 {"sinaSymbol":"sz000521","type":"11","name":"长虹美菱"},
-{"sinaSymbol":"sh601375","type":"11","name":"中原证券"},]}
+{"sinaSymbol":"sh601375","type":"11","name":"中原证券"}]}

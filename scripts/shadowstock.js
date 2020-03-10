@@ -139,10 +139,6 @@
             if (!userSettings.watchingStocks) {
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
             }
-            $.getJSON("watchlist.json", function (data) {
-                userSettings.watchingStocks = data['watchingStocks'];
-            });
-
             _userSettings = userSettings;
             return;
         },
@@ -893,7 +889,7 @@
         if (_elements.resetWatchlistButton) {
             _elements.resetWatchlistButton.click(function () {
                 $.getJSON("watchlist.json", function (data) {
-                    console.log(data);
+                    console.log(data)
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
                 });

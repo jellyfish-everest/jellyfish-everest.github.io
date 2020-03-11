@@ -826,6 +826,18 @@
             }
         },
 
+        resetWatchList = function (json_list, day_str) {
+            $.getJSON(json_list)
+                .done(function (data) {
+                    _userSettings.watchingStocks = data['watchingStocks'];
+                    setUserSettings();
+                    showAlert(_formatString('将被重置{0}交易日股票列表', day_str), 4000);
+                })
+                .fail(function () {
+                    showAlert(_formatString('无法获取{0}交易日股票列表', day_str));
+                });
+        },
+
         /******************** 外部方法 ********************/
         _elements,
         _attachElements = function (elements) {
@@ -922,11 +934,22 @@
             }
             if (_elements.resetWatchlistButton) {
                 _elements.resetWatchlistButton.click(function () {
-                    $.getJSON("watchlist.json", function (data) {
-                        _userSettings.watchingStocks = data['watchingStocks'];
-                        setUserSettings();
-                        showAlert('股票列表将被重置', 4000);
-                    });
+                    resetWatchList("content/watchlists/watchlist.json", "今")
+                });
+            }
+            if (_elements.resetWatchlistButtonDayMinus1) {
+                _elements.resetWatchlistButtonDayMinus1.click(function () {
+                    resetWatchList("content/watchlists/watchlist-day-minus-1.json", "昨")
+                });
+            }
+            if (_elements.resetWatchlistButtonDayMinus2) {
+                _elements.resetWatchlistButtonDayMinus2.click(function () {
+                    resetWatchList("content/watchlists/watchlist-day-minus-2.json", "前")
+                });
+            }
+            if (_elements.resetWatchlistButtonDayMinus3) {
+                _elements.resetWatchlistButtonDayMinus3.click(function () {
+                    resetWatchList("content/watchlists/watchlist-day-minus-3.json", "大前")
                 });
             }
             if (_elements.resetColumnHeader) {

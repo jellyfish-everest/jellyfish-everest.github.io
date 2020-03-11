@@ -18,10 +18,20 @@
                     <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
                 </div>
             </div>
-            <div class="col-xs-2">
-                <button id="resetWatchlistButton" type="button" class="btn btn-info" title="重置股票列表">重置股票列表</button>
+            <div class="col-xs-3">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        恢复股票列表 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a id="resetWatchlistButton" href="#">今交易日</a></li>
+                        <li><a id="resetWatchlistButtonDayMinus1" href="#">昨交易日</a></li>
+                        <li><a id="resetWatchlistButtonDayMinus2" href="#">前交易日</a></li>
+                        <li><a id="resetWatchlistButtonDayMinus3" href="#">大前交易日</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-5">
                 <div class="btn-group">
                     <button id="settingsButton" type="button" class="btn btn-info" title="设置">设置</button>
                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
@@ -62,6 +72,9 @@
                     settingsButton: $('#settingsButton'),
                     impexpButton: $('#impexpButton'),
                     resetWatchlistButton: $('#resetWatchlistButton'),
+                    resetWatchlistButtonDayMinus1: $('#resetWatchlistButtonDayMinus1'),
+                    resetWatchlistButtonDayMinus2: $('#resetWatchlistButtonDayMinus2'),
+                    resetWatchlistButtonDayMinus3: $('#resetWatchlistButtonDayMinus3'),
                     resetColumnHeader: $('#resetColumnHeader')
                 });
                 ShadowStock.start();

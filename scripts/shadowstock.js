@@ -939,17 +939,17 @@
             }
             if (_elements.resetWatchlistButtonDayMinus1) {
                 _elements.resetWatchlistButtonDayMinus1.click(function () {
-                    resetWatchList("content/watchlists/watchlist-day-minus-1.json", "昨")
+                    resetWatchList("content/watchlists/watchlist1.json", "昨")
                 });
             }
             if (_elements.resetWatchlistButtonDayMinus2) {
                 _elements.resetWatchlistButtonDayMinus2.click(function () {
-                    resetWatchList("content/watchlists/watchlist-day-minus-2.json", "前")
+                    resetWatchList("content/watchlists/watchlist2.json", "前")
                 });
             }
             if (_elements.resetWatchlistButtonDayMinus3) {
                 _elements.resetWatchlistButtonDayMinus3.click(function () {
-                    resetWatchList("content/watchlists/watchlist-day-minus-3.json", "大前")
+                    resetWatchList("content/watchlists/watchlist3.json", "大前")
                 });
             }
             if (_elements.resetColumnHeader) {

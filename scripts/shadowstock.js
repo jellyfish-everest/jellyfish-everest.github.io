@@ -161,7 +161,7 @@
         /******************** 初始化 ********************/
         _columnEngines = [],
         initColumnEngines = function () {
-            // 远程 - 数据源栏位
+            // 远程 - 数据源字段
             _appSettings.nameColumnId = 0;
             _appSettings.closingPriceColumnId = 2;
             _appSettings.priceColumnId = 3;
@@ -177,7 +177,7 @@
                 };
             }
 
-            // 本地扩展 - 数据源栏位
+            // 本地扩展 - 数据源字段
             _appSettings.sinaSymbolColumnId = 40;
             _columnEngines[_appSettings.sinaSymbolColumnId] = {
                 id: _appSettings.sinaSymbolColumnId,
@@ -208,7 +208,7 @@
                 getValue: getValueDefault
             };
 
-            // 本地扩展 - 非数据源栏位
+            // 本地扩展 - 非数据源字段
             _appSettings.actionsColumnId = 50;
             _columnEngines[_appSettings.actionsColumnId] = {
                 id: _appSettings.actionsColumnId, name: '操作', siblings: _columnEngines,
@@ -480,7 +480,7 @@
                     : null;
                 var index = this.id;
                 if (columnMapping && this.id < columnMapping.length) {
-                    index = columnMapping[index]; // 根据股票类型，映射原始数据源中的栏位（扩展栏位索引从 40 开始，不进行映射）
+                    index = columnMapping[index]; // 根据股票类型，映射原始数据源中的字段（扩展字段索引从 40 开始，不进行映射）
                     if (!$.isNumeric(index) || index < 0) { // 不存在映射
                         this._text = '';
                         return this._text;
@@ -501,7 +501,7 @@
                     : null;
                 var index = this.id;
                 if (columnMapping && this.id < columnMapping.length) {
-                    index = columnMapping[index]; // 根据股票类型，映射原始数据源中的栏位（扩展栏位索引从 40 开始，不进行映射）
+                    index = columnMapping[index]; // 根据股票类型，映射原始数据源中的字段（扩展字段索引从 40 开始，不进行映射）
                     if (!$.isNumeric(index) || index < 0) { // 不存在映射
                         this._value = '';
                         return this._value;

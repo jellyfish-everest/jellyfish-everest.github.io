@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-xs-5">
                 <div class="form-group">
-                    <label for="displayColumns" class="text-danger">显示栏位</label>
+                    <label for="displayColumns" class="text-danger">显示字段</label>
                     <select id="displayColumns" class="form-control input-sm" multiple></select>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             </div>
             <div class="col-xs-5">
                 <div class="form-group">
-                    <label for="availableColumns">可用栏位</label>
+                    <label for="availableColumns">可用字段</label>
                     <select id="availableColumns" class="form-control input-sm" multiple></select>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 });
 
                 if (!hasActionsColumn) {
-                    if (!confirm('不显示【操作】栏位则无法进行排序、编辑和删除操作，确定继续吗？')) {
+                    if (!confirm('不显示【操作】字段则无法进行排序、编辑和删除操作，确定继续吗？')) {
                         return;
                     }
                 }

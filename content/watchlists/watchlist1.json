@@ -1,74 +1,44 @@
 {
   "watchingStocks": [
     {
-      "sinaSymbol": "sh000001",
+      "sinaSymbol": "sh603118",
       "type": "11",
-      "name": "上证指数"
+      "name": "共进股份"
     },
     {
-      "sinaSymbol": "sh600345",
+      "sinaSymbol": "sz000783",
       "type": "11",
-      "name": "长江通信"
+      "name": "长江证券"
     },
     {
-      "sinaSymbol": "sz002003",
+      "sinaSymbol": "sz000667",
       "type": "11",
-      "name": "伟星股份"
+      "name": "美好置业"
     },
     {
-      "sinaSymbol": "sz002928",
+      "sinaSymbol": "sh603758",
       "type": "11",
-      "name": "华夏航空"
+      "name": "秦安股份"
     },
     {
-      "sinaSymbol": "sh601208",
+      "sinaSymbol": "sz300229",
       "type": "11",
-      "name": "东材科技"
+      "name": "拓尔思"
     },
     {
-      "sinaSymbol": "sh600579",
+      "sinaSymbol": "sz002075",
       "type": "11",
-      "name": "克劳斯"
+      "name": "沙钢股份"
     },
     {
-      "sinaSymbol": "sz000710",
+      "sinaSymbol": "sz000567",
       "type": "11",
-      "name": "贝瑞基因"
+      "name": "海德股份"
     },
     {
-      "sinaSymbol": "sz000404",
+      "sinaSymbol": "sz002860",
       "type": "11",
-      "name": "长虹华意"
-    },
-    {
-      "sinaSymbol": "sh600130",
-      "type": "11",
-      "name": "波导股份"
-    },
-    {
-      "sinaSymbol": "sh600069",
-      "type": "11",
-      "name": "银鸽投资"
-    },
-    {
-      "sinaSymbol": "sh603633",
-      "type": "11",
-      "name": "徕木股份"
-    },
-    {
-      "sinaSymbol": "sz300452",
-      "type": "11",
-      "name": "山河药辅"
-    },
-    {
-      "sinaSymbol": "sz000521",
-      "type": "11",
-      "name": "长虹美菱"
-    },
-    {
-      "sinaSymbol": "sh601375",
-      "type": "11",
-      "name": "中原证券"
+      "name": "星帅尔"
     }
   ]
 }

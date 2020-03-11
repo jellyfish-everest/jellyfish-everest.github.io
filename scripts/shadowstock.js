@@ -101,26 +101,26 @@
         defaultUserSettings = {
             refreshInterval: 5000,
             displayColumns: [
-                { id: 50, name: '操作' },
-                { id: 54, name: '名称代码' },
-                { id: 3, name: '最新价' },
-                { id: 51, name: '涨跌' },
-                { id: 52, name: '涨跌率' },
-                { id: 4, name: '最高' },
-                { id: 5, name: '最低' },
-                { id: 1, name: '今开' },
-                { id: 2, name: '昨收' },
-                { id: 9, name: '成交额' },
-                { id: 41, name: '成本' },
-                { id: 42, name: '持有量' },
-                { id: 58, name: '盈亏率' },
-                { id: 57, name: '盈亏' },
-                { id: 31, name: '时间' },
-                { id: 59, name: '工具' }
+                {id: 50, name: '操作'},
+                {id: 54, name: '名称代码'},
+                {id: 3, name: '最新价'},
+                {id: 51, name: '涨跌'},
+                {id: 52, name: '涨跌率'},
+                {id: 4, name: '最高'},
+                {id: 5, name: '最低'},
+                {id: 1, name: '今开'},
+                {id: 2, name: '昨收'},
+                {id: 9, name: '成交额'},
+                {id: 41, name: '成本'},
+                {id: 42, name: '持有量'},
+                {id: 58, name: '盈亏率'},
+                {id: 57, name: '盈亏'},
+                {id: 31, name: '时间'},
+                {id: 59, name: '工具'}
             ],
             watchingStocks: [
-                { sinaSymbol: 'sh000001', type: '11', name: '上证指数' },
-                { sinaSymbol: 'sz399006', type: '11', name: '创业板指' }
+                {sinaSymbol: 'sh000001', type: '11', name: '上证指数'},
+                {sinaSymbol: 'sz399006', type: '11', name: '创业板指'}
             ]
         },
         getUserSettings = function () {
@@ -155,7 +155,7 @@
             return;
         },
         setUserSettings = function () {
-            $.cookie(_appId, _userSettings, { expires: _appSettings.cookieExpires });
+            $.cookie(_appId, _userSettings, {expires: _appSettings.cookieExpires});
         },
 
         /******************** 初始化 ********************/
@@ -167,18 +167,46 @@
             _appSettings.priceColumnId = 3;
             var stockColumnsLength = _appSettings.stockColumns.length;
             for (var i = 0; i < stockColumnsLength; i++) {
-                _columnEngines[i] = { id: i, name: _appSettings.stockColumns[i], siblings: _columnEngines, getClass: getClassDefault, getText: getTextDefault, getValue: getValueDefault };
+                _columnEngines[i] = {
+                    id: i,
+                    name: _appSettings.stockColumns[i],
+                    siblings: _columnEngines,
+                    getClass: getClassDefault,
+                    getText: getTextDefault,
+                    getValue: getValueDefault
+                };
             }
 
             // 本地扩展 - 数据源栏位
             _appSettings.sinaSymbolColumnId = 40;
-            _columnEngines[_appSettings.sinaSymbolColumnId] = { id: _appSettings.sinaSymbolColumnId, name: '新浪代码', siblings: _columnEngines, getClass: getClassDefault, getText: getTextDefault, getValue: getValueDefault };
+            _columnEngines[_appSettings.sinaSymbolColumnId] = {
+                id: _appSettings.sinaSymbolColumnId,
+                name: '新浪代码',
+                siblings: _columnEngines,
+                getClass: getClassDefault,
+                getText: getTextDefault,
+                getValue: getValueDefault
+            };
 
             _appSettings.costColumnId = 41;
-            _columnEngines[_appSettings.costColumnId] = { id: _appSettings.costColumnId, name: '成本', siblings: _columnEngines, getClass: getClassDefault, getText: getTextForNumber, getValue: getValueDefault };
+            _columnEngines[_appSettings.costColumnId] = {
+                id: _appSettings.costColumnId,
+                name: '成本',
+                siblings: _columnEngines,
+                getClass: getClassDefault,
+                getText: getTextForNumber,
+                getValue: getValueDefault
+            };
 
             _appSettings.quantityColumnId = 42;
-            _columnEngines[_appSettings.quantityColumnId] = { id: _appSettings.quantityColumnId, name: '持有量', siblings: _columnEngines, getClass: getClassDefault, getText: getTextForNumber, getValue: getValueDefault };
+            _columnEngines[_appSettings.quantityColumnId] = {
+                id: _appSettings.quantityColumnId,
+                name: '持有量',
+                siblings: _columnEngines,
+                getClass: getClassDefault,
+                getText: getTextForNumber,
+                getValue: getValueDefault
+            };
 
             // 本地扩展 - 非数据源栏位
             _appSettings.actionsColumnId = 50;
@@ -221,8 +249,7 @@
                         if (this.siblings[_appSettings.priceColumnId].getValue(data) == 0) // 停牌或异常
                         {
                             this._value = 0;
-                        }
-                        else {
+                        } else {
                             this._value = this.siblings[_appSettings.priceColumnId].getValue(data) - this.siblings[_appSettings.closingPriceColumnId].getValue(data);
                         }
                     }
@@ -252,8 +279,7 @@
                         var text = this.siblings[_appSettings.sinaSymbolColumnId].getText(data);
                         if (/\d/g.test(text)) {
                             this._text = text.replace(/[^\d]/g, '');
-                        }
-                        else {
+                        } else {
                             this._text = text.substr(text.lastIndexOf('_') + 1).toUpperCase();
                         }
                     }
@@ -588,8 +614,7 @@
                 if (hasActionsColumn) {
                     assignActions();
                 }
-            }
-            finally {
+            } finally {
                 _enableStockTimer(true);
             }
         },
@@ -602,8 +627,12 @@
                 opacity: 0.9,
                 revert: true,
                 scroll: false,
-                start: function (event, ui) { _disableStockTimer(); },
-                stop: function (event, ui) { _enableStockTimer(); },
+                start: function (event, ui) {
+                    _disableStockTimer();
+                },
+                stop: function (event, ui) {
+                    _enableStockTimer();
+                },
                 update: function (event, ui) {
                     var watchingStocks = [];
                     $('.container-action>.glyphicon-move', ui.item.parent()).each(function (i) {
@@ -639,8 +668,7 @@
                         var watchingStock = _userSettings.watchingStocks.splice(i, 1)[0];
                         setUserSettings();
                         showAlert(_formatString('{0} ({1}) 已删除', watchingStock.name, watchingStock.sinaSymbol));
-                    }
-                    else {
+                    } else {
                         showAlert(_formatString('{0} 不存在', sinaSymbol));
                     }
                 }
@@ -706,11 +734,10 @@
             var prefix = _appSettings.stockTypes[typeId].prefix;
             if (prefix) {
                 return _formatString('{0}|{1}', prefix + data[2], typeId);
-            }
-            else {
+            } else {
                 return _formatString('{0}|{1}', data[3], typeId);
-        }
-    },
+            }
+        },
 
         _editorCallback = function (args) {
             try {
@@ -728,7 +755,7 @@
 
                             setUserSettings();
                             showAlert(_formatString('{0} ({1}) 已更新, 成本: {2} 持有量: {3}', watchingStock.name, watchingStock.sinaSymbol, watchingStock.cost, watchingStock.quantity));
-                    }
+                        }
                         break;
 
                     case 'clear':
@@ -740,29 +767,28 @@
 
                             setUserSettings();
                             showAlert(_formatString('{0} ({1}) 已更新, 成本: {2} 持有量: {3}', watchingStock.name, watchingStock.sinaSymbol, watchingStock.cost, watchingStock.quantity));
-                    }
+                        }
                         break;
 
                     case 'cancel':
                     default:
                         break;
-            }
-        }
-            finally {
+                }
+            } finally {
                 $('.container-action>.glyphicon-edit').popover('hide');
-        }
-    },
+            }
+        },
         showAlert = function (message, duration) {
             if (!$.isNumeric(duration) || duration < 0) {
                 duration = 2000;
-        }
+            }
             _elements.alertPanel.html(message).slideDown(function () {
                 var _this = $(this);
                 window.setTimeout(function () {
                     _this.slideUp();
                 }, duration);
             });
-    },
+        },
 
         _settingsCallback = function (args) {
             try {
@@ -777,12 +803,11 @@
                     case 'cancel':
                     default:
                         break;
-            }
-        }
-            finally {
+                }
+            } finally {
                 _elements.settingsButton.popover('hide');
-        }
-    },
+            }
+        },
         _impexpCallback = function (args) {
             try {
                 switch (args.result) {
@@ -795,12 +820,11 @@
                     case 'cancel':
                     default:
                         break;
-            }
-        }
-            finally {
+                }
+            } finally {
                 _elements.impexpButton.popover('hide');
-        }
-    },
+            }
+        },
 
         /******************** 外部方法 ********************/
         _elements,
@@ -808,25 +832,25 @@
             _elements = elements;
             if (_elements.stockTable) {
                 _elements.stockTable.empty();
-        }
+            }
             if (_elements.suggestionText) {
                 _elements.suggestionText.focus(function () {
                     $(this).select();
                 }).autocomplete({
-                        minLength: 1,
-                        autoFocus: true,
-                        source: [],
-                        search: function (event, ui) {
+                    minLength: 1,
+                    autoFocus: true,
+                    source: [],
+                    search: function (event, ui) {
                         var term = event.target.value;
                         if (term) {
                             if (term in suggestionCache) {
                                 _elements.suggestionText.autocomplete('option', 'source', suggestionCache[term]);
                                 return;
-                        }
+                            }
                             suggestionRequest(term);
                         }
-                },
-                        select: function (event, ui) {
+                    },
+                    select: function (event, ui) {
                         if (_userSettings.watchingStocks.length < _appSettings.maxWatchingStockCount) {
                             var values = ui.item.value.split('|'); // 对应 getSuggestionValue
                             var sinaSymbol = values[0];
@@ -836,91 +860,89 @@
                             if (i >= 0) {
                                 var watchingStock = _userSettings.watchingStocks[i];
                                 showAlert(_formatString('{0} ({1}) 已存在', watchingStock.name, watchingStock.sinaSymbol));
-                            }
-                            else {
-                                var name = ui.item.label.substr(ui.item.label.lastIndexOf(' ') +1); // 对应 getSuggestionLabel
+                            } else {
+                                var name = ui.item.label.substr(ui.item.label.lastIndexOf(' ') + 1); // 对应 getSuggestionLabel
                                 _userSettings.watchingStocks.push({
-                                        sinaSymbol: sinaSymbol,
-                                        type: type,
-                                        name: name
+                                    sinaSymbol: sinaSymbol,
+                                    type: type,
+                                    name: name
                                 });
                                 setUserSettings();
                                 showAlert(_formatString('{0} ({1}) 已添加', name, sinaSymbol));
-                        }
-                        }
-                        else {
+                            }
+                        } else {
                             showAlert(_formatString('自选股数量请不要超过 {0}', _appSettings.maxWatchingStockCount));
                         }
 
                         $(event.target).focus().select();
                         return false;
-                }
+                    }
                 });
-        }
+            }
             if (_elements.alertPanel) {
                 _elements.alertPanel.hide();
-        }
+            }
             if (_elements.settingsButton) {
                 _elements.settingsButton.popover({
-                        container: 'body',
-                        html: true,
-                        trigger: 'manual',
-                        placement: 'bottom'
+                    container: 'body',
+                    html: true,
+                    trigger: 'manual',
+                    placement: 'bottom'
                 }).click(function () {
                     var displayColumnsKey = 'cookieDisplayColumns';
                     var availableColumnsKey = 'cookieAvailableColumns';
                     $.cookie(displayColumnsKey, _userSettings.displayColumns);
                     $.cookie(availableColumnsKey, _appSettings.availableColumns);
                     $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="settings" src="settings.html?{0}"></iframe>', escape(JSON.stringify({
-                            token: _appId,
-                            callback: 'ShadowStock.settingsCallback',
-                            refreshInterval: _userSettings.refreshInterval,
-                            displayColumns: displayColumnsKey,
-                            availableColumns: availableColumnsKey,
-                            actionsColumnId: _appSettings.actionsColumnId
+                        token: _appId,
+                        callback: 'ShadowStock.settingsCallback',
+                        refreshInterval: _userSettings.refreshInterval,
+                        displayColumns: displayColumnsKey,
+                        availableColumns: availableColumnsKey,
+                        actionsColumnId: _appSettings.actionsColumnId
                     })))).popover('show');
                 });
-        }
-        if (_elements.impexpButton) {
-            _elements.impexpButton.popover({
+            }
+            if (_elements.impexpButton) {
+                _elements.impexpButton.popover({
                     container: 'body',
                     html: true,
                     trigger: 'manual',
                     placement: 'bottom'
-            }).click(function () {
-                var userSettingsKey = 'cookieUserSettings';
-                $.cookie(userSettingsKey, _userSettings);
-                $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
+                }).click(function () {
+                    var userSettingsKey = 'cookieUserSettings';
+                    $.cookie(userSettingsKey, _userSettings);
+                    $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
                         token: _appId,
                         callback: 'ShadowStock.impexpCallback',
                         userSettings: userSettingsKey
-                })))).popover('show');
-                return false;
-            });
-        }
-        if (_elements.resetWatchlistButton) {
-            _elements.resetWatchlistButton.click(function () {
-                $.getJSON("watchlist.json", function (data) {
-                    _userSettings.watchingStocks = data['watchingStocks'];
-                    setUserSettings();
-                    showAlert('股票列表将被重置', 4000);
+                    })))).popover('show');
+                    return false;
                 });
-            });
-        }
-    },
+            }
+            if (_elements.resetWatchlistButton) {
+                _elements.resetWatchlistButton.click(function () {
+                    $.getJSON("watchlist.json", function (data) {
+                        _userSettings.watchingStocks = data['watchingStocks'];
+                        setUserSettings();
+                        showAlert('股票列表将被重置', 4000);
+                    });
+                });
+            }
+        },
 
         stockTimer,
         duringStockRefresh,
         _enableStockTimer = function (forStockRefresh) {
             stockTimer = window.setTimeout(stockRequest, _userSettings.refreshInterval);
             duringStockRefresh = false;
-    },
+        },
         _disableStockTimer = function (forStockRefresh) {
             duringStockRefresh = forStockRefresh;
             if (stockTimer) {
                 stockTimer = window.clearTimeout(stockTimer);
-        }
-};
+            }
+        };
 
     /******************** 导出 ********************/
     _shadowStock.appId = _appId;

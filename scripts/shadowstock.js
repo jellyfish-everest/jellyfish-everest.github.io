@@ -929,6 +929,13 @@
                     });
                 });
             }
+            if (_elements.resetColumnHeader) {
+                _elements.resetColumnHeader.click(function () {
+                    _userSettings.displayColumns = defaultUserSettings.displayColumns;
+                    setUserSettings();
+                    showAlert('表格字段将被重置', 2000);
+                });
+            }
         },
 
         stockTimer,

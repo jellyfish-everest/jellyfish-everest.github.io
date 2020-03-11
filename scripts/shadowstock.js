@@ -903,7 +903,7 @@
                 $.getJSON("watchlist.json", function (data) {
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
-                    showAlert('重置股票列表已重置');
+                    showAlert('股票列表将被重置', 4000);
                 });
             });
         }

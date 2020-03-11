@@ -831,7 +831,7 @@
                 .done(function (data) {
                     _userSettings.watchingStocks = data['watchingStocks'];
                     setUserSettings();
-                    showAlert(_formatString('将被重置{0}交易日股票列表', day_str), 4000);
+                    showAlert(_formatString('将恢复{0}交易日股票列表', day_str), 4000);
                 })
                 .fail(function () {
                     showAlert(_formatString('无法获取{0}交易日股票列表', day_str));
@@ -956,7 +956,7 @@
                 _elements.resetColumnHeader.click(function () {
                     _userSettings.displayColumns = defaultUserSettings.displayColumns;
                     setUserSettings();
-                    showAlert('表格字段将被重置', 2000);
+                    showAlert('表格字段将被恢复默认', 2000);
                 });
             }
         },

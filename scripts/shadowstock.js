@@ -131,7 +131,7 @@
                 // 读取watchlist.json if cookie doesn't have a stored list yet
                 $.ajax({
                     dataType: "json",
-                    url: "watchlist.json",
+                    url: "content/watchlists/watchlist.json",
                     data: undefined,
                     async: false,
                     success: function (data) {

@@ -99,7 +99,7 @@
 
         _userSettings,
         defaultUserSettings = {
-            refreshInterval: 5000,
+            refreshInterval: 3000,
             displayColumns: [
                 {id: 50, name: '操作'},
                 {id: 54, name: '名称代码'},

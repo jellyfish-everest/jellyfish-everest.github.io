@@ -115,8 +115,8 @@
                 {id: 42, name: '持有量'},
                 {id: 58, name: '盈亏率'},
                 {id: 57, name: '盈亏'},
-                {id: 31, name: '时间'},
-                {id: 59, name: '工具'}
+                {id: 31, name: '时间'}
+                // {id: 59, name: '工具'}
             ],
             watchingStocks: [
                 {sinaSymbol: 'sh000001', type: '11', name: '上证指数'},
@@ -294,7 +294,7 @@
                 getClass: getClassDefault,
                 getText: function (data) {
                     if (this._text == undefined) {
-                        this._text = _formatString('{2} <a title="新浪股票" href="https://biz.finance.sina.com.cn/suggest/lookup_n.php?q={0}" target="_blank">{1}</a>',
+                            this._text = _formatString('{2} <a title="同花顺" href="https://m.10jqka.com.cn/stockpage/hs_{0}" target="_blank">{1}</a>',
                             this.siblings[_appSettings.symbolColumnId].getText(data),
                             this.siblings[_appSettings.nameColumnId].getText(data),
                             this.siblings[_appSettings.symbolColumnId].getText(data));

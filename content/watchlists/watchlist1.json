@@ -1,0 +1,44 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz000567",
+      "type": "11",
+      "name": "海德股份"
+    },
+    {
+      "sinaSymbol": "sz000667",
+      "type": "11",
+      "name": "美好置业"
+    },
+    {
+      "sinaSymbol": "sz000783",
+      "type": "11",
+      "name": "长江证券"
+    },
+    {
+      "sinaSymbol": "sz002075",
+      "type": "11",
+      "name": "沙钢股份"
+    },
+    {
+      "sinaSymbol": "sz002860",
+      "type": "11",
+      "name": "星帅尔"
+    },
+    {
+      "sinaSymbol": "sz300229",
+      "type": "11",
+      "name": "拓尔思"
+    },
+    {
+      "sinaSymbol": "sh603118",
+      "type": "11",
+      "name": "共进股份"
+    },
+    {
+      "sinaSymbol": "sh603758",
+      "type": "11",
+      "name": "秦安股份"
+    }
+  ]
+}

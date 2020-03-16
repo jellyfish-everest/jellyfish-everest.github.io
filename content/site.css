@@ -52,16 +52,16 @@ td {
     cursor: move;
 }
 td.positive {
-    color: red;
+    color: #FC2E17;
 }
 td.negative {
-    color: green;
+    color: #4DCD53;
 }
 
-.input-group-addon.btn-warning,
-.input-group-addon.btn-danger {
-    color: #fff;
-}
+/*.input-group-addon.btn-warning,*/
+/*.input-group-addon.btn-danger {*/
+/*    color: #fff;*/
+/*}*/
 
 .ui-sortable-helper {
     display: table;
@@ -105,6 +105,6 @@ iframe.impexp {
     width: 500px;
 }
 
-#stockTable td.btn-default {
-    background-color: transparent;
-}
+/*#stockTable td.btn-default {*/
+/*    background-color: transparent;*/
+/*}*/

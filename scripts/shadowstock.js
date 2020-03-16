@@ -118,27 +118,12 @@
                 {id: 31, name: '时间'}
                 // {id: 59, name: '工具'}
             ],
-            watchingStocks: [
-                {sinaSymbol: 'sh000001', type: '11', name: '上证指数'},
-                {sinaSymbol: 'sz399006', type: '11', name: '创业板指'}
-            ]
+            watchingStocks: []
         },
         getUserSettings = function () {
             var userSettings = $.cookie(_appId);
             if (!userSettings) {
                 _userSettings = defaultUserSettings;
-
-                // 读取watchlist.json if cookie doesn't have a stored list yet
-                $.ajax({
-                    dataType: "json",
-                    url: "content/watchlists/watchlist.json",
-                    data: undefined,
-                    async: false,
-                    success: function (data) {
-                        _userSettings.watchingStocks = data['watchingStocks'];
-                        setUserSettings();
-                    }
-                });
                 return;
             }
 
@@ -156,6 +141,8 @@
         },
         setUserSettings = function () {
             $.cookie(_appId, _userSettings, {expires: _appSettings.cookieExpires});
+            // send a request and update the sotck list right wawy
+            stockRequest();
         },
 
         /******************** 初始化 ********************/
@@ -398,6 +385,78 @@
                 }
             }
         },
+
+        resetWatchList = function (json_filename) {
+            $.getJSON("content/watchlists/" + json_filename + ".json")
+                .done(function (data) {
+                    _userSettings.watchingStocks = data['watchingStocks'];
+                    setUserSettings();
+                    showAlert(_formatString('将从 [{0}] 获取交易日股票列表', json_filename));
+                })
+                .fail(function () {
+                    showAlert(_formatString('无法从 [{0}] 获取交易日股票列表', json_filename));
+                });
+        },
+
+        initResetWatchlistDropList = function () {
+            isLocalTesting = $(location).attr('href').includes('127.0.0.1')
+            rootUrl = isLocalTesting ? "" : "https://api.github.com/repos/jellyfish-everest/jellyfish-everest.github.io/contents/"
+
+            $.ajax({
+                url: rootUrl + "content/watchlists",
+                data: undefined,
+                success: function (data) {
+                    watchListArray = []
+
+                    if (isLocalTesting) {
+                        // parse the html result from ajax query to find all href pointing to json files
+                        $(data).find('a:contains(".json")').each(function () {
+                            let json_file_name = $(this).attr("href")
+                            watchListArray.push(json_file_name.split('.').slice(0, -1).join('.'))
+                            console.log("Found the json watchlist: " + json_file_name);
+                        });
+
+                    } else {
+                        // Query github api to get a list of watch list json files
+                        data.forEach(function (file_entry) {
+                            let json_file_name = file_entry['name']
+                            watchListArray.push(json_file_name.split('.').slice(0, -1).join('.'))
+                            console.log("Found the json watchlist: " + json_file_name);
+                        });
+
+                    }
+
+                    // Sort the list based on the file name (numerical date) most recent date come in first
+                    watchListArray.sort().reverse()
+
+                    // Populate newest watch list button
+                    if (watchListArray.length) {
+                        let latestWatchListName = watchListArray[0]
+                        let resetLatestWatchlistButton = $('#resetLatestWatchlistButton')
+                        resetLatestWatchlistButton.html("最新列表" + " [" + latestWatchListName + "]")
+                        resetLatestWatchlistButton.click(function () {
+                            resetWatchList(latestWatchListName);
+                        });
+
+                        // If user doesn't have customized setting locally (first time running app), fill with the latest
+                        if (_userSettings && !_userSettings.watchingStocks.length && watchListArray.length) {
+                            resetWatchList(latestWatchListName)
+                        }
+                    }
+
+                    // Populate history dropdown list from 2nd entry to end
+                    let resetWatchlistDropListSelector = $('#resetWatchlistDropList')
+                    watchListArray.slice(1).forEach(function(watchListName)
+                    {
+                        let button_href = $("<a href='#'></a>").text(watchListName)
+                        resetWatchlistDropListSelector.append($("<li></li>").append(button_href))
+                        button_href.click(function () {
+                            resetWatchList(watchListName);
+                        });
+                    });
+                }
+            });
+        },
         stockRetriever = $('<iframe class="hidden"></iframe>'),
         suggestionRetriever = $('<iframe class="hidden"></iframe>'),
         _init = function () {
@@ -408,6 +467,8 @@
             initColumnEngines();
             // 用户设置
             getUserSettings();
+            // Init ResetWatchlistDropList
+            initResetWatchlistDropList();
         },
         _start = function () {
             // 启动
@@ -551,12 +612,15 @@
                 stockList += _userSettings.watchingStocks[i].sinaSymbol + ',';
                 vars[i] = stockVarPrefix + _userSettings.watchingStocks[i].sinaSymbol;
             }
-            _requestData(stockRetriever, {
-                token: token,
-                url: _formatString(_appSettings.stockUrl, token, stockList),
-                callback: 'ShadowStock.stockCallback',
-                vars: vars
-            });
+
+            if (stockList) {
+                _requestData(stockRetriever, {
+                    token: token,
+                    url: _formatString(_appSettings.stockUrl, token, stockList),
+                    callback: 'ShadowStock.stockCallback',
+                    vars: vars
+                });
+            }
         },
         _stockCallback = function (args) {
             if (!duringStockRefresh) {
@@ -650,6 +714,7 @@
             $('.container-action>.glyphicon-edit', _elements.stockTable).popover({
                 html: true,
                 trigger: 'manual',
+                sanitize: false, // JZM: sanitize won't work for these html
                 placement: 'right'
             }).on('show.bs.popover', function () {
                 _disableStockTimer();
@@ -778,10 +843,17 @@
                 $('.container-action>.glyphicon-edit').popover('hide');
             }
         },
-        showAlert = function (message, duration) {
+        showAlert = function (message, duration, isError=false) {
             if (!$.isNumeric(duration) || duration < 0) {
                 duration = 2000;
             }
+
+                if (isError) {
+                _elements.alertPanel.removeClass().addClass('alert alert-danger');
+            } else {
+                _elements.alertPanel.removeClass().addClass('alert alert-success');
+            }
+
             _elements.alertPanel.html(message).slideDown(function () {
                 var _this = $(this);
                 window.setTimeout(function () {
@@ -826,18 +898,6 @@
             }
         },
 
-        resetWatchList = function (json_list, day_str) {
-            $.getJSON(json_list)
-                .done(function (data) {
-                    _userSettings.watchingStocks = data['watchingStocks'];
-                    setUserSettings();
-                    showAlert(_formatString('将恢复{0}交易日股票列表', day_str), 4000);
-                })
-                .fail(function () {
-                    showAlert(_formatString('无法获取{0}交易日股票列表', day_str));
-                });
-        },
-
         /******************** 外部方法 ********************/
         _elements,
         _attachElements = function (elements) {
@@ -871,7 +931,7 @@
                             var i = _findIndex(_userSettings.watchingStocks, 'sinaSymbol', sinaSymbol);
                             if (i >= 0) {
                                 var watchingStock = _userSettings.watchingStocks[i];
-                                showAlert(_formatString('{0} ({1}) 已存在', watchingStock.name, watchingStock.sinaSymbol));
+                                showAlert(_formatString('{0} ({1}) 已存在', watchingStock.name, watchingStock.sinaSymbol), undefined, true);
                             } else {
                                 var name = ui.item.label.substr(ui.item.label.lastIndexOf(' ') + 1); // 对应 getSuggestionLabel
                                 _userSettings.watchingStocks.push({
@@ -899,6 +959,7 @@
                     container: 'body',
                     html: true,
                     trigger: 'manual',
+                    sanitize: false, // JZM: sanitize won't work for these html
                     placement: 'bottom'
                 }).click(function () {
                     var displayColumnsKey = 'cookieDisplayColumns';
@@ -920,6 +981,7 @@
                     container: 'body',
                     html: true,
                     trigger: 'manual',
+                    sanitize: false, // JZM: sanitize won't work for these html
                     placement: 'bottom'
                 }).click(function () {
                     var userSettingsKey = 'cookieUserSettings';
@@ -930,26 +992,6 @@
                         userSettings: userSettingsKey
                     })))).popover('show');
                     return false;
-                });
-            }
-            if (_elements.resetWatchlistButton) {
-                _elements.resetWatchlistButton.click(function () {
-                    resetWatchList("content/watchlists/watchlist.json", "今")
-                });
-            }
-            if (_elements.resetWatchlistButtonDayMinus1) {
-                _elements.resetWatchlistButtonDayMinus1.click(function () {
-                    resetWatchList("content/watchlists/watchlist1.json", "昨")
-                });
-            }
-            if (_elements.resetWatchlistButtonDayMinus2) {
-                _elements.resetWatchlistButtonDayMinus2.click(function () {
-                    resetWatchList("content/watchlists/watchlist2.json", "前")
-                });
-            }
-            if (_elements.resetWatchlistButtonDayMinus3) {
-                _elements.resetWatchlistButtonDayMinus3.click(function () {
-                    resetWatchList("content/watchlists/watchlist3.json", "大前")
                 });
             }
             if (_elements.resetColumnHeader) {

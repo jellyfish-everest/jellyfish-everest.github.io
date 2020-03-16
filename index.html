@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,27 +17,25 @@
                     <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
                 </div>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-5">
+                <button id="resetLatestWatchlistButton" type="button" class="btn btn-danger" title="最新列表">最新列表</button>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                        刷新股票列表 <span class="caret"></span>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                         历史列表 <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a id="resetWatchlistButton" href="#">今交易日</a></li>
-                        <li><a id="resetWatchlistButtonDayMinus1" href="#">昨交易日</a></li>
-                        <li><a id="resetWatchlistButtonDayMinus2" href="#">前交易日</a></li>
-                        <li><a id="resetWatchlistButtonDayMinus3" href="#">大前交易日</a></li>
+                    <ul id="resetWatchlistDropList" class="dropdown-menu">
+                        <!--will be filled with script-->
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-5">
+            <div class="col-xs-3">
                 <div class="btn-group">
-                    <button id="settingsButton" type="button" class="btn btn-info" title="设置">设置</button>
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    <button id="settingsButton" type="button" class="btn btn-primary" title="设置">设置</button>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a id="resetColumnHeader" href="#">恢复表格字段</a></li>
+                        <li><a id="resetColumnHeader" href="#">恢复默认表格字段</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a id="impexpButton" href="#">导入/导出</a></li>
                     </ul>
@@ -46,12 +44,12 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <div id="alertPanel" class="alert alert-danger">请稍候 ...</div>
+                <div id="alertPanel" class="alert alert-info">请稍候 ...</div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <table id="stockTable" class="table table-bordered table-condensed table-hover"></table>
+                    <table id="stockTable" class="table table-bordered table-condensed table-hover table-striped" data-sortable></table>
             </div>
         </div>
 
@@ -70,10 +68,6 @@
                     alertPanel: $('#alertPanel'),
                     settingsButton: $('#settingsButton'),
                     impexpButton: $('#impexpButton'),
-                    resetWatchlistButton: $('#resetWatchlistButton'),
-                    resetWatchlistButtonDayMinus1: $('#resetWatchlistButtonDayMinus1'),
-                    resetWatchlistButtonDayMinus2: $('#resetWatchlistButtonDayMinus2'),
-                    resetWatchlistButtonDayMinus3: $('#resetWatchlistButtonDayMinus3'),
                     resetColumnHeader: $('#resetColumnHeader')
                 });
                 ShadowStock.start();

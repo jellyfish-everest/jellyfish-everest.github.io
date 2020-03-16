@@ -104,13 +104,14 @@
                 {id: 50, name: '操作'},
                 {id: 54, name: '名称代码'},
                 {id: 3, name: '最新价'},
-                {id: 51, name: '涨跌'},
+                {id: 60, name: '目标价'},
+                // {id: 51, name: '涨跌'},
                 {id: 52, name: '涨跌率'},
                 {id: 4, name: '最高'},
                 {id: 5, name: '最低'},
                 {id: 1, name: '今开'},
                 {id: 2, name: '昨收'},
-                {id: 9, name: '成交额'},
+                // {id: 9, name: '成交额'},
                 {id: 41, name: '成本'},
                 {id: 42, name: '持有量'},
                 {id: 58, name: '盈亏率'},
@@ -362,6 +363,16 @@
             //     },
             //     getValue: getValueDefault
             // };
+
+            _appSettings.targetPriceColumnId = 60;
+            _columnEngines[_appSettings.targetPriceColumnId] = {
+                id: _appSettings.targetPriceColumnId,
+                name: '目标价',
+                siblings: _columnEngines,
+                getClass: getClassDefault,
+                getText: getTextForNumber,
+                getValue: getValueDefault
+            };
 
             _appSettings.availableColumns = [];
             var columnEnginesLength = _columnEngines.length;
@@ -667,6 +678,7 @@
                         data[_appSettings.costColumnId] = watchingStock.cost;
                         data[_appSettings.quantityColumnId] = watchingStock.quantity;
                         data.type = watchingStock.type;
+                        data[_appSettings.targetPriceColumnId]= watchingStock.targetPrice;
                     }
 
                     stockTableRow = $('<tr>').appendTo(stockTableBody);

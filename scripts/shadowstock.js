@@ -343,25 +343,25 @@
                 }
             };
 
-            _appSettings.toolColumnId = 59;
-            _columnEngines[_appSettings.toolColumnId] = {
-                id: _appSettings.toolColumnId, name: '工具', siblings: _columnEngines,
-                getClass: getClassAsNone,
-                getText: function (data) {
-                    if (this._text == undefined) {
-                        this._text = _formatString(
-                            ' <a title="成交" href="http://gu.qq.com/{0}/gp/detail" target="_blank">细</a>'
-                            //+ ' <a title="股吧" href="http://guba.sina.com.cn/?s=bar&name={0}" target="_blank">论</a>'
-                            //+ ' <a title="分红" href="http://stockpage.10jqka.com.cn/{1}/bonus/#bonuslist" target="_blank">红</a>'
-                            + ' <a title="曲线" href="TI.htm?{0}" target="_blank">线</a>',
-                            this.siblings[_appSettings.sinaSymbolColumnId].getText(data),
-                            this.siblings[_appSettings.symbolColumnId].getText(data),
-                            _getTicks());
-                    }
-                    return this._text;
-                },
-                getValue: getValueDefault
-            };
+            // _appSettings.toolColumnId = 59;
+            // _columnEngines[_appSettings.toolColumnId] = {
+            //     id: _appSettings.toolColumnId, name: '工具', siblings: _columnEngines,
+            //     getClass: getClassAsNone,
+            //     getText: function (data) {
+            //         if (this._text == undefined) {
+            //             this._text = _formatString(
+            //                 ' <a title="成交" href="http://gu.qq.com/{0}/gp/detail" target="_blank">细</a>'
+            //                 //+ ' <a title="股吧" href="http://guba.sina.com.cn/?s=bar&name={0}" target="_blank">论</a>'
+            //                 //+ ' <a title="分红" href="http://stockpage.10jqka.com.cn/{1}/bonus/#bonuslist" target="_blank">红</a>'
+            //                 + ' <a title="曲线" href="TI.htm?{0}" target="_blank">线</a>',
+            //                 this.siblings[_appSettings.sinaSymbolColumnId].getText(data),
+            //                 this.siblings[_appSettings.symbolColumnId].getText(data),
+            //                 _getTicks());
+            //         }
+            //         return this._text;
+            //     },
+            //     getValue: getValueDefault
+            // };
 
             _appSettings.availableColumns = [];
             var columnEnginesLength = _columnEngines.length;
@@ -638,8 +638,10 @@
                 stockTableRow = $('<tr>').appendTo(stockTableHead);
                 for (var i = 0; i < displayColumnsLength; i++) {
                     var id = _userSettings.displayColumns[i].id;
-                    $('<th>').html(_columnEngines[id].name)
-                        .appendTo(stockTableRow);
+                    if (_columnEngines[id]) {
+                        $('<th>').html(_columnEngines[id].name)
+                            .appendTo(stockTableRow);
+                    }
 
                     if (!hasActionsColumn && id == _appSettings.actionsColumnId) {
                         hasActionsColumn = true;
@@ -669,9 +671,12 @@
 
                     stockTableRow = $('<tr>').appendTo(stockTableBody);
                     for (var i = 0; i < displayColumnsLength; i++) {
-                        $('<td>').addClass(_columnEngines[_userSettings.displayColumns[i].id].getClass(data))
-                            .html(_columnEngines[_userSettings.displayColumns[i].id].getText(data))
-                            .appendTo(stockTableRow);
+                        var id = _userSettings.displayColumns[i].id;
+                        if (_columnEngines[id]) {
+                            $('<td>').addClass(_columnEngines[id].getClass(data))
+                                .html(_columnEngines[id].getText(data))
+                                .appendTo(stockTableRow);
+                        }
                     }
                 }
 

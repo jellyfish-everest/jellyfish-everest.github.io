@@ -1,0 +1,10 @@
+{"watchingStocks": 
+[{"sinaSymbol": "sh600379", "type": "11", "name": "宝光股份", "cost": 6.41, "quantity": 200}, 
+{"sinaSymbol": "sz000837", "type": "11", "name": "秦川机床", "cost": 4.85, "quantity": 300}, 
+{"sinaSymbol": "sz002545", "type": "11", "name": "东方铁塔", "cost": 7.58, "quantity": 200},
+{"sinaSymbol": "sz002825", "type": "11", "name": "纳尔股份","targetPrice": 14.20},
+{"sinaSymbol": "sz300305", "type": "11", "name": "裕兴股份","targetPrice": 10.39},
+{"sinaSymbol": "sh600192", "type": "11", "name": "长城电工","targetPrice": 5.59},
+{"sinaSymbol": "sh600973", "type": "11", "name": "宝胜股份","targetPrice": 4.85},
+{"sinaSymbol": "sz300419", "type": "11", "name": "浩丰科技", "targetPrice": 6.56},
+{"sinaSymbol": "sh603041", "type": "11", "name": "美思德", "targetPrice": 19.05}]}

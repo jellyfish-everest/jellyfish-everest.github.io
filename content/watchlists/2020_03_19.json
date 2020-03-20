@@ -1,5 +1,5 @@
 {"watchingStocks": 
-{"sinaSymbol": "sz002342", "type": "11", "name": "巨力索具"}, 
+[{"sinaSymbol": "sz002342", "type": "11", "name": "巨力索具"}, 
 {"sinaSymbol": "sh603336", "type": "11", "name": "宏辉果蔬"}, 
 {"sinaSymbol": "sz300512", "type": "11", "name": "中亚股份"}, 
 {"sinaSymbol": "sz300712", "type": "11", "name": "永福股份"},

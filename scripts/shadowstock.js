@@ -1,4 +1,4 @@
-﻿(function (window, document, undefined) {
+(function (window, document, undefined) {
     var _shadowStock = {},
         _appId = 'EverestSimpleMarketMonitor',
         _appName = 'Everest Simple Market Monitor',
@@ -405,7 +405,7 @@
                     showAlert(_formatString('将从 [{0}] 获取交易日股票列表', json_filename));
                 })
                 .fail(function () {
-                    showAlert(_formatString('无法从 [{0}] 获取交易日股票列表', json_filename));
+                    showAlert(_formatString('无法从 [{0}] 获取交易日股票列表', json_filename), undefined, true);
                 });
         },
 

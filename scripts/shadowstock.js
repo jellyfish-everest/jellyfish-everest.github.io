@@ -580,7 +580,7 @@
 
                 var value = this.getValue(data);
                 this._text = $.isNumeric(value)
-                    ? _toShortNumberText(value)
+                    ? _round(value, 2)
                     : data[index];
             }
             return this._text;

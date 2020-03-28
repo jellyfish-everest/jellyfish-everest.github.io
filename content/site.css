@@ -1,4 +1,4 @@
-﻿body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
@@ -81,7 +81,7 @@ iframe.editor {
 iframe.settings {
     border: 0;
     width: 510px;
-    height: 280px;
+    height: 300px;
 }
 .container-settings {
     width: 500px;
@@ -98,11 +98,16 @@ iframe.settings {
 
 iframe.impexp {
     border: 0;
-    width: 510px;
-    height: 235px;
+    width: 610px;
+    height: 550px;
 }
 .container-impexp {
-    width: 500px;
+    width: 600px;
+}
+
+.container-impexp #userSettings {
+    font-size: 14px;
+    resize: none;
 }
 
 /*#stockTable td.btn-default {*/

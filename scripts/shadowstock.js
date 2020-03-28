@@ -119,7 +119,14 @@
                 {id: 31, name: '时间'}
                 // {id: 59, name: '工具'}
             ],
-            watchingStocks: []
+            watchingStocks: [],
+            watchingIndices: [
+                {sinaSymbol: 'sh000001', type: '11', name: '上证指数'},
+                {sinaSymbol: 'sz399001', type: '11', name: '深圳成指'},
+                {sinaSymbol: 'sz399006', type: '11', name: '创业板指'},
+                {sinaSymbol: 'sh000300', type: '11', name: '沪深300'},
+                {sinaSymbol: 'sh000016', type: '11', name: '上证50'}
+            ]
         },
         getUserSettings = function () {
             var userSettings = $.cookie(_appId);
@@ -136,6 +143,9 @@
             }
             if (!userSettings.watchingStocks) {
                 userSettings.watchingStocks = defaultUserSettings.watchingStocks;
+            }
+            if (!userSettings.watchingIndices) {
+                userSettings.watchingIndices = defaultUserSettings.watchingIndices;
             }
             _userSettings = userSettings;
             return;
@@ -400,12 +410,21 @@
         resetWatchList = function (json_filename) {
             $.getJSON("content/watchlists/" + json_filename + ".json")
                 .done(function (data) {
-                    _userSettings.watchingStocks = data['watchingStocks'];
+                    // watch stocks list
+                    if(data['watchingStocks']){
+                        _userSettings.watchingStocks = data['watchingStocks'];
+                        showAlert(_formatString('成功获取 [{0}] 交易日股票列表', json_filename));
+                    }else{
+                        showAlert(_formatString('未在[{0}]交易日找到股票列表', json_filename), undefined, true);
+                    }
+
+                    // watch indices list (reset to default list if not found in user setting file
+                    _userSettings.watchingIndices = data['watchingIndices'] ? data['watchingIndices'] : defaultUserSettings.watchingIndices
+
                     setUserSettings();
-                    showAlert(_formatString('将从 [{0}] 获取交易日股票列表', json_filename));
                 })
                 .fail(function () {
-                    showAlert(_formatString('无法从 [{0}] 获取交易日股票列表', json_filename), undefined, true);
+                    showAlert(_formatString('获取[{0}]交易日股票列表失败，请检查文件格式 ', json_filename), undefined, true);
                 });
         },
 
@@ -614,15 +633,32 @@
             _disableStockTimer(true);
             getUserSettings();
 
+            // build a set of index symbol for filtering
+            let indexSymbolSet = new Set()
+            for (var ii = 0; ii < _userSettings.watchingIndices.length; ii++) {
+                indexSymbolSet.add(_userSettings.watchingIndices[ii].sinaSymbol);
+            }
+
             // 自选列表
             var token = _getTicks();
             var vars = [];
             var stockList = '';
             var watchingStocksLength = _userSettings.watchingStocks.length;
-            for (var i = 0; i < watchingStocksLength; i++) {
-                stockList += _userSettings.watchingStocks[i].sinaSymbol + ',';
-                vars[i] = stockVarPrefix + _userSettings.watchingStocks[i].sinaSymbol;
+            var i = 0
+            for (i = 0; i < watchingStocksLength; i++) {
+                let sinaSymbol = _userSettings.watchingStocks[i].sinaSymbol
+                stockList += sinaSymbol + ',';
+                vars[i] = stockVarPrefix + sinaSymbol;
+
+                //remove from index list if it's already in watchingStocks
+                indexSymbolSet.delete(sinaSymbol)
             }
+
+            // 加入置顶card list
+            indexSymbolSet.forEach(function (sinaSymbol) {
+                stockList += sinaSymbol + ',';
+                vars[i++] = stockVarPrefix + sinaSymbol;
+            })
 
             if (stockList) {
                 _requestData(stockRetriever, {
@@ -634,6 +670,7 @@
             }
         },
         _stockCallback = function (args) {
+            // only update when timer is disabled
             if (!duringStockRefresh) {
                 return;
             }
@@ -642,6 +679,12 @@
                 _elements.stockTable.empty();
                 var displayColumnsLength = _userSettings.displayColumns.length;
                 var stockTableRow;
+
+                let changeRateSum = 0;
+                let positiveStockCount = 0;
+                let negativeStockCount = 0;
+                let upLimitStockCount = 0;
+                let downLimitStockCount  = 0;
 
                 // 表头
                 var hasActionsColumn = false;
@@ -673,28 +716,106 @@
                     // 本地扩展 - 数据源
                     data[_appSettings.sinaSymbolColumnId] = sinaSymbol;
                     var i = _findIndex(_userSettings.watchingStocks, 'sinaSymbol', sinaSymbol);
+                    // Only create table when for stock found in watchlist (findIndex return -1 if not found)
                     if (i >= 0) {
+                        // 本地扩展 - 数据源
                         var watchingStock = _userSettings.watchingStocks[i];
                         data[_appSettings.costColumnId] = watchingStock.cost;
                         data[_appSettings.quantityColumnId] = watchingStock.quantity;
                         data.type = watchingStock.type;
-                        data[_appSettings.targetPriceColumnId]= watchingStock.targetPrice;
-                    }
+                        data[_appSettings.targetPriceColumnId] = watchingStock.targetPrice;
 
-                    stockTableRow = $('<tr>').appendTo(stockTableBody);
-                    for (var i = 0; i < displayColumnsLength; i++) {
-                        var id = _userSettings.displayColumns[i].id;
-                        if (_columnEngines[id]) {
-                            $('<td>').addClass(_columnEngines[id].getClass(data))
-                                .html(_columnEngines[id].getText(data))
-                                .appendTo(stockTableRow);
+                        // only add row if it's in watch list
+                        stockTableRow = $('<tr>').appendTo(stockTableBody);
+                        for (var i = 0; i < displayColumnsLength; i++) {
+                            var id = _userSettings.displayColumns[i].id;
+                            if (_columnEngines[id]) {
+                                $('<td>').addClass(_columnEngines[id].getClass(data))
+                                    .html(_columnEngines[id].getText(data))
+                                    .appendTo(stockTableRow);
+                            }
                         }
+
+                        // Accumulate Average change rate for index card below
+                        let limit = _columnEngines[0].getText(data).includes('ST') ? 0.0475 : 0.095
+                        changeRate = _columnEngines[_appSettings.changeRateColumnId].getValue(data);
+                        if (changeRate > 0){
+                            positiveStockCount++;
+                            if (changeRate>limit){
+                                upLimitStockCount++;
+                            }
+                        }else if(changeRate < 0){
+                            negativeStockCount++;
+                            if (changeRate<-limit){
+                                downLimitStockCount++;
+                            }
+                        }
+
+                        changeRateSum += changeRate;
                     }
                 }
 
                 if (hasActionsColumn) {
                     assignActions();
                 }
+
+                // Add cards
+                _elements.indexCards.empty()
+                let averageChangeRate = changeRateSum / _userSettings.watchingStocks.length
+                // 指数卡
+                for (var ii = 0; ii < _userSettings.watchingIndices.length; ii++) {
+                    let symbolKey = stockVarPrefix + _userSettings.watchingIndices[ii].sinaSymbol;
+                    let data = args[symbolKey].split(',');
+
+                    clearColumnEnginesCache();
+
+                    let cardHtml = $("<div class='well well-sm'></div>")
+
+                    // '名称'
+                    let columnId = 0 // '名称'
+                    if (_columnEngines[columnId]) {
+                        $('<div>').html(_columnEngines[columnId].getText(data))
+                            .appendTo(cardHtml);
+                    }
+
+                    // 最新价
+                    columnId = 3 // '最新价'
+                    if (_columnEngines[columnId]) {
+                        $('<div>').addClass(_columnEngines[columnId].getClass(data))
+                            .html(_columnEngines[columnId].getText(data))
+                            .appendTo(cardHtml);
+                    }
+
+                    // 涨跌/涨跌率
+                    if (_columnEngines[_appSettings.changeColumnId] && _columnEngines[_appSettings.changeRateColumnId]) {
+                        $('<span>').addClass('h6')
+                            .addClass(_columnEngines[_appSettings.changeColumnId].getClass(data))
+                            .html(_columnEngines[_appSettings.changeColumnId].getText(data) + ' (' + _columnEngines[_appSettings.changeRateColumnId].getText(data) + ')')
+                            .appendTo(cardHtml);
+                    }
+
+                    // 选股相对盈亏率
+                    let beatIndexChangeRate = averageChangeRate - _columnEngines[_appSettings.changeRateColumnId].getValue(data)
+                    let beatIndexChangeRateSide = beatIndexChangeRate > 0 ? 'btn-danger' : (beatIndexChangeRate < 0 ? 'btn-success' : '')
+                    $('<div>').addClass(beatIndexChangeRateSide).html(_toPercentageText(beatIndexChangeRate)).appendTo(cardHtml);
+
+                    _elements.indexCards.append($("<div class='col-sm-2 col-md-2 text-center'></div>").append(cardHtml))
+                }
+
+                // 选股总计卡·
+                let avgChangeRateSide = averageChangeRate > 0 ? 'positive' : (averageChangeRate < 0 ? 'negative' : '')
+                let summaryCardHtml = $("<div class='summary-card well well-sm'></div>")
+
+                summaryCardHtml
+                    .append($('<div>').append('平均涨跌率 ').append($('<span>').addClass(avgChangeRateSide).text(_toPercentageText(averageChangeRate))))
+                    .append($('<div>').append('涨 ').append($('<span>').addClass("positive").text(positiveStockCount))
+                                                    .append(" 板 ").append($('<span>').addClass("positive").text(upLimitStockCount)))
+                    .append($('<div>').append('跌 ').append($('<span>').addClass("negative").text(negativeStockCount))
+                                                    .append(" 板 ").append($('<span>').addClass("negative").text(downLimitStockCount)))
+
+                _elements.indexCards.prepend($("<div class='col-sm-2 col-md-2 text-center'></div>").append(summaryCardHtml))
+
+
             } finally {
                 _enableStockTimer(true);
             }

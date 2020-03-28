@@ -10,28 +10,28 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row show-grid">
-            <div class="col-xs-4">
-                <div class="input-group">
-                    <div class="input-group-addon">股票查询</div>
-                    <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
-                </div>
-            </div>
-            <div class="col-xs-5">
-                <button id="resetLatestWatchlistButton" type="button" class="btn btn-danger" title="最新列表">最新列表</button>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <div class="input-group-addon">股票查询</div>
+                        <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
+                    </div>
+                </form>
+                <button id="resetLatestWatchlistButton" type="button" class="btn btn-danger navbar-btn" title="最新列表">
+                    最新列表
+                </button>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                         历史列表 <span class="caret"></span>
+                        历史列表 <span class="caret"></span>
                     </button>
                     <ul id="resetWatchlistDropList" class="dropdown-menu">
                         <!--will be filled with script-->
                     </ul>
                 </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="btn-group">
-                    <button id="settingsButton" type="button" class="btn btn-primary" title="设置">设置</button>
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <div class="btn-group navbar-right">
+                    <button id="settingsButton" type="button" class="btn btn-info navbar-btn" title="设置">设置</button>
+                    <button type="button" class="btn btn-info dropdown-toggle navbar-btn" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -41,17 +41,23 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div id="alertPanel" class="alert alert-info">请稍候 ...</div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="alertPanel" class="alert alert-info">请稍候 ...</div>
+                </div>
             </div>
-        </div>
+
+        </nav>
+
+        <div id="indexCards" class="container-fluid"></div>
+
         <div class="row">
             <div class="col-xs-12">
                     <table id="stockTable" class="table table-bordered table-condensed table-hover table-striped" data-sortable></table>
             </div>
         </div>
+
+
 
         <script src="scripts/jquery-1.10.2.js"></script>
         <script src="scripts/jquery-ui.js"></script>
@@ -64,6 +70,7 @@
                 ShadowStock.init();
                 ShadowStock.attachElements({
                     stockTable: $('#stockTable'),
+                    indexCards: $('#indexCards'),
                     suggestionText: $('#suggestionText'),
                     alertPanel: $('#alertPanel'),
                     settingsButton: $('#settingsButton'),

@@ -125,7 +125,7 @@
                 {sinaSymbol: 'sz399001', type: '11', name: '深圳成指'},
                 {sinaSymbol: 'sz399006', type: '11', name: '创业板指'},
                 {sinaSymbol: 'sh000300', type: '11', name: '沪深300'},
-                {sinaSymbol: 'sh000016', type: '11', name: '上证50'}
+                {sinaSymbol: 'sh000905', type: '11', name: '中证500'}
             ]
         },
         getUserSettings = function () {

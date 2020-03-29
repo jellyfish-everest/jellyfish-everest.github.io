@@ -1,5 +1,7 @@
 {"watchingStocks": 
-[{"sinaSymbol": "sh600983", "type": "11", "name": "惠而浦"},
- {"sinaSymbol": "sz000150", "type": "11", "name": "宜华健康"}, 
- {"sinaSymbol": "sz300233", "type": "11", "name": "金城医药"}, 
- {"sinaSymbol": "sz300003", "type": "11", "name": "乐普医疗"}]}
+[{"sinaSymbol": "sz002816", "type": "11", "name": "和科达"}, 
+{"sinaSymbol": "sz002825", "type": "11", "name": "纳尔股份"}, 
+{"sinaSymbol": "sh603557", "type": "11", "name": "起步股份"}, 
+{"sinaSymbol": "sz002375", "type": "11", "name": "亚厦股份"}, 
+{"sinaSymbol": "sz300218", "type": "11", "name": "安利股份"}, 
+{"sinaSymbol": "sh600495", "type": "11", "name": "晋西车轴"}]}

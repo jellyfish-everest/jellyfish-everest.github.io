@@ -22,6 +22,11 @@ body {
     border-color: #606060;
 }
 
+#indexCards .col-sm-2 {
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
 /*https://stackoverflow.com/questions/20429229/bootstrap-3-navigation-bar-right-margin-is-not-supposed-to-be-15px*/
 .navbar-right {
     margin-right: 0px;

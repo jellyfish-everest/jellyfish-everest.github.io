@@ -463,7 +463,7 @@
                     if (watchListArray.length) {
                         let latestWatchListName = watchListArray[0]
                         let resetLatestWatchlistButton = $('#resetLatestWatchlistButton')
-                        resetLatestWatchlistButton.html("最新列表" + " [" + latestWatchListName + "]")
+                        resetLatestWatchlistButton.html("载入最新选股" + " [" + latestWatchListName + "]")
                         resetLatestWatchlistButton.click(function () {
                             resetWatchList(latestWatchListName);
                         });

@@ -1,0 +1,39 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600361",
+      "type": "11",
+      "name": "华联综超"
+    },
+    {
+      "sinaSymbol": "sz002571",
+      "type": "11",
+      "name": "德力股份"
+    },
+    {
+      "sinaSymbol": "sz002734",
+      "type": "11",
+      "name": "利民股份"
+    },
+    {
+      "sinaSymbol": "sz000856",
+      "type": "11",
+      "name": "冀东装备"
+    },
+    {
+      "sinaSymbol": "sh600814",
+      "type": "11",
+      "name": "杭州解百"
+    },
+    {
+      "sinaSymbol": "sz002060",
+      "type": "11",
+      "name": "粤水电"
+    },
+    {
+      "sinaSymbol": "sz002852",
+      "type": "11",
+      "name": "道道全"
+    }
+  ]
+}

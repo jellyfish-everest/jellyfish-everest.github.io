@@ -1,0 +1,69 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002816",
+      "type": "11",
+      "name": "和科达"
+    },
+    {
+      "sinaSymbol": "sh603393",
+      "type": "11",
+      "name": "新天然气"
+    },
+    {
+      "sinaSymbol": "sh600429",
+      "type": "11",
+      "name": "三元股份"
+    },
+    {
+      "sinaSymbol": "sh603013",
+      "type": "11",
+      "name": "亚普股份"
+    },
+    {
+      "sinaSymbol": "sh603886",
+      "type": "11",
+      "name": "元祖股份"
+    },
+    {
+      "sinaSymbol": "sz000987",
+      "type": "11",
+      "name": "越秀金控"
+    },
+    {
+      "sinaSymbol": "sz300218",
+      "type": "11",
+      "name": "安利股份"
+    },
+    {
+      "sinaSymbol": "sz300094",
+      "type": "11",
+      "name": "国联水产"
+    },
+    {
+      "sinaSymbol": "sz002588",
+      "type": "11",
+      "name": "史丹利"
+    },
+    {
+      "sinaSymbol": "sh603955",
+      "type": "11",
+      "name": "大千生态"
+    },
+    {
+      "sinaSymbol": "sh600467",
+      "type": "11",
+      "name": "好当家"
+    },
+    {
+      "sinaSymbol": "sh600097",
+      "type": "11",
+      "name": "开创国际"
+    },
+    {
+      "sinaSymbol": "sh600371",
+      "type": "11",
+      "name": "万向德农"
+    }
+  ]
+}

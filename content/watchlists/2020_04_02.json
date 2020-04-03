@@ -1,0 +1,39 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002816",
+      "type": "11",
+      "name": "和科达"
+    },
+    {
+      "sinaSymbol": "sz300765",
+      "type": "11",
+      "name": "新诺威"
+    },
+    {
+      "sinaSymbol": "sz300529",
+      "type": "11",
+      "name": "健帆生物"
+    },
+	{
+      "sinaSymbol": "sz300305",
+      "type": "11",
+      "name": "裕兴股份"
+    },
+	{
+      "sinaSymbol": "sz002225",
+      "type": "11",
+      "name": "濮耐股份"
+    },
+	{
+      "sinaSymbol": "sh603918",
+      "type": "11",
+      "name": "金桥信息"
+    },
+	{
+      "sinaSymbol": "sh603458",
+      "type": "11",
+      "name": "勘设股份"
+    }
+  ]
+}

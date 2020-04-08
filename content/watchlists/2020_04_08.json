@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600026",
+      "type": "11",
+      "name": "中远海能",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600452",
+      "type": "11",
+      "name": "涪陵电力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600429",
+      "type": "11",
+      "name": "三元股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300233",
+      "type": "11",
+      "name": "金城医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000987",
+      "type": "11",
+      "name": "越秀金控",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600501",
+      "type": "11",
+      "name": "航天晨光",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300334",
+      "type": "11",
+      "name": "津膜科技",
+      "picked": true
+    }
+  ]
+}

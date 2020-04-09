@@ -1,0 +1,82 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600268",
+      "type": "11",
+      "name": "国电南自",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002726",
+      "type": "11",
+      "name": "龙大肉食",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002778",
+      "type": "11",
+      "name": "高科石化",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600051",
+      "type": "11",
+      "name": "宁波联合",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002773",
+      "type": "11",
+      "name": "康弘药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002862",
+      "type": "11",
+      "name": "实丰文化",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603886",
+      "type": "11",
+      "name": "元祖股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600597",
+      "type": "11",
+      "name": "光明乳业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600387",
+      "type": "11",
+      "name": "海越能源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002148",
+      "type": "11",
+      "name": "北纬科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300292",
+      "type": "11",
+      "name": "吴通控股",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300093",
+      "type": "11",
+      "name": "金刚玻璃",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh601015",
+      "type": "11",
+      "name": "陕西黑猫",
+      "picked": false
+    }
+  ]
+}

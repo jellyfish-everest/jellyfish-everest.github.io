@@ -22,6 +22,19 @@ body {
     border-color: #606060;
 }
 
+.summary-card.picked, .relative-ratio-picked{
+    border: 1px solid #ffe600;
+}
+
+.relative-ratio-picked,.relative-ratio{
+    margin: 3px;
+}
+
+
+#stockTable tr.picked td:first-child{
+    border-left: 2px solid #ffe600;
+}
+
 #indexCards .col-sm-2 {
     padding-right: 3px;
     padding-left: 3px;

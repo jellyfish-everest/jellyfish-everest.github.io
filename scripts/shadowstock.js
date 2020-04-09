@@ -124,8 +124,8 @@
                 {sinaSymbol: 'sh000001', type: '11', name: '上证指数'},
                 {sinaSymbol: 'sz399001', type: '11', name: '深圳成指'},
                 {sinaSymbol: 'sz399006', type: '11', name: '创业板指'},
-                {sinaSymbol: 'sh000300', type: '11', name: '沪深300'},
-                {sinaSymbol: 'sh000905', type: '11', name: '中证500'}
+                {sinaSymbol: 'sh000300', type: '11', name: '沪深300'}
+                // {sinaSymbol: 'sh000905', type: '11', name: '中证500'}
             ]
         },
         getUserSettings = function () {
@@ -669,6 +669,88 @@
                 });
             }
         },
+
+        _buildIndexCards = function (marketData, averageChangeRates) {
+            for (var ii = 0; ii < _userSettings.watchingIndices.length; ii++) {
+                let symbolKey = stockVarPrefix + _userSettings.watchingIndices[ii].sinaSymbol;
+                let data = marketData[symbolKey].split(',');
+
+                clearColumnEnginesCache();
+
+                let cardHtml = $("<div class='well well-sm'></div>")
+
+                // '名称'
+                let columnId = 0 // '名称'
+                if (_columnEngines[columnId]) {
+                    $('<div>').html(_columnEngines[columnId].getText(data))
+                        .appendTo(cardHtml);
+                }
+
+                // 最新价
+                columnId = 3 // '最新价'
+                if (_columnEngines[columnId]) {
+                    $('<div>').addClass(_columnEngines[columnId].getClass(data))
+                        .html(_columnEngines[columnId].getText(data))
+                        .appendTo(cardHtml);
+                }
+
+                // 涨跌/涨跌率
+                if (_columnEngines[_appSettings.changeColumnId] && _columnEngines[_appSettings.changeRateColumnId]) {
+                    $('<span>').addClass('h6')
+                        .addClass(_columnEngines[_appSettings.changeColumnId].getClass(data))
+                        .html(_columnEngines[_appSettings.changeColumnId].getText(data) + ' (' + _columnEngines[_appSettings.changeRateColumnId].getText(data) + ')')
+                        .appendTo(cardHtml);
+                }
+
+                // 选股相对盈亏率
+                for (rateType in averageChangeRates) {
+                    let beatIndexChangeRate = averageChangeRates[rateType] - _columnEngines[_appSettings.changeRateColumnId].getValue(data)
+                    let beatIndexChangeRateSide = beatIndexChangeRate > 0 ? 'btn-danger' : (beatIndexChangeRate < 0 ? 'btn-success' : '')
+                    $('<div>').addClass(beatIndexChangeRateSide)
+                        .addClass(rateType == "picked" ? 'relative-ratio-picked' : 'relative-ratio')
+                        .html(_toPercentageText(beatIndexChangeRate)).appendTo(cardHtml);
+                }
+
+                _elements.indexCards.append($("<div class='col-sm-2 col-md-2 text-center'></div>").append(cardHtml))
+            }
+        },
+
+        _buildSummaryCard = function (stat, picked) {
+            let avgChangeRateSide = stat.averageChangeRate > 0 ? 'positive' : (stat.averageChangeRate < 0 ? 'negative' : '')
+            let summaryCardHtml = $("<div class='summary-card well well-sm'></div>")
+
+            summaryCardHtml
+                .append($('<div>').append((picked ? '筛选 ':'全部 ') + stat.count + '只'))
+                .append($('<div>').append('涨跌 ').append($('<span>').addClass(avgChangeRateSide).text(_toPercentageText(stat.averageChangeRate))))
+                .append($('<div>').append('涨 ').append($('<span>').addClass("positive").text(stat.positiveStockCount))
+                    .append(" 板 ").append($('<span>').addClass("positive").text(stat.upLimitStockCount)))
+                .append($('<div>').append('跌 ').append($('<span>').addClass("negative").text(stat.negativeStockCount))
+                    .append(" 板 ").append($('<span>').addClass("negative").text(stat.downLimitStockCount)))
+
+            if (picked) {
+                summaryCardHtml.addClass('picked')
+            }
+
+            return $("<div class='col-sm-2 col-md-2 text-center'></div>").append(summaryCardHtml)
+        },
+
+        _upDownCounter = function (summaryStats, changeRate, limit) {
+            if (changeRate > 0) {
+                summaryStats.positiveStockCount++;
+                if (changeRate > limit) {
+                    summaryStats.upLimitStockCount++;
+                }
+            } else if (changeRate < 0) {
+                summaryStats.negativeStockCount++;
+                if (changeRate < -limit) {
+                    summaryStats.downLimitStockCount++;
+                }
+            }
+            summaryStats.changeRateSum += changeRate;
+            summaryStats.count++;
+        },
+
+
         _stockCallback = function (args) {
             // only update when timer is disabled
             if (!duringStockRefresh) {
@@ -680,11 +762,25 @@
                 var displayColumnsLength = _userSettings.displayColumns.length;
                 var stockTableRow;
 
-                let changeRateSum = 0;
-                let positiveStockCount = 0;
-                let negativeStockCount = 0;
-                let upLimitStockCount = 0;
-                let downLimitStockCount  = 0;
+                let summaryStatsAll = {
+                    count: 0,
+                    changeRateSum: 0,
+                    averageChangeRate: 0,
+                    positiveStockCount: 0,
+                    negativeStockCount: 0,
+                    upLimitStockCount: 0,
+                    downLimitStockCount: 0
+                };
+
+                let summaryStatsPicked = {
+                    count: 0,
+                    changeRateSum: 0,
+                    averageChangeRate: 0,
+                    positiveStockCount: 0,
+                    negativeStockCount: 0,
+                    upLimitStockCount: 0,
+                    downLimitStockCount: 0
+                };
 
                 // 表头
                 var hasActionsColumn = false;
@@ -736,22 +832,19 @@
                             }
                         }
 
+                        // Marked picked stocks
+                        if (watchingStock.picked){
+                            stockTableRow.addClass('picked');
+                        }
+
                         // Accumulate Average change rate for index card below
                         let limit = _columnEngines[0].getText(data).includes('ST') ? 0.0475 : 0.095
                         changeRate = _columnEngines[_appSettings.changeRateColumnId].getValue(data);
-                        if (changeRate > 0){
-                            positiveStockCount++;
-                            if (changeRate>limit){
-                                upLimitStockCount++;
-                            }
-                        }else if(changeRate < 0){
-                            negativeStockCount++;
-                            if (changeRate<-limit){
-                                downLimitStockCount++;
-                            }
-                        }
 
-                        changeRateSum += changeRate;
+                        _upDownCounter(summaryStatsAll, changeRate, limit)
+                        if (watchingStock.picked) {
+                            _upDownCounter(summaryStatsPicked, changeRate, limit)
+                        }
                     }
                 }
 
@@ -761,60 +854,29 @@
 
                 // Add cards
                 _elements.indexCards.empty()
-                let averageChangeRate = changeRateSum / _userSettings.watchingStocks.length
-                // 指数卡
-                for (var ii = 0; ii < _userSettings.watchingIndices.length; ii++) {
-                    let symbolKey = stockVarPrefix + _userSettings.watchingIndices[ii].sinaSymbol;
-                    let data = args[symbolKey].split(',');
+                summaryStatsAll.averageChangeRate = summaryStatsAll.changeRateSum / summaryStatsAll.count;
+                // If we have picked
+                if (summaryStatsPicked.count>0){
+                    summaryStatsPicked.averageChangeRate = summaryStatsPicked.changeRateSum / summaryStatsPicked.count;
 
-                    clearColumnEnginesCache();
+                    // 指数卡
+                    _buildIndexCards(args,{
+                        "all":summaryStatsAll.averageChangeRate,
+                        "picked":summaryStatsPicked.averageChangeRate
+                    })
 
-                    let cardHtml = $("<div class='well well-sm'></div>")
-
-                    // '名称'
-                    let columnId = 0 // '名称'
-                    if (_columnEngines[columnId]) {
-                        $('<div>').html(_columnEngines[columnId].getText(data))
-                            .appendTo(cardHtml);
-                    }
-
-                    // 最新价
-                    columnId = 3 // '最新价'
-                    if (_columnEngines[columnId]) {
-                        $('<div>').addClass(_columnEngines[columnId].getClass(data))
-                            .html(_columnEngines[columnId].getText(data))
-                            .appendTo(cardHtml);
-                    }
-
-                    // 涨跌/涨跌率
-                    if (_columnEngines[_appSettings.changeColumnId] && _columnEngines[_appSettings.changeRateColumnId]) {
-                        $('<span>').addClass('h6')
-                            .addClass(_columnEngines[_appSettings.changeColumnId].getClass(data))
-                            .html(_columnEngines[_appSettings.changeColumnId].getText(data) + ' (' + _columnEngines[_appSettings.changeRateColumnId].getText(data) + ')')
-                            .appendTo(cardHtml);
-                    }
-
-                    // 选股相对盈亏率
-                    let beatIndexChangeRate = averageChangeRate - _columnEngines[_appSettings.changeRateColumnId].getValue(data)
-                    let beatIndexChangeRateSide = beatIndexChangeRate > 0 ? 'btn-danger' : (beatIndexChangeRate < 0 ? 'btn-success' : '')
-                    $('<div>').addClass(beatIndexChangeRateSide).html(_toPercentageText(beatIndexChangeRate)).appendTo(cardHtml);
-
-                    _elements.indexCards.append($("<div class='col-sm-2 col-md-2 text-center'></div>").append(cardHtml))
+                    // 选股总计卡
+                    _elements.indexCards
+                        .prepend(_buildSummaryCard(summaryStatsPicked, true))
+                        .prepend(_buildSummaryCard(summaryStatsAll)).prepend("")
                 }
+                else{
+                    // 指数卡
+                    _buildIndexCards(args,{"all":summaryStatsAll.averageChangeRate})
 
-                // 选股总计卡·
-                let avgChangeRateSide = averageChangeRate > 0 ? 'positive' : (averageChangeRate < 0 ? 'negative' : '')
-                let summaryCardHtml = $("<div class='summary-card well well-sm'></div>")
-
-                summaryCardHtml
-                    .append($('<div>').append('平均涨跌率 ').append($('<span>').addClass(avgChangeRateSide).text(_toPercentageText(averageChangeRate))))
-                    .append($('<div>').append('涨 ').append($('<span>').addClass("positive").text(positiveStockCount))
-                                                    .append(" 板 ").append($('<span>').addClass("positive").text(upLimitStockCount)))
-                    .append($('<div>').append('跌 ').append($('<span>').addClass("negative").text(negativeStockCount))
-                                                    .append(" 板 ").append($('<span>').addClass("negative").text(downLimitStockCount)))
-
-                _elements.indexCards.prepend($("<div class='col-sm-2 col-md-2 text-center'></div>").append(summaryCardHtml))
-
+                    // 选股总计卡
+                    _elements.indexCards.prepend(_buildSummaryCard(summaryStatsAll)).prepend("")
+                }
 
             } finally {
                 _enableStockTimer(true);

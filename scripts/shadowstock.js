@@ -708,24 +708,25 @@
                     let beatIndexChangeRateSide = beatIndexChangeRate > 0 ? 'btn-danger' : (beatIndexChangeRate < 0 ? 'btn-success' : '')
                     $('<div>').addClass(beatIndexChangeRateSide)
                         .addClass(rateType == "picked" ? 'relative-ratio-picked' : 'relative-ratio')
-                        .html(_toPercentageText(beatIndexChangeRate)).appendTo(cardHtml);
+                        .text(_toPercentageText(beatIndexChangeRate)).appendTo(cardHtml);
                 }
 
                 _elements.indexCards.append($("<div class='col-sm-2 col-md-2 text-center'></div>").append(cardHtml))
             }
         },
 
-        _buildSummaryCard = function (stat, picked) {
+        _buildSummaryCard = function (stat, picked=false, isThumbsUp=false) {
             let avgChangeRateSide = stat.averageChangeRate > 0 ? 'positive' : (stat.averageChangeRate < 0 ? 'negative' : '')
             let summaryCardHtml = $("<div class='summary-card well well-sm'></div>")
 
             summaryCardHtml
-                .append($('<div>').append((picked ? '筛选 ':'全部 ') + stat.count + '只'))
-                .append($('<div>').append('涨跌 ').append($('<span>').addClass(avgChangeRateSide).text(_toPercentageText(stat.averageChangeRate))))
+                .append($('<div>').append((picked ? '筛选 ' : '全部 ') + stat.count + ' 只'))
+                .append($('<div>').append('涨跌 ').append($('<span>').addClass(avgChangeRateSide).text((avgChangeRateSide ? '🐮 ' : '🐻 ')+_toPercentageText(stat.averageChangeRate))))
                 .append($('<div>').append('涨 ').append($('<span>').addClass("positive").text(stat.positiveStockCount))
                     .append(" 板 ").append($('<span>').addClass("positive").text(stat.upLimitStockCount)))
                 .append($('<div>').append('跌 ').append($('<span>').addClass("negative").text(stat.negativeStockCount))
                     .append(" 板 ").append($('<span>').addClass("negative").text(stat.downLimitStockCount)))
+                .append($('<div>').html((isThumbsUp?'👍':'👎') ))
 
             if (picked) {
                 summaryCardHtml.addClass('picked')
@@ -867,8 +868,8 @@
 
                     // 选股总计卡
                     _elements.indexCards
-                        .prepend(_buildSummaryCard(summaryStatsPicked, true))
-                        .prepend(_buildSummaryCard(summaryStatsAll)).prepend("")
+                        .prepend(_buildSummaryCard(summaryStatsPicked, true, summaryStatsPicked.averageChangeRate > summaryStatsAll.averageChangeRate))
+                        .prepend(_buildSummaryCard(summaryStatsAll, false, summaryStatsPicked.averageChangeRate < summaryStatsAll.averageChangeRate))
                 }
                 else{
                     // 指数卡

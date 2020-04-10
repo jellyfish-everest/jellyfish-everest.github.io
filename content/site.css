@@ -18,12 +18,12 @@ body {
   padding: 3px;
 }
 
-.summary-card {
-    border-color: #606060;
+.summary-card,.relative-ratio{
+    border: 2px solid #e0e0e0;
 }
 
-.summary-card.picked, .relative-ratio-picked{
-    border: 1px solid #ffe600;
+.summary-card.picked,.relative-ratio-picked{
+    border: 2px solid #ffe600;
 }
 
 .relative-ratio-picked,.relative-ratio{
@@ -38,6 +38,10 @@ body {
 #indexCards .col-sm-2 {
     padding-right: 3px;
     padding-left: 3px;
+}
+
+.float-right {
+    float:right;
 }
 
 /*https://stackoverflow.com/questions/20429229/bootstrap-3-navigation-bar-right-margin-is-not-supposed-to-be-15px*/

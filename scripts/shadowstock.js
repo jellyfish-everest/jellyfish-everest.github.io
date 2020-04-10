@@ -715,18 +715,18 @@
             }
         },
 
-        _buildSummaryCard = function (stat, picked=false, isThumbsUp=false) {
+        _buildSummaryCard = function (stat, picked=false, isThumbsUp=undefined) {
             let avgChangeRateSide = stat.averageChangeRate > 0 ? 'positive' : (stat.averageChangeRate < 0 ? 'negative' : '')
             let summaryCardHtml = $("<div class='summary-card well well-sm'></div>")
 
             summaryCardHtml
                 .append($('<div>').append((picked ? '筛选 ' : '全部 ') + stat.count + ' 只'))
-                .append($('<div>').append('涨跌 ').append($('<span>').addClass(avgChangeRateSide).text((avgChangeRateSide ? '🐮 ' : '🐻 ')+_toPercentageText(stat.averageChangeRate))))
-                .append($('<div>').append('涨 ').append($('<span>').addClass("positive").text(stat.positiveStockCount))
+                .append($('<div>').append('涨跌 ').append($('<span>').addClass(avgChangeRateSide).text(_toPercentageText(stat.averageChangeRate))))
+                .append($('<div>').append('🐮 涨 ').append($('<span>').addClass("positive").text(stat.positiveStockCount))
                     .append(" 板 ").append($('<span>').addClass("positive").text(stat.upLimitStockCount)))
-                .append($('<div>').append('跌 ').append($('<span>').addClass("negative").text(stat.negativeStockCount))
+                .append($('<div>').append('🐻 跌 ').append($('<span>').addClass("negative").text(stat.negativeStockCount))
                     .append(" 板 ").append($('<span>').addClass("negative").text(stat.downLimitStockCount)))
-                .append($('<div>').html((isThumbsUp?'👍':'👎') ))
+                .append($('<div>').html(isThumbsUp==true ? '🏆': '&nbsp;'))
 
             if (picked) {
                 summaryCardHtml.addClass('picked')

@@ -726,7 +726,7 @@
                     .append(" 板 ").append($('<span>').addClass("positive").text(stat.upLimitStockCount)))
                 .append($('<div>').append('🐻 跌 ').append($('<span>').addClass("negative").text(stat.negativeStockCount))
                     .append(" 板 ").append($('<span>').addClass("negative").text(stat.downLimitStockCount)))
-                .append($('<div>').html(isThumbsUp==true ? '🏆': '&nbsp;'))
+                .append($('<div>').html(isThumbsUp == true ? '🏆': (isThumbsUp == false ? '&nbsp;':'')))
 
             if (picked) {
                 summaryCardHtml.addClass('picked')

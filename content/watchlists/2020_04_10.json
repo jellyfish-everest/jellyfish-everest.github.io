@@ -1,0 +1,34 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603590",
+      "type": "11",
+      "name": "康辰药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000757",
+      "type": "11",
+      "name": "浩物股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002735",
+      "type": "11",
+      "name": "王子新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300452",
+      "type": "11",
+      "name": "山河药辅",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300334",
+      "type": "11",
+      "name": "津膜科技",
+      "picked": false
+    }
+  ]
+}

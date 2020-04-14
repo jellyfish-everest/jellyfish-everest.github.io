@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300049",
+      "type": "11",
+      "name": "福瑞股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300402",
+      "type": "11",
+      "name": "宝色股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300233",
+      "type": "11",
+      "name": "金城医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300575",
+      "type": "11",
+      "name": "中旗股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603991",
+      "type": "11",
+      "name": "至正股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300334",
+      "type": "11",
+      "name": "津膜科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600527",
+      "type": "11",
+      "name": "江南高纤",
+      "picked": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600268",
+      "type": "11",
+      "name": "国电南自",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600148",
+      "type": "11",
+      "name": "长春一东",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300676",
+      "type": "11",
+      "name": "华大基因",
+      "picked": true
+    }
+  ]
+}

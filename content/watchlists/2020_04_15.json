@@ -1,0 +1,22 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002690",
+      "type": "11",
+      "name": "美亚光电",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300755",
+      "type": "11",
+      "name": "华致酒行",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002773",
+      "type": "11",
+      "name": "康弘药业",
+      "picked": true
+    }
+  ]
+}

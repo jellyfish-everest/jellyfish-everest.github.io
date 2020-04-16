@@ -1,0 +1,58 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600603",
+      "type": "11",
+      "name": "广汇物流",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002932",
+      "type": "11",
+      "name": "明德生物",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600452",
+      "type": "11",
+      "name": "涪陵电力",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600148",
+      "type": "11",
+      "name": "长春一东",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600744",
+      "type": "11",
+      "name": "华银电力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300722",
+      "type": "11",
+      "name": "新余国科",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300003",
+      "type": "11",
+      "name": "乐普医疗",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600371",
+      "type": "11",
+      "name": "万向德农",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600051",
+      "type": "11",
+      "name": "宁波联合",
+      "picked": false
+    }
+  ]
+}

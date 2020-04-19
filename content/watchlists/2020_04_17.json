@@ -1,0 +1,28 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300401",
+      "type": "11",
+      "name": "花园生物",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300368",
+      "type": "11",
+      "name": "汇金股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600597",
+      "type": "11",
+      "name": "光明乳业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002690",
+      "type": "11",
+      "name": "美亚光电",
+      "picked": false
+    }
+  ]
+}

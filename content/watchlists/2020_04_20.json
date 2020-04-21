@@ -1,0 +1,28 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300452",
+      "type": "11",
+      "name": "山河药辅",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000861",
+      "type": "11",
+      "name": "海印股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002883",
+      "type": "11",
+      "name": "中设股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600371",
+      "type": "11",
+      "name": "万向德农",
+      "picked": false
+    }
+  ]
+}

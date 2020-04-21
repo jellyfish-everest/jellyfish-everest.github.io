@@ -1,0 +1,76 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300485",
+      "type": "11",
+      "name": "赛升药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002931",
+      "type": "11",
+      "name": "锋龙股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603977",
+      "type": "11",
+      "name": "国泰集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600527",
+      "type": "11",
+      "name": "江南高纤",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000055",
+      "type": "11",
+      "name": "方大集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603979",
+      "type": "11",
+      "name": "金诚信",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603590",
+      "type": "11",
+      "name": "康辰药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000631",
+      "type": "11",
+      "name": "顺发恒业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300022",
+      "type": "11",
+      "name": "吉峰科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000019",
+      "type": "11",
+      "name": "深粮控股",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600148",
+      "type": "11",
+      "name": "长春一东",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600226",
+      "type": "11",
+      "name": "瀚叶股份",
+      "picked": false
+    }
+  ]
+}

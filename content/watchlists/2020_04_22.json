@@ -3,27 +3,32 @@
     {
       "sinaSymbol": "sz002548",
       "type": "11",
-      "name": "金新农"
+      "name": "金新农",
+      "picked": true
     },
     {
       "sinaSymbol": "sz000713",
       "type": "11",
-      "name": "丰乐种业"
+      "name": "丰乐种业",
+      "picked": true
     },
     {
       "sinaSymbol": "sh600387",
       "type": "11",
-      "name": "海越能源"
+      "name": "海越能源",
+      "picked": true
     },
     {
       "sinaSymbol": "sz300357",
       "type": "11",
-      "name": "我武生物"
+      "name": "我武生物",
+      "picked": true
     },
     {
       "sinaSymbol": "sz002238",
       "type": "11",
-      "name": "天威视讯"
+      "name": "天威视讯",
+      "picked": true
     }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh601975",
+      "type": "11",
+      "name": "招商南油",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002727",
+      "type": "11",
+      "name": "一心堂",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300305",
+      "type": "11",
+      "name": "裕兴股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300192",
+      "type": "11",
+      "name": "科斯伍德",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603088",
+      "type": "11",
+      "name": "宁波精达",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000525",
+      "type": "11",
+      "name": "红太阳",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh601890",
+      "type": "11",
+      "name": "亚星锚链",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000006",
+      "type": "11",
+      "name": "深振业A",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002277",
+      "type": "11",
+      "name": "友阿股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002066",
+      "type": "11",
+      "name": "瑞泰科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300003",
+      "type": "11",
+      "name": "乐普医疗",
+      "picked": false
+    }
+  ]
+}

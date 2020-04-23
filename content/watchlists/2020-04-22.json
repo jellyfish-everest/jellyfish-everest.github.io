@@ -1,0 +1,29 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002548",
+      "type": "11",
+      "name": "金新农"
+    },
+    {
+      "sinaSymbol": "sz000713",
+      "type": "11",
+      "name": "丰乐种业"
+    },
+    {
+      "sinaSymbol": "sh600387",
+      "type": "11",
+      "name": "海越能源"
+    },
+    {
+      "sinaSymbol": "sz300357",
+      "type": "11",
+      "name": "我武生物"
+    },
+    {
+      "sinaSymbol": "sz002238",
+      "type": "11",
+      "name": "天威视讯"
+    }
+  ]
+}

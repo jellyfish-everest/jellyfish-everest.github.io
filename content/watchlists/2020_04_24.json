@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300443",
+      "type": "11",
+      "name": "金雷股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300008",
+      "type": "11",
+      "name": "天海防务",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000796",
+      "type": "11",
+      "name": "凯撒旅业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600887",
+      "type": "11",
+      "name": "伊利股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000006",
+      "type": "11",
+      "name": "深振业A",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002251",
+      "type": "11",
+      "name": "步步高",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603179",
+      "type": "11",
+      "name": "新泉股份",
+      "picked": true
+    }
+  ]
+}

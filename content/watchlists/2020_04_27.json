@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600094",
+      "type": "11",
+      "name": "大名城",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002225",
+      "type": "11",
+      "name": "濮耐股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh601106",
+      "type": "11",
+      "name": "中国一重",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000598",
+      "type": "11",
+      "name": "兴蓉环境",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603336",
+      "type": "11",
+      "name": "宏辉果蔬",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300015",
+      "type": "11",
+      "name": "爱尔眼科",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002822",
+      "type": "11",
+      "name": "中装建设",
+      "picked": false
+    }
+  ]
+}

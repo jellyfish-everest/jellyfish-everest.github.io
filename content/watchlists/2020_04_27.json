@@ -1,45 +1,63 @@
 {
   "watchingStocks": [
     {
-      "sinaSymbol": "sh600094",
+      "sinaSymbol": "sz000068",
       "type": "11",
-      "name": "大名城",
-      "picked": false
-    },
-    {
-      "sinaSymbol": "sz002225",
-      "type": "11",
-      "name": "濮耐股份",
+      "name": "华控赛格",
       "picked": true
     },
     {
-      "sinaSymbol": "sh601106",
+      "sinaSymbol": "sh600809",
       "type": "11",
-      "name": "中国一重",
+      "name": "山西汾酒",
       "picked": false
     },
     {
-      "sinaSymbol": "sz000598",
+      "sinaSymbol": "sz000858",
       "type": "11",
-      "name": "兴蓉环境",
+      "name": "五粮液",
       "picked": false
     },
     {
-      "sinaSymbol": "sh603336",
+      "sinaSymbol": "sh600283",
       "type": "11",
-      "name": "宏辉果蔬",
+      "name": "钱江水利",
       "picked": false
     },
     {
-      "sinaSymbol": "sz300015",
+      "sinaSymbol": "sz002650",
       "type": "11",
-      "name": "爱尔眼科",
+      "name": "加加食品",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002533",
+      "type": "11",
+      "name": "金杯电工",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600246",
+      "type": "11",
+      "name": "万通地产",
       "picked": false
     },
     {
-      "sinaSymbol": "sz002822",
+      "sinaSymbol": "sz300093",
       "type": "11",
-      "name": "中装建设",
+      "name": "金刚玻璃",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002327",
+      "type": "11",
+      "name": "富安娜",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603179",
+      "type": "11",
+      "name": "新泉股份",
       "picked": false
     }
   ]

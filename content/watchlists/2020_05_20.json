@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603979",
+      "type": "11",
+      "name": "金诚信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300644",
+      "type": "11",
+      "name": "南京聚隆",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300260",
+      "type": "11",
+      "name": "新莱应材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000301",
+      "type": "11",
+      "name": "东方盛虹",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002050",
+      "type": "11",
+      "name": "三花智控",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300415",
+      "type": "11",
+      "name": "伊之密",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300755",
+      "type": "11",
+      "name": "华致酒行",
+      "picked": false
+    }
+  ]
+}

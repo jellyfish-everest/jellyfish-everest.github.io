@@ -1,0 +1,58 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300676",
+      "type": "11",
+      "name": "华大基因",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002046",
+      "type": "11",
+      "name": "轴研科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300144",
+      "type": "11",
+      "name": "宋城演艺",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000869",
+      "type": "11",
+      "name": "张裕A",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600729",
+      "type": "11",
+      "name": "重庆百货",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300453",
+      "type": "11",
+      "name": "三鑫医疗",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300357",
+      "type": "11",
+      "name": "我武生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000403",
+      "type": "11",
+      "name": "双林生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002891",
+      "type": "11",
+      "name": "中宠股份",
+      "picked": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002251",
+      "type": "11",
+      "name": "步步高",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300220",
+      "type": "11",
+      "name": "金运激光",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300200",
+      "type": "11",
+      "name": "高盟新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603979",
+      "type": "11",
+      "name": "金诚信",
+      "picked": true
+    }
+  ]
+}

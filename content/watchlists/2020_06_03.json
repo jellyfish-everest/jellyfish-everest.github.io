@@ -1,0 +1,64 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300526",
+      "type": "11",
+      "name": "中潜股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300337",
+      "type": "11",
+      "name": "银邦股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300604",
+      "type": "11",
+      "name": "长川科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300706",
+      "type": "11",
+      "name": "阿石创",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002666",
+      "type": "11",
+      "name": "德联集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002394",
+      "type": "11",
+      "name": "联发股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300656",
+      "type": "11",
+      "name": "民德电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603055",
+      "type": "11",
+      "name": "台华新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300031",
+      "type": "11",
+      "name": "宝通科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600099",
+      "type": "11",
+      "name": "林海股份",
+      "picked": false
+    }
+  ]
+}

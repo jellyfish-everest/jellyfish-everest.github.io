@@ -1,0 +1,64 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002635",
+      "type": "11",
+      "name": "安洁科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603922",
+      "type": "11",
+      "name": "金鸿顺",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603711",
+      "type": "11",
+      "name": "香飘飘",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002050",
+      "type": "11",
+      "name": "三花智控",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600811",
+      "type": "11",
+      "name": "东方集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600724",
+      "type": "11",
+      "name": "宁波富达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300075",
+      "type": "11",
+      "name": "数字政通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300245",
+      "type": "11",
+      "name": "天玑科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601689",
+      "type": "11",
+      "name": "拓普集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002481",
+      "type": "11",
+      "name": "双塔食品",
+      "picked": false
+    }
+  ]
+}

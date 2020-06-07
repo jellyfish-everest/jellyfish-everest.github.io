@@ -1,0 +1,52 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300448",
+      "type": "11",
+      "name": "浩云科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603222",
+      "type": "11",
+      "name": "济民制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000557",
+      "type": "11",
+      "name": "西部创业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002594",
+      "type": "11",
+      "name": "比亚迪",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002928",
+      "type": "11",
+      "name": "华夏航空",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002931",
+      "type": "11",
+      "name": "锋龙股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300263",
+      "type": "11",
+      "name": "隆华科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300163",
+      "type": "11",
+      "name": "先锋新材",
+      "picked": true
+    }
+  ]
+}

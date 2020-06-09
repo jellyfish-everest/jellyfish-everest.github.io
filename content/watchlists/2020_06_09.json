@@ -1,0 +1,88 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603639",
+      "type": "11",
+      "name": "海利尔",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002925",
+      "type": "11",
+      "name": "盈趣科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002896",
+      "type": "11",
+      "name": "中大力德",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603757",
+      "type": "11",
+      "name": "大元泵业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002555",
+      "type": "11",
+      "name": "三七互娱",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603665",
+      "type": "11",
+      "name": "康隆达",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600754",
+      "type": "11",
+      "name": "锦江酒店",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000801",
+      "type": "11",
+      "name": "四川九洲",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300231",
+      "type": "11",
+      "name": "银信科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000880",
+      "type": "11",
+      "name": "潍柴重机",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002522",
+      "type": "11",
+      "name": "浙江众成",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600119",
+      "type": "11",
+      "name": "ST长投",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600246",
+      "type": "11",
+      "name": "万通地产",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002582",
+      "type": "11",
+      "name": "好想你",
+      "picked": true
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300705",
+      "type": "11",
+      "name": "九典制药",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300016",
+      "type": "11",
+      "name": "北陆药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002399",
+      "type": "11",
+      "name": "海普瑞",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002313",
+      "type": "11",
+      "name": "日海智能",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300648",
+      "type": "11",
+      "name": "星云股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600814",
+      "type": "11",
+      "name": "杭州解百",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002019",
+      "type": "11",
+      "name": "亿帆医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600645",
+      "type": "11",
+      "name": "中源协和",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000965",
+      "type": "11",
+      "name": "天保基建",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600720",
+      "type": "11",
+      "name": "祁连山",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000688",
+      "type": "11",
+      "name": "国城矿业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300034",
+      "type": "11",
+      "name": "钢研高纳",
+      "picked": false
+    }
+  ]
+}

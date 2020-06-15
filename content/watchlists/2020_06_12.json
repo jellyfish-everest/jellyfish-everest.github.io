@@ -1,0 +1,52 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002214",
+      "type": "11",
+      "name": "大立科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600773",
+      "type": "11",
+      "name": "西藏城投",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002726",
+      "type": "11",
+      "name": "龙大肉食",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603976",
+      "type": "11",
+      "name": "正川股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002025",
+      "type": "11",
+      "name": "航天电器",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300175",
+      "type": "11",
+      "name": "朗源股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000948",
+      "type": "11",
+      "name": "南天信息",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603139",
+      "type": "11",
+      "name": "康惠制药",
+      "picked": false
+    }
+  ]
+}

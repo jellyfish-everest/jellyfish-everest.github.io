@@ -1,0 +1,76 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300055",
+      "type": "11",
+      "name": "万邦达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000902",
+      "type": "11",
+      "name": "新洋丰",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002125",
+      "type": "11",
+      "name": "湘潭电化",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002669",
+      "type": "11",
+      "name": "康达新材",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300044",
+      "type": "11",
+      "name": "赛为智能",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300245",
+      "type": "11",
+      "name": "天玑科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002780",
+      "type": "11",
+      "name": "三夫户外",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002362",
+      "type": "11",
+      "name": "汉王科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600299",
+      "type": "11",
+      "name": "安迪苏",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300119",
+      "type": "11",
+      "name": "瑞普生物",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600037",
+      "type": "11",
+      "name": "歌华有线",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300692",
+      "type": "11",
+      "name": "中环环保",
+      "picked": false
+    }
+  ]
+}

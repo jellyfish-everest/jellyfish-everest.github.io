@@ -1,0 +1,142 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603799",
+      "type": "11",
+      "name": "华友钴业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300025",
+      "type": "11",
+      "name": "华星创业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300161",
+      "type": "11",
+      "name": "华中数控",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600198",
+      "type": "11",
+      "name": "大唐电信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300628",
+      "type": "11",
+      "name": "亿联网络",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000561",
+      "type": "11",
+      "name": "烽火电子",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300741",
+      "type": "11",
+      "name": "华宝股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300687",
+      "type": "11",
+      "name": "赛意信息",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002636",
+      "type": "11",
+      "name": "金安国纪",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002281",
+      "type": "11",
+      "name": "光迅科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300181",
+      "type": "11",
+      "name": "佐力药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002802",
+      "type": "11",
+      "name": "洪汇新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002484",
+      "type": "11",
+      "name": "江海股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300114",
+      "type": "11",
+      "name": "中航电测",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002389",
+      "type": "11",
+      "name": "航天彩虹",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000801",
+      "type": "11",
+      "name": "四川九洲",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002827",
+      "type": "11",
+      "name": "高争民爆",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002308",
+      "type": "11",
+      "name": "威创股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300739",
+      "type": "11",
+      "name": "明阳电路",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600055",
+      "type": "11",
+      "name": "万东医疗",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000829",
+      "type": "11",
+      "name": "天音控股",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603039",
+      "type": "11",
+      "name": "泛微网络",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002022",
+      "type": "11",
+      "name": "科华生物",
+      "picked": true
+    }
+  ]
+}

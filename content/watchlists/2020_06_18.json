@@ -1,0 +1,70 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600456",
+      "type": "11",
+      "name": "宝钛股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300054",
+      "type": "11",
+      "name": "鼎龙股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600900",
+      "type": "11",
+      "name": "长江电力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000582",
+      "type": "11",
+      "name": "北部湾港",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000600",
+      "type": "11",
+      "name": "建投能源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000526",
+      "type": "11",
+      "name": "紫光学大",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002279",
+      "type": "11",
+      "name": "久其软件",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603693",
+      "type": "11",
+      "name": "江苏新能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002883",
+      "type": "11",
+      "name": "中设股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600804",
+      "type": "11",
+      "name": "鹏博士",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002576",
+      "type": "11",
+      "name": "通达动力",
+      "picked": false
+    }
+  ]
+}

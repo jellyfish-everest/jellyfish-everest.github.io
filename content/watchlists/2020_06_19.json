@@ -1,0 +1,64 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh601108",
+      "type": "11",
+      "name": "财通证券",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600030",
+      "type": "11",
+      "name": "中信证券",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300185",
+      "type": "11",
+      "name": "通裕重工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000571",
+      "type": "11",
+      "name": "*ST大洲",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300033",
+      "type": "11",
+      "name": "同花顺",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000538",
+      "type": "11",
+      "name": "云南白药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002709",
+      "type": "11",
+      "name": "天赐材料",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603030",
+      "type": "11",
+      "name": "全筑股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002735",
+      "type": "11",
+      "name": "王子新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000895",
+      "type": "11",
+      "name": "双汇发展",
+      "picked": false
+    }
+  ]
+}

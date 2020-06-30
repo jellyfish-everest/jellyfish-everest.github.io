@@ -1,0 +1,64 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300341",
+      "type": "11",
+      "name": "麦克奥迪",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603606",
+      "type": "11",
+      "name": "东方电缆",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600116",
+      "type": "11",
+      "name": "三峡水利",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002373",
+      "type": "11",
+      "name": "千方科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600719",
+      "type": "11",
+      "name": "大连热电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600353",
+      "type": "11",
+      "name": "旭光股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002884",
+      "type": "11",
+      "name": "凌霄泵业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600283",
+      "type": "11",
+      "name": "钱江水利",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300666",
+      "type": "11",
+      "name": "江丰电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300592",
+      "type": "11",
+      "name": "华凯创意",
+      "picked": true
+    }
+  ]
+}

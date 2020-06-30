@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300010",
+      "type": "11",
+      "name": "立思辰",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000733",
+      "type": "11",
+      "name": "振华科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600594",
+      "type": "11",
+      "name": "益佰制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002932",
+      "type": "11",
+      "name": "明德生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300263",
+      "type": "11",
+      "name": "隆华科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002389",
+      "type": "11",
+      "name": "航天彩虹",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603976",
+      "type": "11",
+      "name": "正川股份",
+      "picked": false
+    }
+  ]
+}

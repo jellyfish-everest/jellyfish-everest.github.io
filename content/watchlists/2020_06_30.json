@@ -1,0 +1,100 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh601519",
+      "type": "11",
+      "name": "大智慧",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603021",
+      "type": "11",
+      "name": "山东华鹏",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601636",
+      "type": "11",
+      "name": "旗滨集团",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002839",
+      "type": "11",
+      "name": "张家港行",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300078",
+      "type": "11",
+      "name": "思创医惠",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603980",
+      "type": "11",
+      "name": "吉华集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601222",
+      "type": "11",
+      "name": "林洋能源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600830",
+      "type": "11",
+      "name": "香溢融通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300161",
+      "type": "11",
+      "name": "华中数控",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300185",
+      "type": "11",
+      "name": "通裕重工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300607",
+      "type": "11",
+      "name": "拓斯达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002218",
+      "type": "11",
+      "name": "拓日新能",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603707",
+      "type": "11",
+      "name": "健友股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300454",
+      "type": "11",
+      "name": "深信服",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300511",
+      "type": "11",
+      "name": "雪榕生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002802",
+      "type": "11",
+      "name": "洪汇新材",
+      "picked": false
+    }
+  ]
+}

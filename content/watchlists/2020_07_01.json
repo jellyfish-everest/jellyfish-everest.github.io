@@ -1,0 +1,118 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002298",
+      "type": "11",
+      "name": "中电兴发",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603380",
+      "type": "11",
+      "name": "易德龙",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002023",
+      "type": "11",
+      "name": "海特高新",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002259",
+      "type": "11",
+      "name": "*ST升达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002049",
+      "type": "11",
+      "name": "紫光国微",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000656",
+      "type": "11",
+      "name": "金科股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002253",
+      "type": "11",
+      "name": "川大智胜",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300075",
+      "type": "11",
+      "name": "数字政通",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300330",
+      "type": "11",
+      "name": "华虹计通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600731",
+      "type": "11",
+      "name": "湖南海利",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600206",
+      "type": "11",
+      "name": "有研新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002184",
+      "type": "11",
+      "name": "海得控制",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300692",
+      "type": "11",
+      "name": "中环环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002507",
+      "type": "11",
+      "name": "涪陵榨菜",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300563",
+      "type": "11",
+      "name": "神宇股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002782",
+      "type": "11",
+      "name": "可立克",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300515",
+      "type": "11",
+      "name": "三德科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603988",
+      "type": "11",
+      "name": "中电电机",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300041",
+      "type": "11",
+      "name": "回天新材",
+      "picked": true
+    }
+  ]
+}

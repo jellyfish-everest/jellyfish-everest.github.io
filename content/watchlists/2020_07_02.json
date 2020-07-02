@@ -1,0 +1,136 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002326",
+      "type": "11",
+      "name": "永太科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600754",
+      "type": "11",
+      "name": "锦江酒店",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000619",
+      "type": "11",
+      "name": "海螺型材",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002360",
+      "type": "11",
+      "name": "同德化工",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300192",
+      "type": "11",
+      "name": "科斯伍德",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603123",
+      "type": "11",
+      "name": "翠微股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600649",
+      "type": "11",
+      "name": "城投控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300534",
+      "type": "11",
+      "name": "陇神戎发",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300392",
+      "type": "11",
+      "name": "腾信股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601515",
+      "type": "11",
+      "name": "东风股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600116",
+      "type": "11",
+      "name": "三峡水利",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600155",
+      "type": "11",
+      "name": "华创阳安",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002334",
+      "type": "11",
+      "name": "英威腾",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002798",
+      "type": "11",
+      "name": "帝欧家居",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000776",
+      "type": "11",
+      "name": "广发证券",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300484",
+      "type": "11",
+      "name": "蓝海华腾",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600030",
+      "type": "11",
+      "name": "中信证券",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600629",
+      "type": "11",
+      "name": "华建集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600739",
+      "type": "11",
+      "name": "辽宁成大",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002185",
+      "type": "11",
+      "name": "华天科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000965",
+      "type": "11",
+      "name": "天保基建",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300351",
+      "type": "11",
+      "name": "永贵电器",
+      "picked": true
+    }
+  ]
+}

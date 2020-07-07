@@ -129,7 +129,9 @@
             ]
         },
         getUserSettings = function () {
-            var userSettings = $.cookie(_appId);
+            // Retrieve user setting from local storage
+            var userSettings = JSON.parse(localStorage.getItem(_appId));
+
             if (!userSettings) {
                 _userSettings = defaultUserSettings;
                 return;
@@ -151,7 +153,9 @@
             return;
         },
         setUserSettings = function () {
-            $.cookie(_appId, _userSettings, {expires: _appSettings.cookieExpires});
+            // Store user setting in local storage
+            localStorage.setItem(_appId,  JSON.stringify(_userSettings));
+
             // send a request and update the sotck list right wawy
             stockRequest();
         },

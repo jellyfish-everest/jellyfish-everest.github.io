@@ -1,0 +1,1624 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300337",
+      "type": "11",
+      "name": "银邦股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300491",
+      "type": "11",
+      "name": "通合科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300324",
+      "type": "11",
+      "name": "旋极信息",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600130",
+      "type": "11",
+      "name": "波导股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300707",
+      "type": "11",
+      "name": "威唐工业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300102",
+      "type": "11",
+      "name": "乾照光电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603305",
+      "type": "11",
+      "name": "旭升股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh601330",
+      "type": "11",
+      "name": "绿色动力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603738",
+      "type": "11",
+      "name": "泰晶科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603010",
+      "type": "11",
+      "name": "万盛股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002519",
+      "type": "11",
+      "name": "银河电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603595",
+      "type": "11",
+      "name": "东尼电子",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002396",
+      "type": "11",
+      "name": "星网锐捷",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300128",
+      "type": "11",
+      "name": "锦富技术",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600505",
+      "type": "11",
+      "name": "西昌电力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603876",
+      "type": "11",
+      "name": "鼎胜新材",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002313",
+      "type": "11",
+      "name": "日海智能",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600865",
+      "type": "11",
+      "name": "百大集团",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300202",
+      "type": "11",
+      "name": "聚龙股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300376",
+      "type": "11",
+      "name": "易事特",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002492",
+      "type": "11",
+      "name": "恒基达鑫",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600863",
+      "type": "11",
+      "name": "内蒙华电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300185",
+      "type": "11",
+      "name": "通裕重工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000798",
+      "type": "11",
+      "name": "中水渔业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002549",
+      "type": "11",
+      "name": "凯美特气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000876",
+      "type": "11",
+      "name": "新希望",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300386",
+      "type": "11",
+      "name": "飞天诚信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002383",
+      "type": "11",
+      "name": "合众思壮",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600828",
+      "type": "11",
+      "name": "茂业商业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002006",
+      "type": "11",
+      "name": "精功科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002556",
+      "type": "11",
+      "name": "辉隆股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002550",
+      "type": "11",
+      "name": "千红制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300271",
+      "type": "11",
+      "name": "华宇软件",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002755",
+      "type": "11",
+      "name": "奥赛康",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603358",
+      "type": "11",
+      "name": "华达科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002067",
+      "type": "11",
+      "name": "景兴纸业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002775",
+      "type": "11",
+      "name": "文科园林",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600299",
+      "type": "11",
+      "name": "安迪苏",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002020",
+      "type": "11",
+      "name": "京新药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002561",
+      "type": "11",
+      "name": "徐家汇",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002429",
+      "type": "11",
+      "name": "兆驰股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002481",
+      "type": "11",
+      "name": "双塔食品",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300576",
+      "type": "11",
+      "name": "容大感光",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002293",
+      "type": "11",
+      "name": "罗莱生活",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600730",
+      "type": "11",
+      "name": "中国高科",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300454",
+      "type": "11",
+      "name": "深信服",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002365",
+      "type": "11",
+      "name": "永安药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002152",
+      "type": "11",
+      "name": "广电运通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300757",
+      "type": "11",
+      "name": "罗博特科",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603055",
+      "type": "11",
+      "name": "台华新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000688",
+      "type": "11",
+      "name": "国城矿业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000592",
+      "type": "11",
+      "name": "平潭发展",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600714",
+      "type": "11",
+      "name": "金瑞矿业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603611",
+      "type": "11",
+      "name": "诺力股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600854",
+      "type": "11",
+      "name": "春兰股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600480",
+      "type": "11",
+      "name": "凌云股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000004",
+      "type": "11",
+      "name": "国农科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000005",
+      "type": "11",
+      "name": "世纪星源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000023",
+      "type": "11",
+      "name": "深天地A",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000150",
+      "type": "11",
+      "name": "宜华健康",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000409",
+      "type": "11",
+      "name": "ST地矿",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000413",
+      "type": "11",
+      "name": "东旭光电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000420",
+      "type": "11",
+      "name": "吉林化纤",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000505",
+      "type": "11",
+      "name": "京粮控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000523",
+      "type": "11",
+      "name": "广州浪奇",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000558",
+      "type": "11",
+      "name": "莱茵体育",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000566",
+      "type": "11",
+      "name": "海南海药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000586",
+      "type": "11",
+      "name": "汇源通信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000590",
+      "type": "11",
+      "name": "启迪古汉",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000597",
+      "type": "11",
+      "name": "东北制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000601",
+      "type": "11",
+      "name": "韶能股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000637",
+      "type": "11",
+      "name": "茂化实华",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000655",
+      "type": "11",
+      "name": "金岭矿业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000705",
+      "type": "11",
+      "name": "浙江震元",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000757",
+      "type": "11",
+      "name": "浩物股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000818",
+      "type": "11",
+      "name": "航锦科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000821",
+      "type": "11",
+      "name": "京山轻机",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000833",
+      "type": "11",
+      "name": "粤桂股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000921",
+      "type": "11",
+      "name": "海信家电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000975",
+      "type": "11",
+      "name": "银泰黄金",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002009",
+      "type": "11",
+      "name": "天奇股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002014",
+      "type": "11",
+      "name": "永新股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002064",
+      "type": "11",
+      "name": "华峰氨纶",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002074",
+      "type": "11",
+      "name": "国轩高科",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002088",
+      "type": "11",
+      "name": "鲁阳节能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002090",
+      "type": "11",
+      "name": "金智科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002101",
+      "type": "11",
+      "name": "广东鸿图",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002115",
+      "type": "11",
+      "name": "三维通信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002137",
+      "type": "11",
+      "name": "麦达数字",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002169",
+      "type": "11",
+      "name": "智光电气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002170",
+      "type": "11",
+      "name": "芭田股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002178",
+      "type": "11",
+      "name": "延华智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002180",
+      "type": "11",
+      "name": "纳思达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002192",
+      "type": "11",
+      "name": "*ST融捷",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002199",
+      "type": "11",
+      "name": "东晶电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002215",
+      "type": "11",
+      "name": "诺普信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002224",
+      "type": "11",
+      "name": "三力士",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002265",
+      "type": "11",
+      "name": "西仪股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002309",
+      "type": "11",
+      "name": "中利集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002374",
+      "type": "11",
+      "name": "丽鹏股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002390",
+      "type": "11",
+      "name": "信邦制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002391",
+      "type": "11",
+      "name": "长青股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002406",
+      "type": "11",
+      "name": "远东传动",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002412",
+      "type": "11",
+      "name": "汉森制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002424",
+      "type": "11",
+      "name": "贵州百灵",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002451",
+      "type": "11",
+      "name": "摩恩电气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002469",
+      "type": "11",
+      "name": "三维工程",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002490",
+      "type": "11",
+      "name": "山东墨龙",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002510",
+      "type": "11",
+      "name": "天汽模",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002512",
+      "type": "11",
+      "name": "达华智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002528",
+      "type": "11",
+      "name": "英飞拓",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002533",
+      "type": "11",
+      "name": "金杯电工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002547",
+      "type": "11",
+      "name": "春兴精工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002587",
+      "type": "11",
+      "name": "奥拓电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002615",
+      "type": "11",
+      "name": "哈尔斯",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002639",
+      "type": "11",
+      "name": "雪人股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002649",
+      "type": "11",
+      "name": "博彦科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002659",
+      "type": "11",
+      "name": "凯文教育",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002663",
+      "type": "11",
+      "name": "普邦股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002682",
+      "type": "11",
+      "name": "龙洲股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002694",
+      "type": "11",
+      "name": "顾地科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002718",
+      "type": "11",
+      "name": "友邦吊顶",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002757",
+      "type": "11",
+      "name": "南兴股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002759",
+      "type": "11",
+      "name": "天际股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002771",
+      "type": "11",
+      "name": "真视通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002787",
+      "type": "11",
+      "name": "华源控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002788",
+      "type": "11",
+      "name": "鹭燕医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002793",
+      "type": "11",
+      "name": "罗欣药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002796",
+      "type": "11",
+      "name": "世嘉科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002806",
+      "type": "11",
+      "name": "华锋股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002813",
+      "type": "11",
+      "name": "路畅科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002822",
+      "type": "11",
+      "name": "中装建设",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002833",
+      "type": "11",
+      "name": "弘亚数控",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002843",
+      "type": "11",
+      "name": "泰嘉股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002852",
+      "type": "11",
+      "name": "道道全",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002887",
+      "type": "11",
+      "name": "绿茵生态",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002893",
+      "type": "11",
+      "name": "华通热力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002929",
+      "type": "11",
+      "name": "润建股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300004",
+      "type": "11",
+      "name": "南风股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300021",
+      "type": "11",
+      "name": "大禹节水",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300048",
+      "type": "11",
+      "name": "合康新能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300057",
+      "type": "11",
+      "name": "万顺新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300064",
+      "type": "11",
+      "name": "豫金刚石",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300070",
+      "type": "11",
+      "name": "碧水源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300079",
+      "type": "11",
+      "name": "数码科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300091",
+      "type": "11",
+      "name": "金通灵",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300096",
+      "type": "11",
+      "name": "易联众",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300103",
+      "type": "11",
+      "name": "达刚控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300126",
+      "type": "11",
+      "name": "锐奇股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300157",
+      "type": "11",
+      "name": "恒泰艾普",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300158",
+      "type": "11",
+      "name": "振东制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300184",
+      "type": "11",
+      "name": "力源信息",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300199",
+      "type": "11",
+      "name": "翰宇药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300213",
+      "type": "11",
+      "name": "佳讯飞鸿",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300221",
+      "type": "11",
+      "name": "银禧科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300222",
+      "type": "11",
+      "name": "科大智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300230",
+      "type": "11",
+      "name": "永利股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300248",
+      "type": "11",
+      "name": "新开普",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300254",
+      "type": "11",
+      "name": "仟源医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300267",
+      "type": "11",
+      "name": "尔康制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300270",
+      "type": "11",
+      "name": "中威电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300276",
+      "type": "11",
+      "name": "三丰智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300279",
+      "type": "11",
+      "name": "和晶科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300287",
+      "type": "11",
+      "name": "飞利信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300292",
+      "type": "11",
+      "name": "吴通控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300300",
+      "type": "11",
+      "name": "汉鼎宇佑",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300301",
+      "type": "11",
+      "name": "长方集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300307",
+      "type": "11",
+      "name": "慈星股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300310",
+      "type": "11",
+      "name": "宜通世纪",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300320",
+      "type": "11",
+      "name": "海达股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300359",
+      "type": "11",
+      "name": "全通教育",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300370",
+      "type": "11",
+      "name": "安控科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300420",
+      "type": "11",
+      "name": "五洋停车",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300421",
+      "type": "11",
+      "name": "力星股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300424",
+      "type": "11",
+      "name": "航新科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300461",
+      "type": "11",
+      "name": "田中精机",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300473",
+      "type": "11",
+      "name": "德尔股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300478",
+      "type": "11",
+      "name": "杭州高新",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300490",
+      "type": "11",
+      "name": "华自科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300516",
+      "type": "11",
+      "name": "久之洋",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300546",
+      "type": "11",
+      "name": "雄帝科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300559",
+      "type": "11",
+      "name": "佳发教育",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300569",
+      "type": "11",
+      "name": "天能重工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300570",
+      "type": "11",
+      "name": "太辰光",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300581",
+      "type": "11",
+      "name": "晨曦航空",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300589",
+      "type": "11",
+      "name": "江龙船艇",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300598",
+      "type": "11",
+      "name": "诚迈科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300611",
+      "type": "11",
+      "name": "美力科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300647",
+      "type": "11",
+      "name": "超频三",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300659",
+      "type": "11",
+      "name": "中孚信息",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300668",
+      "type": "11",
+      "name": "杰恩设计",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300670",
+      "type": "11",
+      "name": "大烨智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300698",
+      "type": "11",
+      "name": "万马科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300700",
+      "type": "11",
+      "name": "岱勒新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300716",
+      "type": "11",
+      "name": "国立科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300818",
+      "type": "11",
+      "name": "耐普矿机",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600027",
+      "type": "11",
+      "name": "华电国际",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600110",
+      "type": "11",
+      "name": "诺德股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600117",
+      "type": "11",
+      "name": "西宁特钢",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600118",
+      "type": "11",
+      "name": "中国卫星",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600127",
+      "type": "11",
+      "name": "金健米业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600189",
+      "type": "11",
+      "name": "吉林森工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600203",
+      "type": "11",
+      "name": "福日电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600258",
+      "type": "11",
+      "name": "首旅酒店",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600297",
+      "type": "11",
+      "name": "广汇汽车",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600327",
+      "type": "11",
+      "name": "大东方",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600351",
+      "type": "11",
+      "name": "亚宝药业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600360",
+      "type": "11",
+      "name": "华微电子",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600405",
+      "type": "11",
+      "name": "动力源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600420",
+      "type": "11",
+      "name": "现代制药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600435",
+      "type": "11",
+      "name": "北方导航",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600469",
+      "type": "11",
+      "name": "风神股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600493",
+      "type": "11",
+      "name": "凤竹纺织",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600526",
+      "type": "11",
+      "name": "菲达环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600528",
+      "type": "11",
+      "name": "中铁工业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600545",
+      "type": "11",
+      "name": "卓郎智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600558",
+      "type": "11",
+      "name": "大西洋",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600579",
+      "type": "11",
+      "name": "克劳斯",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600602",
+      "type": "11",
+      "name": "云赛智联",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600630",
+      "type": "11",
+      "name": "龙头股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600642",
+      "type": "11",
+      "name": "申能股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600644",
+      "type": "11",
+      "name": "乐山电力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600673",
+      "type": "11",
+      "name": "东阳光",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600698",
+      "type": "11",
+      "name": "ST天雁",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600707",
+      "type": "11",
+      "name": "彩虹股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600728",
+      "type": "11",
+      "name": "佳都科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600778",
+      "type": "11",
+      "name": "友好集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600792",
+      "type": "11",
+      "name": "云煤能源",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600808",
+      "type": "11",
+      "name": "马钢股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600833",
+      "type": "11",
+      "name": "第一医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601098",
+      "type": "11",
+      "name": "中南传媒",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603001",
+      "type": "11",
+      "name": "奥康国际",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603011",
+      "type": "11",
+      "name": "合锻智能",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603012",
+      "type": "11",
+      "name": "创力集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603032",
+      "type": "11",
+      "name": "德新交运",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603036",
+      "type": "11",
+      "name": "如通股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603042",
+      "type": "11",
+      "name": "华脉科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603045",
+      "type": "11",
+      "name": "福达合金",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603050",
+      "type": "11",
+      "name": "科林电气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603079",
+      "type": "11",
+      "name": "圣达生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603096",
+      "type": "11",
+      "name": "新经典",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603098",
+      "type": "11",
+      "name": "森特股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603103",
+      "type": "11",
+      "name": "横店影视",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603188",
+      "type": "11",
+      "name": "ST亚邦",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603306",
+      "type": "11",
+      "name": "华懋科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603331",
+      "type": "11",
+      "name": "百达精工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603357",
+      "type": "11",
+      "name": "设计总院",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603500",
+      "type": "11",
+      "name": "祥和实业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603580",
+      "type": "11",
+      "name": "艾艾精工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603602",
+      "type": "11",
+      "name": "纵横通信",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603607",
+      "type": "11",
+      "name": "京华激光",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603616",
+      "type": "11",
+      "name": "韩建河山",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603637",
+      "type": "11",
+      "name": "镇海股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603656",
+      "type": "11",
+      "name": "泰禾光电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603660",
+      "type": "11",
+      "name": "苏州科达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603679",
+      "type": "11",
+      "name": "华体科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603706",
+      "type": "11",
+      "name": "东方环宇",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603709",
+      "type": "11",
+      "name": "中源家居",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603773",
+      "type": "11",
+      "name": "沃格光电",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603822",
+      "type": "11",
+      "name": "嘉澳环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603877",
+      "type": "11",
+      "name": "太平鸟",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603878",
+      "type": "11",
+      "name": "武进不锈",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603885",
+      "type": "11",
+      "name": "吉祥航空",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603982",
+      "type": "11",
+      "name": "泉峰汽车",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603997",
+      "type": "11",
+      "name": "继峰股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688081",
+      "type": "11",
+      "name": "兴图新科",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688096",
+      "type": "11",
+      "name": "京源环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688100",
+      "type": "11",
+      "name": "威胜信息",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688159",
+      "type": "11",
+      "name": "有方科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688178",
+      "type": "11",
+      "name": "万德斯",
+      "picked": false
+    }
+  ]
+}

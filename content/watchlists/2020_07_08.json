@@ -1,0 +1,196 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh601880",
+      "type": "11",
+      "name": "大连港",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600317",
+      "type": "11",
+      "name": "营口港",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603617",
+      "type": "11",
+      "name": "君禾股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002846",
+      "type": "11",
+      "name": "英联股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002151",
+      "type": "11",
+      "name": "北斗星通",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300816",
+      "type": "11",
+      "name": "艾可蓝",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603657",
+      "type": "11",
+      "name": "春光科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002886",
+      "type": "11",
+      "name": "沃特股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600038",
+      "type": "11",
+      "name": "中直股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002504",
+      "type": "11",
+      "name": "弘高创意",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300219",
+      "type": "11",
+      "name": "鸿利智汇",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002167",
+      "type": "11",
+      "name": "东方锆业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002943",
+      "type": "11",
+      "name": "宇晶股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688021",
+      "type": "11",
+      "name": "奥福环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300748",
+      "type": "11",
+      "name": "金力永磁",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002628",
+      "type": "11",
+      "name": "成都路桥",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603121",
+      "type": "11",
+      "name": "华培动力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600491",
+      "type": "11",
+      "name": "龙元建设",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600662",
+      "type": "11",
+      "name": "强生控股",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300577",
+      "type": "11",
+      "name": "开润股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002957",
+      "type": "11",
+      "name": "科瑞技术",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600986",
+      "type": "11",
+      "name": "科达股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300101",
+      "type": "11",
+      "name": "振芯科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002661",
+      "type": "11",
+      "name": "克明面业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002943",
+      "type": "11",
+      "name": "宇晶股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000815",
+      "type": "11",
+      "name": "美利云",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603528",
+      "type": "11",
+      "name": "多伦科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300600",
+      "type": "11",
+      "name": "瑞特股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600980",
+      "type": "11",
+      "name": "北矿科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002151",
+      "type": "11",
+      "name": "北斗星通",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300045",
+      "type": "11",
+      "name": "华力创通",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh603089",
+      "type": "11",
+      "name": "正裕工业",
+      "picked": true
+    }
+  ]
+}

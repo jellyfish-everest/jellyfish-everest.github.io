@@ -664,14 +664,38 @@
                 vars[i++] = stockVarPrefix + sinaSymbol;
             })
 
+            // Send ajax call instead because _requestData() will run into "url too long" error on building the long url
+            // through data.html
             if (stockList) {
-                _requestData(stockRetriever, {
-                    token: token,
+                $.ajax({
+                    cache: true,
                     url: _formatString(_appSettings.stockUrl, token, stockList),
-                    callback: 'ShadowStock.stockCallback',
-                    vars: vars
+                    type: "GET",
+                    dataType: "script",
+                    success: function (data) {
+                        // parse the returned quote in global var into args, and pass down to callback to build the table
+                        var args = {token: token};
+                        var varsLength = vars.length;
+                        for (var i = 0; i < varsLength; i++) {
+                            try {
+                                args[vars[i]] = eval(vars[i]);
+                                // set the global quote var to undefined
+                                eval(vars[i] + ' = undefined');
+                            } catch (e) {
+                            }
+                        }
+                        ShadowStock.stockCallback(args);
+                    }
                 });
             }
+            // if (stockList) {
+            //     _requestData(stockRetriever, {
+            //         token: token,
+            //         url: _formatString(_appSettings.stockUrl, token, stockList),
+            //         callback: 'ShadowStock.stockCallback',
+            //         vars: vars
+            //     });
+            // }
         },
 
         _buildIndexCards = function (marketData, averageChangeRates) {
@@ -1190,7 +1214,7 @@
                     placement: 'bottom'
                 }).click(function () {
                     var userSettingsKey = 'cookieUserSettings';
-                    $.cookie(userSettingsKey, _userSettings);
+                    localStorage.setItem(userSettingsKey,  JSON.stringify(_userSettings));
                     $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
                         token: _appId,
                         callback: 'ShadowStock.impexpCallback',

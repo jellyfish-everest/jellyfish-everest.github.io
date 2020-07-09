@@ -679,8 +679,6 @@
                         for (var i = 0; i < varsLength; i++) {
                             try {
                                 args[vars[i]] = eval(vars[i]);
-                                // set the global quote var to undefined
-                                eval(vars[i] + ' = undefined');
                             } catch (e) {
                             }
                         }

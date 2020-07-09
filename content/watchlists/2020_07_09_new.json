@@ -1,0 +1,124 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600890",
+      "type": "11",
+      "name": "中房股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600917",
+      "type": "11",
+      "name": "重庆燃气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600556",
+      "type": "11",
+      "name": "天下秀",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002652",
+      "type": "11",
+      "name": "扬子新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300138",
+      "type": "11",
+      "name": "晨光生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603776",
+      "type": "11",
+      "name": "永安行",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002621",
+      "type": "11",
+      "name": "美吉姆",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300247",
+      "type": "11",
+      "name": "融捷健康",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300046",
+      "type": "11",
+      "name": "台基股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002741",
+      "type": "11",
+      "name": "光华科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300622",
+      "type": "11",
+      "name": "博士眼镜",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000720",
+      "type": "11",
+      "name": "新能泰山",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300447",
+      "type": "11",
+      "name": "全信股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002582",
+      "type": "11",
+      "name": "好想你",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603168",
+      "type": "11",
+      "name": "莎普爱思",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300507",
+      "type": "11",
+      "name": "苏奥传感",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600880",
+      "type": "11",
+      "name": "博瑞传播",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600375",
+      "type": "11",
+      "name": "华菱星马",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000017",
+      "type": "11",
+      "name": "*ST中华A",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300538",
+      "type": "11",
+      "name": "同益股份",
+      "picked": false
+    }
+  ]
+}

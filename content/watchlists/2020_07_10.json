@@ -1,0 +1,112 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600393",
+      "type": "11",
+      "name": "粤泰股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300651",
+      "type": "11",
+      "name": "金陵体育",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600868",
+      "type": "11",
+      "name": "梅雁吉祥",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603738",
+      "type": "11",
+      "name": "泰晶科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600548",
+      "type": "11",
+      "name": "深高速",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000659",
+      "type": "11",
+      "name": "珠海中富",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300539",
+      "type": "11",
+      "name": "横河模具",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002186",
+      "type": "11",
+      "name": "全聚德",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600736",
+      "type": "11",
+      "name": "苏州高新",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000701",
+      "type": "11",
+      "name": "厦门信达",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600738",
+      "type": "11",
+      "name": "兰州民百",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601952",
+      "type": "11",
+      "name": "苏垦农发",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002041",
+      "type": "11",
+      "name": "登海种业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002373",
+      "type": "11",
+      "name": "千方科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603866",
+      "type": "11",
+      "name": "桃李面包",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002264",
+      "type": "11",
+      "name": "新华都",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600576",
+      "type": "11",
+      "name": "祥源文化",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603214",
+      "type": "11",
+      "name": "爱婴室",
+      "picked": true
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300519",
+      "type": "11",
+      "name": "新光药业",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600618",
+      "type": "11",
+      "name": "氯碱化工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000848",
+      "type": "11",
+      "name": "承德露露",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600103",
+      "type": "11",
+      "name": "青山纸业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002229",
+      "type": "11",
+      "name": "鸿博股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002227",
+      "type": "11",
+      "name": "奥特迅",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002157",
+      "type": "11",
+      "name": "正邦科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601992",
+      "type": "11",
+      "name": "金隅集团",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600538",
+      "type": "11",
+      "name": "国发股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600300",
+      "type": "11",
+      "name": "维维股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600097",
+      "type": "11",
+      "name": "开创国际",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600281",
+      "type": "11",
+      "name": "太化股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002772",
+      "type": "11",
+      "name": "众兴菌业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601798",
+      "type": "11",
+      "name": "蓝科高新",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300406",
+      "type": "11",
+      "name": "九强生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000922",
+      "type": "11",
+      "name": "佳电股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600502",
+      "type": "11",
+      "name": "安徽建工",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002556",
+      "type": "11",
+      "name": "辉隆股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002713",
+      "type": "11",
+      "name": "东易日盛",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000061",
+      "type": "11",
+      "name": "农产品",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300753",
+      "type": "11",
+      "name": "爱朋医疗",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz002607",
+      "type": "11",
+      "name": "中公教育",
+      "picked": false
+    }
+  ]
+}

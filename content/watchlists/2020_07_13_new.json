@@ -1,0 +1,124 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002607",
+      "type": "11",
+      "name": "中公教育",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603007",
+      "type": "11",
+      "name": "花王股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002163",
+      "type": "11",
+      "name": "海南发展",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600538",
+      "type": "11",
+      "name": "国发股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603179",
+      "type": "11",
+      "name": "新泉股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002382",
+      "type": "11",
+      "name": "蓝帆医疗",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002671",
+      "type": "11",
+      "name": "龙泉股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002134",
+      "type": "11",
+      "name": "天津普林",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600821",
+      "type": "11",
+      "name": "*ST劝业",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002679",
+      "type": "11",
+      "name": "福建金森",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000025",
+      "type": "11",
+      "name": "特力A",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002185",
+      "type": "11",
+      "name": "华天科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000061",
+      "type": "11",
+      "name": "农产品",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300819",
+      "type": "11",
+      "name": "聚杰微纤",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002968",
+      "type": "11",
+      "name": "新大正",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600917",
+      "type": "11",
+      "name": "重庆燃气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002556",
+      "type": "11",
+      "name": "辉隆股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600467",
+      "type": "11",
+      "name": "好当家",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603389",
+      "type": "11",
+      "name": "*ST亚振",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300586",
+      "type": "11",
+      "name": "美联新材",
+      "picked": false
+    }
+  ]
+}

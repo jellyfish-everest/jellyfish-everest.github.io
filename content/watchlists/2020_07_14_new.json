@@ -1,0 +1,112 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002007",
+      "type": "11",
+      "name": "华兰生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002959",
+      "type": "11",
+      "name": "小熊电器",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000403",
+      "type": "11",
+      "name": "双林生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002831",
+      "type": "11",
+      "name": "裕同科技",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300146",
+      "type": "11",
+      "name": "汤臣倍健",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600676",
+      "type": "11",
+      "name": "交运股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002940",
+      "type": "11",
+      "name": "昂利康",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002581",
+      "type": "11",
+      "name": "未名医药",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300391",
+      "type": "11",
+      "name": "康跃科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600246",
+      "type": "11",
+      "name": "万通地产",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002045",
+      "type": "11",
+      "name": "国光电器",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000425",
+      "type": "11",
+      "name": "徐工机械",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603991",
+      "type": "11",
+      "name": "至正股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002034",
+      "type": "11",
+      "name": "旺能环境",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600176",
+      "type": "11",
+      "name": "中国巨石",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002254",
+      "type": "11",
+      "name": "泰和新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000031",
+      "type": "11",
+      "name": "大悦城",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300145",
+      "type": "11",
+      "name": "中金环境",
+      "picked": false
+    }
+  ]
+}

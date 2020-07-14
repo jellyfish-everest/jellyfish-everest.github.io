@@ -165,6 +165,7 @@
         initColumnEngines = function () {
             // 远程 - 数据源字段
             _appSettings.nameColumnId = 0;
+            _appSettings.todayOpenPriceColumnId = 1;
             _appSettings.closingPriceColumnId = 2;
             _appSettings.priceColumnId = 3;
             var stockColumnsLength = _appSettings.stockColumns.length;
@@ -252,7 +253,7 @@
                         {
                             this._value = 0;
                         } else {
-                            this._value = this.siblings[_appSettings.priceColumnId].getValue(data) - this.siblings[_appSettings.closingPriceColumnId].getValue(data);
+                            this._value = this.siblings[_appSettings.priceColumnId].getValue(data) - this.siblings[_appSettings.todayOpenPriceColumnId].getValue(data);
                         }
                     }
                     return this._value;
@@ -266,7 +267,7 @@
                 getText: getTextAsPercentage,
                 getValue: function (data) {
                     if (this._value == undefined) {
-                        this._value = this.siblings[_appSettings.changeColumnId].getValue(data) / this.siblings[_appSettings.closingPriceColumnId].getValue(data);
+                        this._value = this.siblings[_appSettings.changeColumnId].getValue(data) / this.siblings[_appSettings.todayOpenPriceColumnId].getValue(data);
                     }
                     return this._value;
                 }

@@ -1,0 +1,28 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300683",
+      "type": "11",
+      "name": "海特生物",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002037",
+      "type": "11",
+      "name": "保利联合",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh603116",
+      "type": "11",
+      "name": "红蜻蜓",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000028",
+      "type": "11",
+      "name": "国药一致",
+      "picked": false
+    }
+  ]
+}

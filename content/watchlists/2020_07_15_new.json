@@ -1,0 +1,64 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603517",
+      "type": "11",
+      "name": "绝味食品",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz300811",
+      "type": "11",
+      "name": "铂科新材",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002890",
+      "type": "11",
+      "name": "弘宇股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh688202",
+      "type": "11",
+      "name": "美迪西",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002263",
+      "type": "11",
+      "name": "大东南",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600706",
+      "type": "11",
+      "name": "曲江文旅",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002760",
+      "type": "11",
+      "name": "凤形股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sz000028",
+      "type": "11",
+      "name": "国药一致",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601777",
+      "type": "11",
+      "name": "力帆股份",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000690",
+      "type": "11",
+      "name": "宝新能源",
+      "picked": true
+    }
+  ]
+}

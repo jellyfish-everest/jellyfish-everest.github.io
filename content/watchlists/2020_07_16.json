@@ -1,0 +1,34 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002658",
+      "type": "11",
+      "name": "雪迪龙",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300040",
+      "type": "11",
+      "name": "九洲电气",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300692",
+      "type": "11",
+      "name": "中环环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz000610",
+      "type": "11",
+      "name": "西安旅游",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300283",
+      "type": "11",
+      "name": "温州宏丰",
+      "picked": false
+    }
+  ]
+}

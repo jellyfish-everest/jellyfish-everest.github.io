@@ -1,0 +1,28 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300283",
+      "type": "11",
+      "name": "温州宏丰",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh600732",
+      "type": "11",
+      "name": "爱旭股份",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600901",
+      "type": "11",
+      "name": "江苏租赁",
+      "picked": true
+    },
+    {
+      "sinaSymbol": "sh600309",
+      "type": "11",
+      "name": "万华化学",
+      "picked": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300779",
+      "type": "11",
+      "name": "惠城环保",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002584",
+      "type": "11",
+      "name": "西陇科学",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz300334",
+      "type": "11",
+      "name": "津膜科技",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sh601330",
+      "type": "11",
+      "name": "绿色动力",
+      "picked": false
+    },
+    {
+      "sinaSymbol": "sz002655",
+      "type": "11",
+      "name": "共达电声",
+      "picked": false
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002297",
+      "type": "11",
+      "name": "博云新材",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601208",
+      "type": "11",
+      "name": "东材科技",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603090",
+      "type": "11",
+      "name": "宏盛股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002648",
+      "type": "11",
+      "name": "卫星石化",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300162",
+      "type": "11",
+      "name": "雷曼光电",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002803",
+      "type": "11",
+      "name": "吉宏股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002469",
+      "type": "11",
+      "name": "三维工程",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000528",
+      "type": "11",
+      "name": "柳工",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002742",
+      "type": "11",
+      "name": "三圣股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603833",
+      "type": "11",
+      "name": "欧派家居",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603916",
+      "type": "11",
+      "name": "苏博特",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002367",
+      "type": "11",
+      "name": "康力电梯",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002973",
+      "type": "11",
+      "name": "侨银环保",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600456",
+      "type": "11",
+      "name": "宝钛股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600008",
+      "type": "11",
+      "name": "首创股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002094",
+      "type": "11",
+      "name": "青岛金王",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300446",
+      "type": "11",
+      "name": "乐凯新材",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000544",
+      "type": "11",
+      "name": "中原环保",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300065",
+      "type": "11",
+      "name": "海兰信",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002865",
+      "type": "11",
+      "name": "钧达股份",
+      "picked": false,
+      "sellPrice": null
+    }
+  ]
+}

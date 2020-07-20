@@ -1,0 +1,164 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300573",
+      "type": "11",
+      "name": "兴齐眼药",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002111",
+      "type": "11",
+      "name": "威海广泰",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600754",
+      "type": "11",
+      "name": "锦江酒店",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601965",
+      "type": "11",
+      "name": "中国汽研",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000889",
+      "type": "11",
+      "name": "中嘉博创",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh688025",
+      "type": "11",
+      "name": "杰普特",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300045",
+      "type": "11",
+      "name": "华力创通",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300324",
+      "type": "11",
+      "name": "旋极信息",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603898",
+      "type": "11",
+      "name": "好莱客",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000913",
+      "type": "11",
+      "name": "钱江摩托",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600189",
+      "type": "11",
+      "name": "吉林森工",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603126",
+      "type": "11",
+      "name": "中材节能",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300415",
+      "type": "11",
+      "name": "伊之密",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300114",
+      "type": "11",
+      "name": "中航电测",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002560",
+      "type": "11",
+      "name": "通达股份",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603915",
+      "type": "11",
+      "name": "国茂股份",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600438",
+      "type": "11",
+      "name": "通威股份",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300505",
+      "type": "11",
+      "name": "川金诺",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603689",
+      "type": "11",
+      "name": "皖天然气",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300674",
+      "type": "11",
+      "name": "宇信科技",
+      "picked": true,
+      "targerPrice": null,
+      "sellPrice": null
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600082",
+      "type": "11",
+      "name": "海泰发展",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603377",
+      "type": "11",
+      "name": "东方时尚",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000829",
+      "type": "11",
+      "name": "天音控股",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000910",
+      "type": "11",
+      "name": "大亚圣象",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000603",
+      "type": "11",
+      "name": "盛达资源",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600694",
+      "type": "11",
+      "name": "大商股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600509",
+      "type": "11",
+      "name": "天富能源",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002168",
+      "type": "11",
+      "name": "惠程科技",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603818",
+      "type": "11",
+      "name": "曲美家居",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300298",
+      "type": "11",
+      "name": "三诺生物",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603992",
+      "type": "11",
+      "name": "松霖科技",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000559",
+      "type": "11",
+      "name": "万向钱潮",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603683",
+      "type": "11",
+      "name": "晶华新材",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600981",
+      "type": "11",
+      "name": "汇鸿集团",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002830",
+      "type": "11",
+      "name": "名雕股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600882",
+      "type": "11",
+      "name": "妙可蓝多",
+      "picked": true,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600429",
+      "type": "11",
+      "name": "三元股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300778",
+      "type": "11",
+      "name": "新城市",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600476",
+      "type": "11",
+      "name": "湘邮科技",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300610",
+      "type": "11",
+      "name": "晨化股份",
+      "picked": false,
+      "sellPrice": null
+    }
+  ]
+}

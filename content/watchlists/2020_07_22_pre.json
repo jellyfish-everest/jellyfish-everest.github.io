@@ -1,0 +1,164 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300219",
+      "type": "11",
+      "name": "鸿利智汇",
+      "picked": false,
+      "targerPrice": 57.668659070000004,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603259",
+      "type": "11",
+      "name": "药明康德",
+      "picked": false,
+      "targerPrice": 223.51985,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603133",
+      "type": "11",
+      "name": "碳元科技",
+      "picked": false,
+      "targerPrice": 21.958520293333333,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601100",
+      "type": "11",
+      "name": "恒立液压",
+      "picked": false,
+      "targerPrice": 213.17355695999998,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600754",
+      "type": "11",
+      "name": "锦江酒店",
+      "picked": false,
+      "targerPrice": 131.61103816000002,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000156",
+      "type": "11",
+      "name": "华数传媒",
+      "picked": false,
+      "targerPrice": 13.725097941176472,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600573",
+      "type": "11",
+      "name": "惠泉啤酒",
+      "picked": false,
+      "targerPrice": 10.099247861111111,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002152",
+      "type": "11",
+      "name": "广电运通",
+      "picked": false,
+      "targerPrice": 258.5968867895,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600887",
+      "type": "11",
+      "name": "伊利股份",
+      "picked": false,
+      "targerPrice": 2836.022900241667,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600562",
+      "type": "11",
+      "name": "国睿科技",
+      "picked": false,
+      "targerPrice": 134.70911161243242,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002449",
+      "type": "11",
+      "name": "国星光电",
+      "picked": false,
+      "targerPrice": 44.31283340076923,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603798",
+      "type": "11",
+      "name": "康普顿",
+      "picked": false,
+      "targerPrice": 23.825964795000004,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000533",
+      "type": "11",
+      "name": "顺钠股份",
+      "picked": false,
+      "targerPrice": 7.220730043333337,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000657",
+      "type": "11",
+      "name": "中钨高新",
+      "picked": false,
+      "targerPrice": 31.623979293478257,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300572",
+      "type": "11",
+      "name": "安车检测",
+      "picked": false,
+      "targerPrice": 230.4769963147826,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002029",
+      "type": "11",
+      "name": "七匹狼",
+      "picked": false,
+      "targerPrice": 60.74997931500002,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002008",
+      "type": "11",
+      "name": "大族激光",
+      "picked": false,
+      "targerPrice": 569.5033520255556,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300338",
+      "type": "11",
+      "name": "开元股份",
+      "picked": false,
+      "targerPrice": 38.14319065,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603698",
+      "type": "11",
+      "name": "航天工程",
+      "picked": false,
+      "targerPrice": 17.1489451,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002544",
+      "type": "11",
+      "name": "杰赛科技",
+      "picked": false,
+      "targerPrice": 105.74711822571429,
+      "sellPrice": null
+    }
+  ]
+}

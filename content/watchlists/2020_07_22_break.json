@@ -1,0 +1,144 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002626",
+      "type": "11",
+      "name": "金达威",
+      "picked": false,
+      "slope": 14.638655462185275
+    },
+    {
+      "sinaSymbol": "sh600161",
+      "type": "11",
+      "name": "天坛生物",
+      "picked": false,
+      "slope": 6.588901559728255
+    },
+    {
+      "sinaSymbol": "sh603515",
+      "type": "11",
+      "name": "欧普照明",
+      "picked": false,
+      "slope": 6.588235294117606
+    },
+    {
+      "sinaSymbol": "sz002811",
+      "type": "11",
+      "name": "郑中设计",
+      "picked": false,
+      "slope": 6.360000000000038
+    },
+    {
+      "sinaSymbol": "sz002298",
+      "type": "11",
+      "name": "中电兴发",
+      "picked": false,
+      "slope": 5.940000000000014
+    },
+    {
+      "sinaSymbol": "sz300634",
+      "type": "11",
+      "name": "彩讯股份",
+      "picked": false,
+      "slope": 4.5963302752293185
+    },
+    {
+      "sinaSymbol": "sh603578",
+      "type": "11",
+      "name": "三星新材",
+      "picked": false,
+      "slope": 4.590163934426256
+    },
+    {
+      "sinaSymbol": "sh603208",
+      "type": "11",
+      "name": "江山欧派",
+      "picked": false,
+      "slope": 4.223044397463017
+    },
+    {
+      "sinaSymbol": "sz300248",
+      "type": "11",
+      "name": "新开普",
+      "picked": false,
+      "slope": 4.100775193798474
+    },
+    {
+      "sinaSymbol": "sz000729",
+      "type": "11",
+      "name": "燕京啤酒",
+      "picked": false,
+      "slope": 3.893617021276618
+    },
+    {
+      "sinaSymbol": "sh600131",
+      "type": "11",
+      "name": "国网信通",
+      "picked": false,
+      "slope": 3.862204724409451
+    },
+    {
+      "sinaSymbol": "sz002675",
+      "type": "11",
+      "name": "东诚药业",
+      "picked": false,
+      "slope": 3.321052631578957
+    },
+    {
+      "sinaSymbol": "sh603015",
+      "type": "11",
+      "name": "弘讯科技",
+      "picked": false,
+      "slope": 2.522727272727271
+    },
+    {
+      "sinaSymbol": "sz002444",
+      "type": "11",
+      "name": "巨星科技",
+      "picked": false,
+      "slope": 2.484126984126985
+    },
+    {
+      "sinaSymbol": "sh600763",
+      "type": "11",
+      "name": "通策医疗",
+      "picked": false,
+      "slope": 2.439198855507875
+    },
+    {
+      "sinaSymbol": "sz002940",
+      "type": "11",
+      "name": "昂利康",
+      "picked": false,
+      "slope": 2.4331683168316904
+    },
+    {
+      "sinaSymbol": "sh603776",
+      "type": "11",
+      "name": "永安行",
+      "picked": false,
+      "slope": 2.2745098039215703
+    },
+    {
+      "sinaSymbol": "sh600803",
+      "type": "11",
+      "name": "新奥股份",
+      "picked": false,
+      "slope": 2.141414141414132
+    },
+    {
+      "sinaSymbol": "sh601212",
+      "type": "11",
+      "name": "白银有色",
+      "picked": false,
+      "slope": 2.087719298245611
+    },
+    {
+      "sinaSymbol": "sz002578",
+      "type": "11",
+      "name": "闽发铝业",
+      "picked": false,
+      "slope": 1.944444444444445
+    }
+  ]
+}

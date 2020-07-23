@@ -479,7 +479,7 @@
 
                     // Populate history dropdown list from 2nd entry to end
                     let resetWatchlistDropListSelector = $('#resetWatchlistDropList')
-                    watchListArray.slice(NumNewWatchListButtons).forEach(function(watchListName)
+                    watchListArray.slice(1).forEach(function(watchListName)
                     {
                         let button_href = $("<a href='#'></a>").text(watchListName)
                         resetWatchlistDropListSelector.append($("<li></li>").append(button_href))

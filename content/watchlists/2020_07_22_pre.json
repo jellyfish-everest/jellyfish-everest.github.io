@@ -5,7 +5,7 @@
       "type": "11",
       "name": "鸿利智汇",
       "picked": false,
-      "targerPrice": 57.668659070000004,
+      "targetPrice": 57.668659070000004,
       "sellPrice": null
     },
     {
@@ -13,7 +13,7 @@
       "type": "11",
       "name": "药明康德",
       "picked": false,
-      "targerPrice": 223.51985,
+      "targetPrice": 223.51985,
       "sellPrice": null
     },
     {
@@ -21,7 +21,7 @@
       "type": "11",
       "name": "碳元科技",
       "picked": false,
-      "targerPrice": 21.958520293333333,
+      "targetPrice": 21.958520293333333,
       "sellPrice": null
     },
     {
@@ -29,7 +29,7 @@
       "type": "11",
       "name": "恒立液压",
       "picked": false,
-      "targerPrice": 213.17355695999998,
+      "targetPrice": 213.17355695999998,
       "sellPrice": null
     },
     {
@@ -37,7 +37,7 @@
       "type": "11",
       "name": "锦江酒店",
       "picked": false,
-      "targerPrice": 131.61103816000002,
+      "targetPrice": 131.61103816000002,
       "sellPrice": null
     },
     {
@@ -45,7 +45,7 @@
       "type": "11",
       "name": "华数传媒",
       "picked": false,
-      "targerPrice": 13.725097941176472,
+      "targetPrice": 13.725097941176472,
       "sellPrice": null
     },
     {
@@ -53,7 +53,7 @@
       "type": "11",
       "name": "惠泉啤酒",
       "picked": false,
-      "targerPrice": 10.099247861111111,
+      "targetPrice": 10.099247861111111,
       "sellPrice": null
     },
     {
@@ -61,7 +61,7 @@
       "type": "11",
       "name": "广电运通",
       "picked": false,
-      "targerPrice": 258.5968867895,
+      "targetPrice": 258.5968867895,
       "sellPrice": null
     },
     {
@@ -69,7 +69,7 @@
       "type": "11",
       "name": "伊利股份",
       "picked": false,
-      "targerPrice": 2836.022900241667,
+      "targetPrice": 2836.022900241667,
       "sellPrice": null
     },
     {
@@ -77,7 +77,7 @@
       "type": "11",
       "name": "国睿科技",
       "picked": false,
-      "targerPrice": 134.70911161243242,
+      "targetPrice": 134.70911161243242,
       "sellPrice": null
     },
     {
@@ -85,7 +85,7 @@
       "type": "11",
       "name": "国星光电",
       "picked": false,
-      "targerPrice": 44.31283340076923,
+      "targetPrice": 44.31283340076923,
       "sellPrice": null
     },
     {
@@ -93,7 +93,7 @@
       "type": "11",
       "name": "康普顿",
       "picked": false,
-      "targerPrice": 23.825964795000004,
+      "targetPrice": 23.825964795000004,
       "sellPrice": null
     },
     {
@@ -101,7 +101,7 @@
       "type": "11",
       "name": "顺钠股份",
       "picked": false,
-      "targerPrice": 7.220730043333337,
+      "targetPrice": 7.220730043333337,
       "sellPrice": null
     },
     {
@@ -109,7 +109,7 @@
       "type": "11",
       "name": "中钨高新",
       "picked": false,
-      "targerPrice": 31.623979293478257,
+      "targetPrice": 31.623979293478257,
       "sellPrice": null
     },
     {
@@ -117,7 +117,7 @@
       "type": "11",
       "name": "安车检测",
       "picked": false,
-      "targerPrice": 230.4769963147826,
+      "targetPrice": 230.4769963147826,
       "sellPrice": null
     },
     {
@@ -125,7 +125,7 @@
       "type": "11",
       "name": "七匹狼",
       "picked": false,
-      "targerPrice": 60.74997931500002,
+      "targetPrice": 60.74997931500002,
       "sellPrice": null
     },
     {
@@ -133,7 +133,7 @@
       "type": "11",
       "name": "大族激光",
       "picked": false,
-      "targerPrice": 569.5033520255556,
+      "targetPrice": 569.5033520255556,
       "sellPrice": null
     },
     {
@@ -141,7 +141,7 @@
       "type": "11",
       "name": "开元股份",
       "picked": false,
-      "targerPrice": 38.14319065,
+      "targetPrice": 38.14319065,
       "sellPrice": null
     },
     {
@@ -149,7 +149,7 @@
       "type": "11",
       "name": "航天工程",
       "picked": false,
-      "targerPrice": 17.1489451,
+      "targetPrice": 17.1489451,
       "sellPrice": null
     },
     {
@@ -157,7 +157,7 @@
       "type": "11",
       "name": "杰赛科技",
       "picked": false,
-      "targerPrice": 105.74711822571429,
+      "targetPrice": 105.74711822571429,
       "sellPrice": null
     }
   ]

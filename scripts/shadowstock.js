@@ -104,9 +104,10 @@
                 {id: 50, name: '操作', sortable: false},
                 {id: 54, name: '名称代码'},
                 {id: 3, name: '最新价'},
-                {id: 60, name: '目标价'},
                 // {id: 51, name: '涨跌'},
                 {id: 52, name: '涨跌率'},
+                {id: 60, name: '目标价'},
+                {id: 61, name: '斜率'},
                 {id: 4, name: '最高'},
                 {id: 5, name: '最低'},
                 {id: 1, name: '今开'},
@@ -379,6 +380,16 @@
             _columnEngines[_appSettings.targetPriceColumnId] = {
                 id: _appSettings.targetPriceColumnId,
                 name: '目标价',
+                siblings: _columnEngines,
+                getClass: getClassDefault,
+                getText: getTextForNumber,
+                getValue: getValueDefault
+            };
+
+            _appSettings.slopeColumnId = 61;
+            _columnEngines[_appSettings.slopeColumnId] = {
+                id: _appSettings.slopeColumnId,
+                name: '斜率',
                 siblings: _columnEngines,
                 getClass: getClassDefault,
                 getText: getTextForNumber,
@@ -902,6 +913,8 @@
                         data[_appSettings.quantityColumnId] = watchingStock.quantity;
                         data.type = watchingStock.type;
                         data[_appSettings.targetPriceColumnId] = watchingStock.targetPrice;
+                        data[_appSettings.slopeColumnId] = watchingStock.slope;
+
 
                         // only add row if it's in watch list
                         stockTableRow = $('<tr>').appendTo(stockTableBody);

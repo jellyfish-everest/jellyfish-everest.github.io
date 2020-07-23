@@ -1,0 +1,151 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600521",
+      "type": "11",
+      "name": "华海药业",
+      "picked": true,
+      "slope": 38.11538461538377
+    },
+    {
+      "sinaSymbol": "sh603196",
+      "type": "11",
+      "name": "日播时尚",
+      "picked": false,
+      "slope": 16.500000000004473
+    },
+    {
+      "sinaSymbol": "sh601339",
+      "type": "11",
+      "name": "百隆东方",
+      "picked": false,
+      "slope": 6.428571428571166
+    },
+    {
+      "sinaSymbol": "sh600336",
+      "type": "11",
+      "name": "澳柯玛",
+      "picked": false,
+      "slope": 4.764705882352873
+    },
+    {
+      "sinaSymbol": "sz000678",
+      "type": "11",
+      "name": "襄阳轴承",
+      "picked": false,
+      "slope": 4.700000000000237
+    },
+    {
+      "sinaSymbol": "sz002741",
+      "type": "11",
+      "name": "光华科技",
+      "picked": false,
+      "slope": 4.476190476190308
+    },
+    {
+      "sinaSymbol": "sz300239",
+      "type": "11",
+      "name": "东宝生物",
+      "picked": true,
+      "slope": 3.290322580645152
+    },
+    {
+      "sinaSymbol": "sz000782",
+      "type": "11",
+      "name": "美达股份",
+      "picked": false,
+      "slope": 3.0625000000000173
+    },
+    {
+      "sinaSymbol": "sz000632",
+      "type": "11",
+      "name": "三木集团",
+      "picked": true,
+      "slope": 2.8285714285714505
+    },
+    {
+      "sinaSymbol": "sz002116",
+      "type": "11",
+      "name": "中国海诚",
+      "picked": false,
+      "slope": 2.719999999999974
+    },
+    {
+      "sinaSymbol": "sz000716",
+      "type": "11",
+      "name": "黑芝麻",
+      "picked": false,
+      "slope": 2.6842105263157587
+    },
+    {
+      "sinaSymbol": "sz002349",
+      "type": "11",
+      "name": "精华制药",
+      "picked": true,
+      "slope": 2.4415584415584495
+    },
+    {
+      "sinaSymbol": "sz000691",
+      "type": "11",
+      "name": "亚太实业",
+      "picked": true,
+      "slope": 2.263157894736844
+    },
+    {
+      "sinaSymbol": "sh603722",
+      "type": "11",
+      "name": "阿科力",
+      "picked": true,
+      "slope": 1.8234501347708816
+    },
+    {
+      "sinaSymbol": "sz000701",
+      "type": "11",
+      "name": "厦门信达",
+      "picked": false,
+      "slope": 1.7567567567567606
+    },
+    {
+      "sinaSymbol": "sh603517",
+      "type": "11",
+      "name": "绝味食品",
+      "picked": true,
+      "slope": 1.4689075630252078
+    },
+    {
+      "sinaSymbol": "sz000153",
+      "type": "11",
+      "name": "丰原药业",
+      "picked": false,
+      "slope": 1.465116279069767
+    },
+    {
+      "sinaSymbol": "sz002347",
+      "type": "11",
+      "name": "泰尔股份",
+      "picked": false,
+      "slope": 1.3913043478260927
+    },
+    {
+      "sinaSymbol": "sh603008",
+      "type": "11",
+      "name": "喜临门",
+      "picked": false,
+      "slope": 1.3448150918411266
+    },
+    {
+      "sinaSymbol": "sh603007",
+      "type": "11",
+      "name": "花王股份",
+      "picked": false,
+      "slope": 1.2271062271062259
+    },
+    {
+      "sinaSymbol": "sz002637",
+      "type": "11",
+      "name": "赞宇科技",
+      "picked": true,
+      "slope": 1.08
+    }
+  ]
+}

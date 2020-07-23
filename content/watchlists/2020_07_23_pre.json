@@ -1,0 +1,164 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600490",
+      "type": "11",
+      "name": "鹏欣资源",
+      "picked": false,
+      "targetPrice": 4.1,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300306",
+      "type": "11",
+      "name": "远方信息",
+      "picked": false,
+      "targetPrice": 10.9604,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603133",
+      "type": "11",
+      "name": "碳元科技",
+      "picked": false,
+      "targetPrice": 21.915555555555553,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603515",
+      "type": "11",
+      "name": "欧普照明",
+      "picked": false,
+      "targetPrice": 32.57929136005718,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600562",
+      "type": "11",
+      "name": "国睿科技",
+      "picked": false,
+      "targetPrice": 19.13027027027027,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600887",
+      "type": "11",
+      "name": "伊利股份",
+      "picked": false,
+      "targetPrice": 37.68601307348041,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000561",
+      "type": "11",
+      "name": "烽火电子",
+      "picked": false,
+      "targetPrice": 8.887058823529413,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002935",
+      "type": "11",
+      "name": "天奥电子",
+      "picked": false,
+      "targetPrice": 29.244615384615383,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000657",
+      "type": "11",
+      "name": "中钨高新",
+      "picked": false,
+      "targetPrice": 7.4891304347826075,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000533",
+      "type": "11",
+      "name": "顺钠股份",
+      "picked": false,
+      "targetPrice": 3.2100000000000013,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002008",
+      "type": "11",
+      "name": "大族激光",
+      "picked": false,
+      "targetPrice": 45.01777777777778,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603355",
+      "type": "11",
+      "name": "莱克电气",
+      "picked": false,
+      "targetPrice": 28.506602567283146,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600803",
+      "type": "11",
+      "name": "新奥股份",
+      "picked": false,
+      "targetPrice": 12.879999999999999,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000831",
+      "type": "11",
+      "name": "五矿稀土",
+      "picked": false,
+      "targetPrice": 16.401666666666674,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300168",
+      "type": "11",
+      "name": "万达信息",
+      "picked": false,
+      "targetPrice": 29.909285714285716,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002933",
+      "type": "11",
+      "name": "新兴装备",
+      "picked": false,
+      "targetPrice": 43.2609267967506,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002242",
+      "type": "11",
+      "name": "九阳股份",
+      "picked": false,
+      "targetPrice": 41.920625,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002246",
+      "type": "11",
+      "name": "北化股份",
+      "picked": false,
+      "targetPrice": 8.774705882352942,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002413",
+      "type": "11",
+      "name": "雷科防务",
+      "picked": false,
+      "targetPrice": 10.346153846153847,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300581",
+      "type": "11",
+      "name": "晨曦航空",
+      "picked": false,
+      "targetPrice": 19.37666666666667,
+      "sellPrice": null
+    }
+  ]
+}

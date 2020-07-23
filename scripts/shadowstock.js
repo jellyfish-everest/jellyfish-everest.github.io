@@ -101,7 +101,7 @@
         defaultUserSettings = {
             refreshInterval: 3000,
             displayColumns: [
-                {id: 50, name: '操作'},
+                {id: 50, name: '操作', sortable: false},
                 {id: 54, name: '名称代码'},
                 {id: 3, name: '最新价'},
                 {id: 60, name: '目标价'},
@@ -155,9 +155,6 @@
         setUserSettings = function () {
             // Store user setting in local storage
             localStorage.setItem(_appId,  JSON.stringify(_userSettings));
-
-            // send a request and update the sotck list right wawy
-            stockRequest();
         },
 
         /******************** 初始化 ********************/
@@ -297,10 +294,9 @@
                 getClass: getClassDefault,
                 getText: function (data) {
                     if (this._text == undefined) {
-                            this._text = _formatString('{2} <a title="同花顺" href="https://m.10jqka.com.cn/stockpage/hs_{0}" target="_blank">{1}</a>',
+                            this._text = _formatString('{0} <a title="同花顺" href="https://m.10jqka.com.cn/stockpage/hs_{0}" target="_blank">{1}</a>',
                             this.siblings[_appSettings.symbolColumnId].getText(data),
-                            this.siblings[_appSettings.nameColumnId].getText(data),
-                            this.siblings[_appSettings.symbolColumnId].getText(data));
+                            this.siblings[_appSettings.nameColumnId].getText(data));
                     }
                     return this._text;
                 },
@@ -426,7 +422,9 @@
                     // watch indices list (reset to default list if not found in user setting file
                     _userSettings.watchingIndices = data['watchingIndices'] ? data['watchingIndices'] : defaultUserSettings.watchingIndices
 
+                    _removeSortTag(); // watchingStocks changed, remove the sort tag
                     setUserSettings();
+                    stockRequest();
                 })
                 .fail(function () {
                     showAlert(_formatString('获取[{0}]交易日股票列表失败，请检查文件格式 ', json_filename), undefined, true);
@@ -481,7 +479,7 @@
 
                     // Populate history dropdown list from 2nd entry to end
                     let resetWatchlistDropListSelector = $('#resetWatchlistDropList')
-                    watchListArray.slice(1).forEach(function(watchListName)
+                    watchListArray.slice(NumNewWatchListButtons).forEach(function(watchListName)
                     {
                         let button_href = $("<a href='#'></a>").text(watchListName)
                         resetWatchlistDropListSelector.append($("<li></li>").append(button_href))
@@ -492,6 +490,19 @@
                 }
             });
         },
+
+        _removeSortTag = function() {
+            // remove sorted tag from th
+            $('th[data-sorted]', _elements.stockTable).each(function (i) {
+                $(this).removeAttr('data-sorted');
+                $(this).removeAttr('data-sorted-direction');
+            })
+
+            // remove from user setting
+            delete _userSettings.sortedColumnName
+            delete _userSettings.sortedColumnDirection
+        },
+
         stockRetriever = $('<iframe class="hidden"></iframe>'),
         suggestionRetriever = $('<iframe class="hidden"></iframe>'),
         _init = function () {
@@ -508,6 +519,36 @@
         _start = function () {
             // 启动
             stockRequest();
+
+            stockTable = document.querySelector('#stockTable')
+            stockTable.addEventListener('Sortable.sorted', function(a)
+            {
+                // extract sorted stock id and save it in user setting so the order in preserved in setting
+                var watchingStocks = [];
+                $('.container-action>.glyphicon-move', _elements.stockTable).each(function (i) {
+                    var i = _findIndex(_userSettings.watchingStocks, 'sinaSymbol', $(this).data('id'));
+                    if (i >= 0) {
+                        watchingStocks.push(_userSettings.watchingStocks[i]);
+                    }
+                });
+                _userSettings.watchingStocks = watchingStocks;
+
+                // extract sorted column and direction and stored in setting (currently not used)
+                let sortedColumn = $('th[data-sorted="true"]', _elements.stockTable)
+                var displayColumnsLength = _userSettings.displayColumns.length;
+                for (var i = 0; i < displayColumnsLength; i++) {
+                    if (_userSettings.displayColumns[i].name == sortedColumn.html()){
+                        _userSettings.sortedColumnName = _userSettings.displayColumns[i].name;
+                        _userSettings.sortedColumnDirection = sortedColumn.attr('data-sorted-direction');
+                        break;
+                    }
+                }
+
+                setUserSettings();
+
+                console.log("Sort " + _userSettings.sortedColumnName + " as " + _userSettings.sortedColumnDirection)
+            })
+
         },
 
         /******************** 公共方法 ********************/
@@ -786,6 +827,14 @@
             }
 
             try {
+                //retrieve the sorting tags from th attr and later set it on the newly created table
+                let sortedColumnName = undefined;
+                let sortedColumnDirection = undefined;
+                $('th[data-sorted="true"]', _elements.stockTable).each(function (i) {
+                    sortedColumnName = $(this).html();
+                    sortedColumnDirection = $(this).attr('data-sorted-direction')
+                })
+
                 _elements.stockTable.empty();
                 var displayColumnsLength = _userSettings.displayColumns.length;
                 var stockTableRow;
@@ -817,8 +866,13 @@
                 for (var i = 0; i < displayColumnsLength; i++) {
                     var id = _userSettings.displayColumns[i].id;
                     if (_columnEngines[id]) {
-                        $('<th>').html(_columnEngines[id].name)
-                            .appendTo(stockTableRow);
+                        headerHtml = $('<th>').html(_columnEngines[id].name);
+                        // add the attrib for sortable
+                        let isSortable = _userSettings.displayColumns[i].sortable;
+                        if (isSortable == false || id == _appSettings.actionsColumnId){
+                            headerHtml.attr('data-sortable', false)
+                        }
+                        headerHtml.appendTo(stockTableRow);
                     }
 
                     if (!hasActionsColumn && id == _appSettings.actionsColumnId) {
@@ -880,6 +934,21 @@
                     assignActions();
                 }
 
+                // init the sortable column (event etc.)
+                _elements.stockTable.removeAttr("data-sortable-initialized")
+                stockTable = document.querySelector('#stockTable')
+                Sortable.initTable(stockTable)
+
+                // restore sorted column
+                if (sortedColumnName) {
+                    $('th', _elements.stockTable).each(function (i) {
+                        if (sortedColumnName == $(this).html()) {
+                            $(this).attr("data-sorted", "true")
+                            $(this).attr("data-sorted-direction", sortedColumnDirection)
+                        }
+                    })
+                }
+
                 // Add cards
                 _elements.indexCards.empty()
                 summaryStatsAll.averageChangeRate = summaryStatsAll.changeRateSum / summaryStatsAll.count;
@@ -934,6 +1003,7 @@
                         }
                     });
                     _userSettings.watchingStocks = watchingStocks;
+                    _removeSortTag(); // watchingStocks changed, remove the sort tag
                     setUserSettings();
                 }
             });
@@ -960,6 +1030,7 @@
                     if (i >= 0) {
                         var watchingStock = _userSettings.watchingStocks.splice(i, 1)[0];
                         setUserSettings();
+                        stockRequest();
                         showAlert(_formatString('{0} ({1}) 已删除', watchingStock.name, watchingStock.sinaSymbol));
                     } else {
                         showAlert(_formatString('{0} 不存在', sinaSymbol));
@@ -1046,6 +1117,7 @@
                                 ? Number(args.quantity)
                                 : undefined;
 
+                            _removeSortTag(); // some field changed, so remove the sort tag just in case
                             setUserSettings();
                             showAlert(_formatString('{0} ({1}) 已更新, 成本: {2} 持有量: {3}', watchingStock.name, watchingStock.sinaSymbol, watchingStock.cost, watchingStock.quantity));
                         }
@@ -1058,6 +1130,7 @@
                             watchingStock.cost = undefined;
                             watchingStock.quantity = undefined;
 
+                            _removeSortTag(); // some field changed, so remove the sort tag just in case
                             setUserSettings();
                             showAlert(_formatString('{0} ({1}) 已更新, 成本: {2} 持有量: {3}', watchingStock.name, watchingStock.sinaSymbol, watchingStock.cost, watchingStock.quantity));
                         }
@@ -1096,7 +1169,9 @@
                     case 'save':
                         _userSettings.refreshInterval = args.refreshInterval;
                         _userSettings.displayColumns = args.displayColumns;
+                        _removeSortTag(); // column header changed, remove the sort tag
                         setUserSettings();
+                        stockRequest();
                         showAlert('设置已更新，立即生效');
                         break;
 
@@ -1113,8 +1188,10 @@
                 switch (args.result) {
                     case 'save':
                         _userSettings = args.userSettings;
+                        _removeSortTag(); // watchingStocks changed, remove the sort tag
                         setUserSettings();
-                        showAlert('设置已更新，立即生效');
+                        stockRequest();
+                        showAlert('导入成功');
                         break;
 
                     case 'cancel':
@@ -1167,7 +1244,9 @@
                                     type: type,
                                     name: name
                                 });
+                                _removeSortTag(); // watchingStocks changed, remove the sort tag
                                 setUserSettings();
+                                stockRequest();
                                 showAlert(_formatString('{0} ({1}) 已添加', name, sinaSymbol));
                             }
                         } else {
@@ -1225,7 +1304,9 @@
             if (_elements.resetColumnHeader) {
                 _elements.resetColumnHeader.click(function () {
                     _userSettings.displayColumns = defaultUserSettings.displayColumns;
+                    _removeSortTag(); // column header changed, remove the sort tag
                     setUserSettings();
+                    stockRequest();
                     showAlert('表格字段将被恢复默认', 2000);
                 });
             }

@@ -96,8 +96,20 @@
                         _displayColumns.focus();
                         break;
                     case 'removeColumn':
-                        _displayColumns.children('option:selected').appendTo(_availableColumns);
-                        _availableColumns.focus();
+                        var toDeleteActionsColumn = false;
+                        _displayColumns.children('option:selected').each(function (i) {
+                            if ($(this).val() == _args.actionsColumnId) {
+                                toDeleteActionsColumn = true;
+                            }
+                        });
+
+                        if (toDeleteActionsColumn){
+                            alert("【操作】字段不可被删除")
+                        }
+                        else {
+                            _displayColumns.children('option:selected').appendTo(_availableColumns);
+                            _availableColumns.focus();
+                        }
                         break;
 
                     case 'moveColumnUp':

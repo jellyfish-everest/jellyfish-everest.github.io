@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +7,7 @@
     <link href="content/bootstrap.css" rel="stylesheet" />
     <link href="content/jquery-ui.css" rel="stylesheet" />
     <link href="content/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="content/sortable-theme-minimal.css" />
 </head>
 <body>
     <div class="container-fluid">
@@ -53,7 +54,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                    <table id="stockTable" class="table table-bordered table-condensed table-hover table-striped" data-sortable></table>
+                    <table id="stockTable" class="table table-bordered table-condensed table-hover table-striped sortable-theme-minimal" data-sortable></table>
             </div>
         </div>
 
@@ -65,6 +66,7 @@
         <script src="scripts/bootstrap.js"></script>
         <script src="scripts/respond.js"></script>
         <script src="scripts/shadowstock.js"></script>
+        <script type="text/javascript" src="scripts/sortable.js"></script>
         <script type="text/javascript">
             $(function () {
                 ShadowStock.init();

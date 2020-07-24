@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+﻿body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
@@ -111,14 +111,14 @@ iframe.editor {
 iframe.settings {
     border: 0;
     width: 510px;
-    height: 300px;
+    height: 500px;
 }
 .container-settings {
     width: 500px;
 }
 #displayColumns,
 #availableColumns {
-    height: 120px;
+    height: 320px;
 }
 .col-toolbar-vertical {
     padding-top: 30px;

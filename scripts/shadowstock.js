@@ -551,7 +551,7 @@
 
                 setUserSettings();
 
-                console.log("Sort " + _userSettings.sortedColumnName + " as " + _userSettings.sortedColumnDirection)
+                console.log("Sort " + _userSettings.sortedColumnName + " as " + _userSettings.sortedColumnDirection + " top is " +_userSettings.watchingStocks[0].name)
             })
 
         },

@@ -86,7 +86,9 @@
         this.setAttribute('data-sorted-direction', newSortedDirection);
         tBody = table.tBodies[0];
         rowArray = [];
-        if (!sorted) {
+        //JZM: always take the real sort pass because of some out of sync sorting issues
+        //if (!sorted) {
+        if (true) {
           if (type.compare != null) {
             _compare = type.compare;
           } else {
@@ -98,7 +100,8 @@
             if (a[0] === b[0]) {
               return a[2] - b[2];
             }
-            if (type.reverse) {
+            //JZM: default is sort for descending, add support for ascending
+            if (type.reverse || newSortedDirection=="ascending") {
               return _compare(b[0], a[0]);
             } else {
               return _compare(a[0], b[0]);
@@ -130,6 +133,7 @@
             tBody.appendChild(row);
           }
         }
+
         if (typeof window['CustomEvent'] === 'function') {
           return typeof table.dispatchEvent === "function" ? table.dispatchEvent(new CustomEvent('Sortable.sorted', {
             bubbles: true

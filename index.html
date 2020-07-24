@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,20 +13,15 @@
     <div class="container-fluid">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
-                <form class="navbar-form navbar-left">
-                    <div class="input-group">
-                        <div class="input-group-addon">股票查询</div>
-                        <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
-                    </div>
-                </form>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <div class="btn-group navbar-left">
+                    <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" data-toggle="dropdown">
                         加载列表 <span class="caret"></span>
                     </button>
                     <ul id="resetWatchlistDropList" class="dropdown-menu">
                         <!--will be filled with script-->
                     </ul>
                 </div>
+                <p class="navbar-text" id="watch-list-name"></p>
                 <div class="btn-group navbar-right">
                     <button id="settingsButton" type="button" class="btn btn-info navbar-btn" title="设置">设置</button>
                     <button type="button" class="btn btn-info dropdown-toggle navbar-btn" data-toggle="dropdown">
@@ -38,6 +33,12 @@
                         <li><a id="impexpButton" href="#">导入/导出</a></li>
                     </ul>
                 </div>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <div class="input-group-addon">股票查询</div>
+                        <input id="suggestionText" type="text" class="form-control" placeholder="代码 / 名称 / 拼音">
+                    </div>
+                </form>
             </div>
             <div class="row">
                 <div class="col-xs-12">

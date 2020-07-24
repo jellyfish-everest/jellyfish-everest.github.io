@@ -439,6 +439,10 @@
                     // watch indices list (reset to default list if not found in user setting file
                     _userSettings.watchingIndices = data['watchingIndices'] ? data['watchingIndices'] : defaultUserSettings.watchingIndices
 
+                    // remember the loaded list name in user setting
+                    _userSettings.watchlistName = json_filename
+                    _setWatchListName();
+
                     _removeSortTag(); // watchingStocks changed, remove the sort tag
                     setUserSettings();
                     stockRequest();
@@ -487,7 +491,7 @@
                         }
                     }
 
-                    // Populate history dropdown list from 2nd entry to end
+                    // Populate dropdown list
                     let resetWatchlistDropListSelector = $('#resetWatchlistDropList')
                     watchListArray.forEach(function(watchListName)
                     {
@@ -497,20 +501,11 @@
                             resetWatchList(watchListName);
                         });
                     });
+
+                    // Display the previously loaded list name if any
+                    _setWatchListName();
                 }
             });
-        },
-
-        _removeSortTag = function() {
-            // remove sorted tag from th
-            $('th[data-sorted]', _elements.stockTable).each(function (i) {
-                $(this).removeAttr('data-sorted');
-                $(this).removeAttr('data-sorted-direction');
-            })
-
-            // remove from user setting
-            delete _userSettings.sortedColumnName
-            delete _userSettings.sortedColumnDirection
         },
 
         stockRetriever = $('<iframe class="hidden"></iframe>'),
@@ -1041,6 +1036,7 @@
                     var i = _findIndex(_userSettings.watchingStocks, 'sinaSymbol', sinaSymbol);
                     if (i >= 0) {
                         var watchingStock = _userSettings.watchingStocks.splice(i, 1)[0];
+                        _clearWatchListName(); //stock entry removed, clear the displayed list name
                         setUserSettings();
                         stockRequest();
                         showAlert(_formatString('{0} ({1}) 已删除', watchingStock.name, watchingStock.sinaSymbol));
@@ -1201,6 +1197,7 @@
                     case 'save':
                         _userSettings = args.userSettings;
                         _removeSortTag(); // watchingStocks changed, remove the sort tag
+                        _clearWatchListName(); //watchingStocks changed, clear the displayed list name
                         setUserSettings();
                         stockRequest();
                         showAlert('导入成功');
@@ -1213,6 +1210,28 @@
             } finally {
                 _elements.impexpButton.popover('hide');
             }
+        },
+
+        _removeSortTag = function() {
+            // remove sorted tag from th
+            $('th[data-sorted]', _elements.stockTable).each(function (i) {
+                $(this).removeAttr('data-sorted');
+                $(this).removeAttr('data-sorted-direction');
+            })
+
+            // remove from user setting
+            delete _userSettings.sortedColumnName
+            delete _userSettings.sortedColumnDirection
+        },
+
+        _setWatchListName = function () {
+            listName = _userSettings.watchlistName ? _userSettings.watchlistName : "用户自定义列表";
+            $('#watch-list-name').html("当前列表：" + listName);
+        },
+
+        _clearWatchListName = function () {
+            delete _userSettings.watchlistName;
+            _setWatchListName();
         },
 
         /******************** 外部方法 ********************/
@@ -1257,6 +1276,7 @@
                                     name: name
                                 });
                                 _removeSortTag(); // watchingStocks changed, remove the sort tag
+                                _clearWatchListName(); //stock entry removed, clear the displayed list name
                                 setUserSettings();
                                 stockRequest();
                                 showAlert(_formatString('{0} ({1}) 已添加', name, sinaSymbol));

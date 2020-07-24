@@ -1,4 +1,4 @@
-﻿body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
@@ -29,7 +29,6 @@ body {
 .relative-ratio-picked,.relative-ratio{
     margin: 3px;
 }
-
 
 #stockTable tr.picked td:first-child{
     border-left: 2px solid #ffe600;
@@ -141,6 +140,12 @@ iframe.impexp {
     resize: none;
 }
 
+/*on smaller device, use smaller fonts for the stocktable*/
+@media (max-device-width: 1200px) {
+    #stockTable{
+        font-size: 13px;
+    }
+}
 /*#stockTable td.btn-default {*/
 /*    background-color: transparent;*/
 /*}*/

@@ -88,6 +88,13 @@ td {
     color: #4DCD53;
 }
 
+.target-reached {
+    color: #ffde00;
+}
+
+.target-not-reached {
+    color: #67b3ff;
+}
 /*.input-group-addon.btn-warning,*/
 /*.input-group-addon.btn-danger {*/
 /*    color: #fff;*/

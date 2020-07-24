@@ -381,7 +381,13 @@
                 id: _appSettings.targetPriceColumnId,
                 name: '目标价',
                 siblings: _columnEngines,
-                getClass: getClassDefault,
+                getClass: function (data) {
+                    if (this._class == undefined) {
+                        var lastPrice = this.siblings[_appSettings.priceColumnId].getValue(data);
+                        this._class = lastPrice >= this.getValue(data) ? 'target-reached' : 'target-not-reached';
+                    }
+                    return this._class;
+                },
                 getText: getTextForNumber,
                 getValue: getValueDefault
             };

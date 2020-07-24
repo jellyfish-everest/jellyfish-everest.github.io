@@ -538,7 +538,7 @@
                 });
                 _userSettings.watchingStocks = watchingStocks;
 
-                // extract sorted column and direction and stored in setting (currently not used)
+                // extract sorted column and direction and stored in setting so the header attributes can be restored on refresh
                 let sortedColumn = $('th[data-sorted="true"]', _elements.stockTable)
                 var displayColumnsLength = _userSettings.displayColumns.length;
                 for (var i = 0; i < displayColumnsLength; i++) {
@@ -832,14 +832,6 @@
             }
 
             try {
-                //retrieve the sorting tags from th attr and later set it on the newly created table
-                let sortedColumnName = undefined;
-                let sortedColumnDirection = undefined;
-                $('th[data-sorted="true"]', _elements.stockTable).each(function (i) {
-                    sortedColumnName = $(this).html();
-                    sortedColumnDirection = $(this).attr('data-sorted-direction')
-                })
-
                 _elements.stockTable.empty();
                 var displayColumnsLength = _userSettings.displayColumns.length;
                 var stockTableRow;
@@ -947,11 +939,11 @@
                 Sortable.initTable(stockTable)
 
                 // restore sorted column
-                if (sortedColumnName) {
+                if (_userSettings.sortedColumnName) {
                     $('th', _elements.stockTable).each(function (i) {
-                        if (sortedColumnName == $(this).html()) {
+                        if (_userSettings.sortedColumnName == $(this).html()) {
                             $(this).attr("data-sorted", "true")
-                            $(this).attr("data-sorted-direction", sortedColumnDirection)
+                            $(this).attr("data-sorted-direction", _userSettings.sortedColumnDirection)
                         }
                     })
                 }

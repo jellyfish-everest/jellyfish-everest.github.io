@@ -143,7 +143,7 @@ iframe.impexp {
 /*on smaller device, use smaller fonts for the stocktable*/
 @media (max-device-width: 1200px) {
     #stockTable{
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 /*#stockTable td.btn-default {*/

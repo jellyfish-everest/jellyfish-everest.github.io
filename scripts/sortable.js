@@ -11,9 +11,10 @@
 
   touchDevice = 'ontouchstart' in document.documentElement;
 
-  if (touchDevice) {
-    clickEvents.push('touchstart');
-  }
+  // JZM: on phone, registering the onClick to "touchstart" seem to trigger the function twice, removing for now
+  // if (touchDevice) {
+  //   clickEvents.push('touchstart');
+  // }
 
   addEventListener = function(el, event, handler) {
     if (el.addEventListener != null) {

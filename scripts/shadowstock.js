@@ -481,22 +481,15 @@
 
                     // Populate newest watch list button
                     if (watchListArray.length) {
-                        let latestWatchListName = watchListArray[0]
-                        let resetLatestWatchlistButton = $('#resetLatestWatchlistButton')
-                        resetLatestWatchlistButton.html("载入最新选股" + " [" + latestWatchListName + "]")
-                        resetLatestWatchlistButton.click(function () {
-                            resetWatchList(latestWatchListName);
-                        });
-
                         // If user doesn't have customized setting locally (first time running app), fill with the latest
                         if (_userSettings && !_userSettings.watchingStocks.length && watchListArray.length) {
-                            resetWatchList(latestWatchListName)
+                            resetWatchList(watchListArray[0])
                         }
                     }
 
                     // Populate history dropdown list from 2nd entry to end
                     let resetWatchlistDropListSelector = $('#resetWatchlistDropList')
-                    watchListArray.slice(1).forEach(function(watchListName)
+                    watchListArray.forEach(function(watchListName)
                     {
                         let button_href = $("<a href='#'></a>").text(watchListName)
                         resetWatchlistDropListSelector.append($("<li></li>").append(button_href))

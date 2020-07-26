@@ -95,6 +95,10 @@ td {
 .target-not-reached {
     color: #67b3ff;
 }
+
+#selected-list-name {
+    color: #ffd574;
+}
 /*.input-group-addon.btn-warning,*/
 /*.input-group-addon.btn-danger {*/
 /*    color: #fff;*/
@@ -153,6 +157,12 @@ iframe.impexp {
         font-size: 15px;
     }
 }
+
+/*#resetWatchlistDropList*/
+/*{*/
+/*   max-height: calc(100vh - 50px);*/
+/*   overflow-y: auto;*/
+/*}*/
 /*#stockTable td.btn-default {*/
 /*    background-color: transparent;*/
 /*}*/

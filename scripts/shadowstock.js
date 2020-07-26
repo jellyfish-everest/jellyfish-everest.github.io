@@ -4,9 +4,10 @@
         _appName = 'Everest Simple Market Monitor',
         _appVersion = '1.0',
 
+        _userProfileMapId = "EverestUserProfile", // key to store profile ID : name pair in local storage
+
         /******************** 配置 ********************/
         _appSettings = {
-            cookieExpires: 365,
             minRefreshInterval: 3000,
             maxWatchingStockCount: 50,
             suggestionUrl: 'https://suggest2.sinajs.cn/suggest/?type=11,12,72,73,81,31,41&key={1}&name={0}',
@@ -97,6 +98,7 @@
             }
         },
 
+        _userProfileId = 1,
         _userSettings,
         defaultUserSettings = {
             refreshInterval: 3000,
@@ -127,11 +129,11 @@
                 {sinaSymbol: 'sz399006', type: '11', name: '创业板指'},
                 {sinaSymbol: 'sh000300', type: '11', name: '沪深300'}
                 // {sinaSymbol: 'sh000905', type: '11', name: '中证500'}
-            ]
+            ],
         },
         getUserSettings = function () {
             // Retrieve user setting from local storage
-            var userSettings = JSON.parse(localStorage.getItem(_appId));
+            var userSettings = JSON.parse(localStorage.getItem(_appId+_userProfileId));
 
             if (!userSettings) {
                 _userSettings = defaultUserSettings;
@@ -155,7 +157,7 @@
         },
         setUserSettings = function () {
             // Store user setting in local storage
-            localStorage.setItem(_appId,  JSON.stringify(_userSettings));
+            localStorage.setItem(_appId+_userProfileId,  JSON.stringify(_userSettings));
         },
 
         /******************** 初始化 ********************/
@@ -441,7 +443,6 @@
 
                     // remember the loaded list name in user setting
                     _userSettings.watchlistName = json_filename
-                    _setWatchListName();
 
                     _removeSortTag(); // watchingStocks changed, remove the sort tag
                     setUserSettings();
@@ -508,10 +509,88 @@
             });
         },
 
+        refreshUserProfileDropList = function(){
+            // Populate dropdown list
+            let profileDropList = $('#profile-drop-list')
+            profileDropList.empty()
+
+            let initialProfileId = undefined
+
+            let userProfileMap = getUserProfileMap();
+
+            for (let id in userProfileMap) {
+                let userProfileName = userProfileMap[id];
+                let button_href = $("<a href='#'></a>").text(userProfileName);
+                //let remove_button = $('<span class="glyphicon glyphicon-remove" role="button" title="删除"></span>');
+                $("<li></li>").append(button_href).appendTo(profileDropList);
+                button_href.click(function () {
+                    _userProfileId = id;
+                    stockRequest();
+                    $("#profile-dropdown-button").html(userProfileName + " <span class='caret'></span>")
+                });
+
+                // set the initial user profile ID
+                if (initialProfileId == undefined){
+                    initialProfileId = id
+                }
+            }
+
+            // Add new profile button
+            $('<li role="separator" class="divider"></li>' +
+                '<div class="input-group">' +
+                    '<input id="add-user-profile-name" class="form-control" placeholder="新配置名称" type="text">' +
+                    '<span class="input-group-btn">' +
+                    '<button id="add-user-profile" class="btn btn-default" type="button">添加</button>' +
+                    '</span>' +
+                '</div>'
+            ).appendTo(profileDropList);
+
+            $("#add-user-profile").click(function () {
+                addUserProfile();
+                refreshUserProfileDropList();
+            });
+
+            return initialProfileId ? userProfileMap[initialProfileId] : "默认用户配置";
+        },
+
+        getUserProfileMap = function(){
+            return JSON.parse(localStorage.getItem(_userProfileMapId));
+        },
+
+        saveUserProfileMap = function(userProfileMap){
+            return localStorage.setItem(_userProfileMapId, JSON.stringify(userProfileMap));
+        },
+
+        addUserProfile = function(){
+            let newUserProfileId = 1;
+            let userProfileMap = getUserProfileMap();
+            if (!userProfileMap)
+            {
+                userProfileMap = {};
+            }else{
+                while (newUserProfileId in userProfileMap){
+                    newUserProfileId++;
+                }
+            }
+            _userProfileId = newUserProfileId;
+            let newProfileName = $("#add-user-profile-name").val();
+            userProfileMap[newUserProfileId] = newProfileName ? newProfileName : "用户配置"+_userProfileId;
+            saveUserProfileMap(userProfileMap);
+
+            $("#profile-dropdown-button").html(userProfileMap[newUserProfileId] + " <span class='caret'></span>")
+            setUserSettings();
+
+            return newUserProfileId;
+        },
+
+        initUserProfileDropList = function () {
+            let initialProfileName = refreshUserProfileDropList();
+            $("#profile-dropdown-button").html(initialProfileName + " <span class='caret'></span>")
+        },
+
         stockRetriever = $('<iframe class="hidden"></iframe>'),
         suggestionRetriever = $('<iframe class="hidden"></iframe>'),
         _init = function () {
-            $.cookie.json = true;
             // 远程数据容器
             $(document.body).append(stockRetriever).append(suggestionRetriever);
             // 列数据处理引擎
@@ -520,6 +599,8 @@
             getUserSettings();
             // Init ResetWatchlistDropList
             initResetWatchlistDropList();
+
+            initUserProfileDropList();
         },
         _start = function () {
             // 启动
@@ -974,6 +1055,9 @@
                     _elements.indexCards.prepend(_buildSummaryCard(summaryStatsAll)).prepend("")
                 }
 
+                // refresh the list title in case it's change externally
+                _setWatchListName();
+
             } finally {
                 _enableStockTimer(true);
             }
@@ -1218,7 +1302,7 @@
 
         _setWatchListName = function () {
             listName = _userSettings.watchlistName ? _userSettings.watchlistName : "用户自定义列表";
-            $('#watch-list-name').html("当前列表：" + listName);
+            $('#watchlist-dropdown-button').html("列表选择 " + "<span id='selected-list-name'>[" + listName + "]</span>" + " <span class=\"caret\"></span>");
         },
 
         _clearWatchListName = function () {
@@ -1293,10 +1377,10 @@
                     sanitize: false, // JZM: sanitize won't work for these html
                     placement: 'bottom'
                 }).click(function () {
-                    var displayColumnsKey = 'cookieDisplayColumns';
-                    var availableColumnsKey = 'cookieAvailableColumns';
-                    $.cookie(displayColumnsKey, _userSettings.displayColumns);
-                    $.cookie(availableColumnsKey, _appSettings.availableColumns);
+                    var displayColumnsKey = 'lsDisplayColumns'+_userProfileId;
+                    var availableColumnsKey = 'lsAvailableColumns'+_userProfileId;
+                    localStorage.setItem(displayColumnsKey, JSON.stringify(_userSettings.displayColumns));
+                    localStorage.setItem(availableColumnsKey, JSON.stringify(_appSettings.availableColumns));
                     $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="settings" src="settings.html?{0}"></iframe>', escape(JSON.stringify({
                         token: _appId,
                         callback: 'ShadowStock.settingsCallback',
@@ -1315,8 +1399,8 @@
                     sanitize: false, // JZM: sanitize won't work for these html
                     placement: 'bottom'
                 }).click(function () {
-                    var userSettingsKey = 'cookieUserSettings';
-                    localStorage.setItem(userSettingsKey,  JSON.stringify(_userSettings));
+                    var userSettingsKey = 'lsUserSettings'+_userProfileId;
+                    localStorage.setItem(userSettingsKey, JSON.stringify(_userSettings));
                     $(this).attr('data-content', _formatString('<iframe frameborder="0" scrolling="no" class="impexp" src="impexp.html?{0}"></iframe>', escape(JSON.stringify({
                         token: _appId,
                         callback: 'ShadowStock.impexpCallback',

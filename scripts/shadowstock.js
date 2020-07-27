@@ -520,7 +520,11 @@
             let userProfileMap = getUserProfileMap();
 
             if (!$.isEmptyObject(userProfileMap)){
-                _userProfileId = Object.keys(userProfileMap)[0];
+                if (_userProfileId == "default"){
+                    _userProfileId = Object.keys(userProfileMap)[0];
+                }
+            }else{
+                _userProfileId = "default";
             }
 
             let selectedUserProfileName = userProfileMap[_userProfileId];
@@ -584,13 +588,11 @@
         addUserProfile = function(){
             let newUserProfileId = 1;
             let userProfileMap = getUserProfileMap();
-            if (!userProfileMap){
-                userProfileMap = {};
-            }else{
-                while (newUserProfileId in userProfileMap){
-                    newUserProfileId++;
-                }
+
+            while (newUserProfileId in userProfileMap){
+                newUserProfileId++;
             }
+
             _userProfileId = newUserProfileId;
             let newProfileName = $("#add-user-profile-name").val();
             userProfileMap[newUserProfileId] = newProfileName ? newProfileName : "用户配置"+_userProfileId;
@@ -604,7 +606,6 @@
 
         deleteUserProfile = function(profileIdToDelete){
             let userProfileMap = getUserProfileMap();
-
             delete userProfileMap[profileIdToDelete];
 
             saveUserProfileMap(userProfileMap);

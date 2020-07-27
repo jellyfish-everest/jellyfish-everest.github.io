@@ -518,18 +518,17 @@
             profileDropList.empty()
 
             let userProfileMap = getUserProfileMap();
-
-            if (!$.isEmptyObject(userProfileMap)){
-                if (_userProfileId == "default"){
-                    _userProfileId = Object.keys(userProfileMap)[0];
-                }
-            }else{
-                _userProfileId = "default";
-            }
-
             let selectedUserProfileName = userProfileMap[_userProfileId];
+            // if we can't find a valid profile with currently selected id
             if (!selectedUserProfileName){
-                selectedUserProfileName = "默认用户配置";
+                // if the list isn't empty, select the first one
+                if (!$.isEmptyObject(userProfileMap)){
+                    _userProfileId = Object.keys(userProfileMap)[0];
+                    selectedUserProfileName = userProfileMap[_userProfileId];
+                }else{
+                    _userProfileId = "default";
+                    selectedUserProfileName = "默认用户配置";
+                }
             }
 
             $("#profile-dropdown-button").html(selectedUserProfileName + " <span class='caret'></span>")

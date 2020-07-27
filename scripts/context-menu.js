@@ -9,8 +9,9 @@
             let x = e.clientX;
             let y = e.clientY;
 
+            // on touch event, we need to explicitly pull touch positions
             if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
-                var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                var touch = e.originalEvent.targetTouches[0] || e.originalEvent.touches[0];
                 x = touch.pageX;
                 y = touch.pageY;
             }
@@ -43,17 +44,6 @@
                 return _openConextMenu(e, settings);
             });
 
-            // Handle long press as well
-            // $(this).on("mousedown", function (e) {
-            //     $(this).data("checkdown", setTimeout(function () {
-            //         return _openConextMenu(e, settings);
-            //     }, 1000));
-            // }).on("mouseup", function () {
-            //     clearTimeout($(this).data("checkdown"));
-            // }).on("mouseout", function () {
-            //     clearTimeout($(this).data("checkdown"));
-            // });
-
             $(this).on('touchend', function (e) {
                 clearTimeout($(this).data("pressTimer"));
             }).on('touchstart', function (e) {
@@ -62,10 +52,6 @@
                     return _openConextMenu(e, settings);
                 }, 800));
             });
-
-            // $(this).longclick(1000, function (e) {
-            //     return _openConextMenu(e, settings);
-            // });
 
             // Hide when click other places
             $(window).click(function () {

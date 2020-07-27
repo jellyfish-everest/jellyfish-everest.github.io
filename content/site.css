@@ -162,6 +162,12 @@ iframe.impexp {
     }
 }
 
+/*disable long press context menu on ios on href anchor*/
+a {
+  -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+  -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+
 /*#resetWatchlistDropList*/
 /*{*/
 /*   max-height: calc(100vh - 50px);*/

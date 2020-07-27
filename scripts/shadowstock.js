@@ -171,6 +171,8 @@
             _appSettings.todayOpenPriceColumnId = 1;
             _appSettings.closingPriceColumnId = 2;
             _appSettings.priceColumnId = 3;
+            _appSettings.todayHigh = 4;
+            _appSettings.todayLow = 5;
             var stockColumnsLength = _appSettings.stockColumns.length;
             for (var i = 0; i < stockColumnsLength; i++) {
                 _columnEngines[i] = {
@@ -388,7 +390,7 @@
                 siblings: _columnEngines,
                 getClass: function (data) {
                     if (this._class == undefined) {
-                        var lastPrice = this.siblings[_appSettings.priceColumnId].getValue(data);
+                        var lastPrice = this.siblings[_appSettings.todayHigh].getValue(data);
                         this._class = lastPrice >= this.getValue(data) ? 'target-reached' : 'target-not-reached';
                     }
                     return this._class;
@@ -414,7 +416,7 @@
                 siblings: _columnEngines,
                 getClass: function (data) {
                     if (this._class == undefined) {
-                        var lastPrice = this.siblings[_appSettings.priceColumnId].getValue(data);
+                        var lastPrice = this.siblings[_appSettings.todayLow].getValue(data);
                         this._class = lastPrice <= this.getValue(data) ? 'target-reached' : 'target-not-reached';
                     }
                     return this._class;
@@ -674,6 +676,17 @@
                 console.log("Sort " + _userSettings.sortedColumnName + " as " + _userSettings.sortedColumnDirection + " top is " +_userSettings.watchingStocks[0].name)
             })
 
+        },
+
+        _holdAfterReachingTarget = function(stockIndex, lastPrice, targetPrice){
+            var watchingStock = _userSettings.watchingStocks[stockIndex];
+            //if we don't have any position, buy some with the last price
+            if(!watchingStock.quantity && lastPrice >= targetPrice){
+                let cash = 100000;
+                watchingStock.quantity = Math.floor(cash/targetPrice/100)*100;
+                watchingStock.cost = targetPrice;
+                setUserSettings();
+            }
         },
 
         /******************** 公共方法 ********************/
@@ -1015,6 +1028,10 @@
                     if (i >= 0) {
                         // 本地扩展 - 数据源
                         var watchingStock = _userSettings.watchingStocks[i];
+
+                        // 临时对于突破便持仓的逻辑，a little hack for now
+                        _holdAfterReachingTarget(i, data[_appSettings.priceColumnId], watchingStock.targetPrice);
+
                         data[_appSettings.costColumnId] = watchingStock.cost;
                         data[_appSettings.quantityColumnId] = watchingStock.quantity;
                         data.type = watchingStock.type;

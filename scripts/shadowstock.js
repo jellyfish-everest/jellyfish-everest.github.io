@@ -110,6 +110,7 @@
                 {id: 52, name: '涨跌率'},
                 {id: 60, name: '目标价'},
                 {id: 61, name: '斜率'},
+                {id: 62, name: '出场价'},
                 {id: 4, name: '最高'},
                 {id: 5, name: '最低'},
                 {id: 1, name: '今开'},
@@ -119,7 +120,6 @@
                 {id: 42, name: '持有量'},
                 {id: 58, name: '盈亏率'},
                 {id: 57, name: '盈亏'},
-                {id: 31, name: '时间'}
                 // {id: 59, name: '工具'}
             ],
             watchingStocks: [],
@@ -403,6 +403,22 @@
                 name: '斜率',
                 siblings: _columnEngines,
                 getClass: getClassDefault,
+                getText: getTextForNumber,
+                getValue: getValueDefault
+            };
+
+            _appSettings.sellPriceColumnId = 62;
+            _columnEngines[_appSettings.sellPriceColumnId] = {
+                id: _appSettings.sellPriceColumnId,
+                name: '出场价',
+                siblings: _columnEngines,
+                getClass: function (data) {
+                    if (this._class == undefined) {
+                        var lastPrice = this.siblings[_appSettings.priceColumnId].getValue(data);
+                        this._class = lastPrice <= this.getValue(data) ? 'target-reached' : 'target-not-reached';
+                    }
+                    return this._class;
+                },
                 getText: getTextForNumber,
                 getValue: getValueDefault
             };
@@ -1004,7 +1020,7 @@
                         data.type = watchingStock.type;
                         data[_appSettings.targetPriceColumnId] = watchingStock.targetPrice;
                         data[_appSettings.slopeColumnId] = watchingStock.slope;
-
+                        data[_appSettings.sellPriceColumnId] = watchingStock.sellPrice;
 
                         // only add row if it's in watch list
                         stockTableRow = $('<tr>').appendTo(stockTableBody);

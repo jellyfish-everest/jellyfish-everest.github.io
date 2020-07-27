@@ -64,7 +64,10 @@
             </div>
         </div>
 
-
+        <!-- right click contextMenu       -->
+        <ul id="contextMenu" class="dropdown-menu" role="menu" style="display:none">
+            <li><a id='delete' tabindex="-1" href="#">删除</a></li>
+        </ul>
 
         <script src="scripts/jquery-1.10.2.js"></script>
         <script src="scripts/jquery-ui.js"></script>
@@ -72,6 +75,7 @@
         <script src="scripts/respond.js"></script>
         <script src="scripts/shadowstock.js"></script>
         <script type="text/javascript" src="scripts/sortable.js"></script>
+        <script type="text/javascript" src="scripts/context-menu.js"></script>
         <script type="text/javascript">
             $(function () {
                 ShadowStock.init();

@@ -99,6 +99,10 @@ td {
 #selected-list-name {
     color: #ffd574;
 }
+
+#contextMenu{
+    background-color: #4e4e4e;
+}
 /*.input-group-addon.btn-warning,*/
 /*.input-group-addon.btn-danger {*/
 /*    color: #fff;*/

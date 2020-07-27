@@ -98,7 +98,7 @@
             }
         },
 
-        _userProfileId = 1,
+        _userProfileId = 'default',
         _userSettings,
         defaultUserSettings = {
             refreshInterval: 3000,
@@ -158,6 +158,9 @@
         setUserSettings = function () {
             // Store user setting in local storage
             localStorage.setItem(_appId+_userProfileId,  JSON.stringify(_userSettings));
+        },
+        deleteUserSetting = function (userProfileIdToBeDeleted){
+            localStorage.removeItem(_appId+userProfileIdToBeDeleted);
         },
 
         /******************** 初始化 ********************/
@@ -509,33 +512,37 @@
             });
         },
 
-        refreshUserProfileDropList = function(){
+        populateUserProfileDropList = function(){
             // Populate dropdown list
             let profileDropList = $('#profile-drop-list')
             profileDropList.empty()
 
-            let initialProfileId = undefined
-
             let userProfileMap = getUserProfileMap();
+
+            if (!$.isEmptyObject(userProfileMap)){
+                _userProfileId = Object.keys(userProfileMap)[0];
+            }
+
+            let selectedUserProfileName = userProfileMap[_userProfileId];
+            if (!selectedUserProfileName){
+                selectedUserProfileName = "默认用户配置";
+            }
+
+            $("#profile-dropdown-button").html(selectedUserProfileName + " <span class='caret'></span>")
 
             for (let id in userProfileMap) {
                 let userProfileName = userProfileMap[id];
-                let button_href = $("<a href='#'></a>").text(userProfileName);
-                //let remove_button = $('<span class="glyphicon glyphicon-remove" role="button" title="删除"></span>');
+                let button_href = $("<a data-id='" + id + "' href='#'></a>").text(userProfileName);
+
                 $("<li></li>").append(button_href).appendTo(profileDropList);
                 button_href.click(function () {
-                    _userProfileId = id;
+                    _userProfileId = parseInt($(this).attr('data-id'));
                     stockRequest();
-                    $("#profile-dropdown-button").html(userProfileName + " <span class='caret'></span>")
+                    $("#profile-dropdown-button").html(userProfileMap[_userProfileId] + " <span class='caret'></span>")
                 });
-
-                // set the initial user profile ID
-                if (initialProfileId == undefined){
-                    initialProfileId = id
-                }
             }
 
-            // Add new profile button
+            // "Add new profile" button
             $('<li role="separator" class="divider"></li>' +
                 '<div class="input-group">' +
                     '<input id="add-user-profile-name" class="form-control" placeholder="新配置名称" type="text">' +
@@ -547,25 +554,37 @@
 
             $("#add-user-profile").click(function () {
                 addUserProfile();
-                refreshUserProfileDropList();
+                populateUserProfileDropList();
             });
 
-            return initialProfileId ? userProfileMap[initialProfileId] : "默认用户配置";
+            $("#profile-drop-list li").contextMenu({
+                menuSelector: "#contextMenu",
+                menuSelected: function (invokedOn, selectedMenu) {
+                    var msg = "You selected the menu item '" + selectedMenu.text() +
+                        "' on the value '" + invokedOn.text() + "'";
+                    console.log(msg);
+                    if (selectedMenu.attr('id') == 'delete'){
+                        let profileIdToBeDeleted = parseInt(invokedOn.attr('data-id'));
+                        deleteUserProfile(profileIdToBeDeleted);
+                        populateUserProfileDropList();
+                    }
+                }
+            });
         },
 
         getUserProfileMap = function(){
-            return JSON.parse(localStorage.getItem(_userProfileMapId));
+            let profileMap = JSON.parse(localStorage.getItem(_userProfileMapId));
+            return profileMap ? profileMap : {};
         },
 
         saveUserProfileMap = function(userProfileMap){
-            return localStorage.setItem(_userProfileMapId, JSON.stringify(userProfileMap));
+            localStorage.setItem(_userProfileMapId, JSON.stringify(userProfileMap));
         },
 
         addUserProfile = function(){
             let newUserProfileId = 1;
             let userProfileMap = getUserProfileMap();
-            if (!userProfileMap)
-            {
+            if (!userProfileMap){
                 userProfileMap = {};
             }else{
                 while (newUserProfileId in userProfileMap){
@@ -577,15 +596,19 @@
             userProfileMap[newUserProfileId] = newProfileName ? newProfileName : "用户配置"+_userProfileId;
             saveUserProfileMap(userProfileMap);
 
-            $("#profile-dropdown-button").html(userProfileMap[newUserProfileId] + " <span class='caret'></span>")
+            // set user setting to store the new profile data
             setUserSettings();
 
             return newUserProfileId;
         },
 
-        initUserProfileDropList = function () {
-            let initialProfileName = refreshUserProfileDropList();
-            $("#profile-dropdown-button").html(initialProfileName + " <span class='caret'></span>")
+        deleteUserProfile = function(profileIdToDelete){
+            let userProfileMap = getUserProfileMap();
+
+            delete userProfileMap[profileIdToDelete];
+
+            saveUserProfileMap(userProfileMap);
+            deleteUserSetting(profileIdToDelete)
         },
 
         stockRetriever = $('<iframe class="hidden"></iframe>'),
@@ -600,7 +623,7 @@
             // Init ResetWatchlistDropList
             initResetWatchlistDropList();
 
-            initUserProfileDropList();
+            populateUserProfileDropList();
         },
         _start = function () {
             // 启动

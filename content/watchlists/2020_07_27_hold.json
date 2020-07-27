@@ -1,0 +1,11 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300029",
+      "type": "11",
+      "name": "天龙光电",
+      "picked": false,
+      "sellPrice": 6.163333333333333
+    }
+  ]
+}

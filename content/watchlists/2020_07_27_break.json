@@ -1,0 +1,46 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh603900",
+      "type": "11",
+      "name": "莱绅通灵",
+      "picked": true,
+      "slope": 5.941176470588368
+    },
+    {
+      "sinaSymbol": "sh603226",
+      "type": "11",
+      "name": "菲林格尔",
+      "picked": false,
+      "slope": 2.712643678160936
+    },
+    {
+      "sinaSymbol": "sh601069",
+      "type": "11",
+      "name": "西部黄金",
+      "picked": true,
+      "slope": 1.8546255506607872
+    },
+    {
+      "sinaSymbol": "sz002041",
+      "type": "11",
+      "name": "登海种业",
+      "picked": true,
+      "slope": 1.2614840989399285
+    },
+    {
+      "sinaSymbol": "sh600547",
+      "type": "11",
+      "name": "山东黄金",
+      "picked": true,
+      "slope": 1.1009732360097317
+    },
+    {
+      "sinaSymbol": "sz000856",
+      "type": "11",
+      "name": "冀东装备",
+      "picked": true,
+      "slope": 1.0219780219780206
+    }
+  ]
+}

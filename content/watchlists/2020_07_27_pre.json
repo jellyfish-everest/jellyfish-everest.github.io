@@ -1,0 +1,100 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz300581",
+      "type": "11",
+      "name": "晨曦航空",
+      "picked": false,
+      "targetPrice": 19.950000000000003,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000698",
+      "type": "11",
+      "name": "沈阳化工",
+      "picked": false,
+      "targetPrice": 9.588275862068965,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300086",
+      "type": "11",
+      "name": "康芝药业",
+      "picked": false,
+      "targetPrice": 7.893333333333332,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603535",
+      "type": "11",
+      "name": "嘉诚国际",
+      "picked": false,
+      "targetPrice": 24.212186835512455,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601218",
+      "type": "11",
+      "name": "吉鑫科技",
+      "picked": false,
+      "targetPrice": 3.4288755000025986,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603039",
+      "type": "11",
+      "name": "泛微网络",
+      "picked": false,
+      "targetPrice": 86.57675675675677,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002610",
+      "type": "11",
+      "name": "爱康科技",
+      "picked": false,
+      "targetPrice": 2.577142857142858,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603987",
+      "type": "11",
+      "name": "康德莱",
+      "picked": false,
+      "targetPrice": 19.925000000000004,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300018",
+      "type": "11",
+      "name": "中元股份",
+      "picked": false,
+      "targetPrice": 7.114117647058823,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300466",
+      "type": "11",
+      "name": "赛摩智能",
+      "picked": false,
+      "targetPrice": 6.528750000000001,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600420",
+      "type": "11",
+      "name": "现代制药",
+      "picked": false,
+      "targetPrice": 11.267692307692311,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002266",
+      "type": "11",
+      "name": "浙富控股",
+      "picked": false,
+      "targetPrice": 5.764285714285714,
+      "sellPrice": null
+    }
+  ]
+}

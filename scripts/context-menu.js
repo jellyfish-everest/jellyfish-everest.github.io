@@ -2,38 +2,46 @@
 
     $.fn.contextMenu = function (settings) {
 
+        _openConextMenu = function (e, setting) {
+            // return native menu if pressing control
+            if (e.ctrlKey) return;
+
+            //open menu
+            var $menu = $(settings.menuSelector)
+                .data("invokedOn", $(e.target))
+                .show()
+                .css({
+                    position: "absolute",
+                    left: getMenuPosition(e.clientX, 'width', 'scrollLeft'),
+                    top: getMenuPosition(e.clientY, 'height', 'scrollTop')
+                })
+                .off('click')
+                .on('click', 'a', function (e) {
+                    $menu.hide();
+
+                    var $invokedOn = $menu.data("invokedOn");
+                    var $selectedMenu = $(e.target);
+
+                    settings.menuSelected.call(this, $invokedOn, $selectedMenu);
+                });
+
+            return false;
+        }
+
         return this.each(function () {
-
-            // Open context menu
+            // Open context menu on "context menu" (right click)
             $(this).on("contextmenu", function (e) {
-                // return native menu if pressing control
-                if (e.ctrlKey) return;
-
-                //open menu
-                var $menu = $(settings.menuSelector)
-                    .data("invokedOn", $(e.target))
-                    .show()
-                    .css({
-                        position: "absolute",
-                        left: getMenuPosition(e.clientX, 'width', 'scrollLeft'),
-                        top: getMenuPosition(e.clientY, 'height', 'scrollTop')
-                    })
-                    .off('click')
-                    .on('click', 'a', function (e) {
-                        $menu.hide();
-
-                        var $invokedOn = $menu.data("invokedOn");
-                        var $selectedMenu = $(e.target);
-
-                        settings.menuSelected.call(this, $invokedOn, $selectedMenu);
-                    });
-
-                return false;
+                return _openConextMenu(e, settings);
             });
 
-            //make sure menu closes on any click
+            $(this).longclick(1000, function (e) {
+                return _openConextMenu(e, settings);
+            });
+
+            // Hide when click other places
             $(window).click(function () {
                 $(settings.menuSelector).hide();
+                console.log("hide context")
             });
         });
 
@@ -51,4 +59,5 @@
         }
 
     };
+
 })(jQuery, window);

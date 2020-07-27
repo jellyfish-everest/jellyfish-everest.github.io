@@ -537,7 +537,7 @@
                 let userProfileName = userProfileMap[id];
                 let button_href = $("<a data-id='" + id + "' href='#'></a>").text(userProfileName);
 
-                $("<li></li>").append(button_href).appendTo(profileDropList);
+                $("<li data-id='" + id + "' ></li>").append(button_href).appendTo(profileDropList);
                 button_href.click(function () {
                     _userProfileId = parseInt($(this).attr('data-id'));
                     stockRequest();

@@ -50,7 +50,7 @@
                 // Set timeout
                 $(this).data("pressTimer", setTimeout(function () {
                     return _openConextMenu(e, settings);
-                }, 800));
+                }, 500));
             });
 
             // Hide when click other places

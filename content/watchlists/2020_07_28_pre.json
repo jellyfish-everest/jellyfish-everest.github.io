@@ -1,0 +1,164 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz000960",
+      "type": "11",
+      "name": "锡业股份",
+      "picked": false,
+      "targetPrice": 12.236923076923077,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300306",
+      "type": "11",
+      "name": "远方信息",
+      "picked": false,
+      "targetPrice": 11.072,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000521",
+      "type": "11",
+      "name": "长虹美菱",
+      "picked": false,
+      "targetPrice": 3.497142857142857,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002311",
+      "type": "11",
+      "name": "海大集团",
+      "picked": false,
+      "targetPrice": 60.5609756097561,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000657",
+      "type": "11",
+      "name": "中钨高新",
+      "picked": false,
+      "targetPrice": 7.583043478260869,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300157",
+      "type": "11",
+      "name": "恒泰艾普",
+      "picked": false,
+      "targetPrice": 3.6166666666666663,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002827",
+      "type": "11",
+      "name": "高争民爆",
+      "picked": false,
+      "targetPrice": 16.649462343530523,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600714",
+      "type": "11",
+      "name": "金瑞矿业",
+      "picked": false,
+      "targetPrice": 6.758461538461537,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600887",
+      "type": "11",
+      "name": "伊利股份",
+      "picked": false,
+      "targetPrice": 38.429019610220614,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002345",
+      "type": "11",
+      "name": "潮宏基",
+      "picked": false,
+      "targetPrice": 4.340000000000001,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601218",
+      "type": "11",
+      "name": "吉鑫科技",
+      "picked": false,
+      "targetPrice": 3.453195000002887,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002241",
+      "type": "11",
+      "name": "歌尔股份",
+      "picked": false,
+      "targetPrice": 38.626000000000005,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600420",
+      "type": "11",
+      "name": "现代制药",
+      "picked": false,
+      "targetPrice": 11.326153846153849,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002412",
+      "type": "11",
+      "name": "汉森制药",
+      "picked": false,
+      "targetPrice": 8.48821540828038,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603663",
+      "type": "11",
+      "name": "三祥新材",
+      "picked": false,
+      "targetPrice": 19.616666666666664,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000561",
+      "type": "11",
+      "name": "烽火电子",
+      "picked": false,
+      "targetPrice": 9.022941176470589,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300758",
+      "type": "11",
+      "name": "七彩化学",
+      "picked": false,
+      "targetPrice": 27.722727272727276,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000708",
+      "type": "11",
+      "name": "中信特钢",
+      "picked": false,
+      "targetPrice": 21.679999999999996,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600939",
+      "type": "11",
+      "name": "重庆建工",
+      "picked": false,
+      "targetPrice": 4.656171011926839,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000698",
+      "type": "11",
+      "name": "沈阳化工",
+      "picked": false,
+      "targetPrice": 9.765172413793103,
+      "sellPrice": null
+    }
+  ]
+}

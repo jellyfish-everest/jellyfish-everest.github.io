@@ -1,0 +1,144 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002082",
+      "type": "11",
+      "name": "万邦德",
+      "picked": false,
+      "slope": 5.441145155482695
+    },
+    {
+      "sinaSymbol": "sz002026",
+      "type": "11",
+      "name": "山东威达",
+      "picked": false,
+      "slope": 5.18181818181817
+    },
+    {
+      "sinaSymbol": "sh603717",
+      "type": "11",
+      "name": "天域生态",
+      "picked": false,
+      "slope": 4.628571428571394
+    },
+    {
+      "sinaSymbol": "sz300338",
+      "type": "11",
+      "name": "开元股份",
+      "picked": false,
+      "slope": 4.130434782608692
+    },
+    {
+      "sinaSymbol": "sz002182",
+      "type": "11",
+      "name": "云海金属",
+      "picked": false,
+      "slope": 2.8448275862068546
+    },
+    {
+      "sinaSymbol": "sh603993",
+      "type": "11",
+      "name": "洛阳钼业",
+      "picked": false,
+      "slope": 2.5714285714285703
+    },
+    {
+      "sinaSymbol": "sz002676",
+      "type": "11",
+      "name": "顺威股份",
+      "picked": false,
+      "slope": 2.5192307692307763
+    },
+    {
+      "sinaSymbol": "sh600861",
+      "type": "11",
+      "name": "北京城乡",
+      "picked": false,
+      "slope": 2.4921465968586403
+    },
+    {
+      "sinaSymbol": "sz300599",
+      "type": "11",
+      "name": "雄塑科技",
+      "picked": false,
+      "slope": 2.163265306122458
+    },
+    {
+      "sinaSymbol": "sz002454",
+      "type": "11",
+      "name": "松芝股份",
+      "picked": false,
+      "slope": 2.1355932203389862
+    },
+    {
+      "sinaSymbol": "sz300775",
+      "type": "11",
+      "name": "三角防务",
+      "picked": false,
+      "slope": 2.020547945205477
+    },
+    {
+      "sinaSymbol": "sh600980",
+      "type": "11",
+      "name": "北矿科技",
+      "picked": false,
+      "slope": 1.7297297297297218
+    },
+    {
+      "sinaSymbol": "sz002842",
+      "type": "11",
+      "name": "翔鹭钨业",
+      "picked": false,
+      "slope": 1.7171717171717134
+    },
+    {
+      "sinaSymbol": "sz300214",
+      "type": "11",
+      "name": "日科化学",
+      "picked": false,
+      "slope": 1.7083333333333472
+    },
+    {
+      "sinaSymbol": "sh603126",
+      "type": "11",
+      "name": "中材节能",
+      "picked": false,
+      "slope": 1.6410256410256407
+    },
+    {
+      "sinaSymbol": "sh603988",
+      "type": "11",
+      "name": "中电电机",
+      "picked": false,
+      "slope": 1.5909090909090908
+    },
+    {
+      "sinaSymbol": "sh601607",
+      "type": "11",
+      "name": "上海医药",
+      "picked": false,
+      "slope": 1.5727272727272916
+    },
+    {
+      "sinaSymbol": "sz300386",
+      "type": "11",
+      "name": "飞天诚信",
+      "picked": false,
+      "slope": 1.557034220532318
+    },
+    {
+      "sinaSymbol": "sh600006",
+      "type": "11",
+      "name": "东风汽车",
+      "picked": false,
+      "slope": 1.246334458823751
+    },
+    {
+      "sinaSymbol": "sz002678",
+      "type": "11",
+      "name": "珠江钢琴",
+      "picked": false,
+      "slope": 1.1807228915662726
+    }
+  ]
+}

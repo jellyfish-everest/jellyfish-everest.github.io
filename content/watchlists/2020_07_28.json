@@ -1,0 +1,88 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sh600980",
+      "type": "11",
+      "name": "北矿科技",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002676",
+      "type": "11",
+      "name": "顺威股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600861",
+      "type": "11",
+      "name": "北京城乡",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002296",
+      "type": "11",
+      "name": "辉煌科技",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002054",
+      "type": "11",
+      "name": "德美化工",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600769",
+      "type": "11",
+      "name": "祥龙电业",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300386",
+      "type": "11",
+      "name": "飞天诚信",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002678",
+      "type": "11",
+      "name": "珠江钢琴",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300656",
+      "type": "11",
+      "name": "民德电子",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603677",
+      "type": "11",
+      "name": "奇精机械",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002588",
+      "type": "11",
+      "name": "史丹利",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300040",
+      "type": "11",
+      "name": "九洲电气",
+      "picked": false,
+      "sellPrice": null
+    }
+  ]
+}

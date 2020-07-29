@@ -1,0 +1,88 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002669",
+      "type": "11",
+      "name": "康达新材",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600851",
+      "type": "11",
+      "name": "海欣股份",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300158",
+      "type": "11",
+      "name": "振东制药",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002157",
+      "type": "11",
+      "name": "正邦科技",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600141",
+      "type": "11",
+      "name": "兴发集团",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300677",
+      "type": "11",
+      "name": "英科医疗",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600419",
+      "type": "11",
+      "name": "天润乳业",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002927",
+      "type": "11",
+      "name": "泰永长征",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002020",
+      "type": "11",
+      "name": "京新药业",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002275",
+      "type": "11",
+      "name": "桂林三金",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300579",
+      "type": "11",
+      "name": "数字认证",
+      "picked": false,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002105",
+      "type": "11",
+      "name": "信隆健康",
+      "picked": false,
+      "sellPrice": null
+    }
+  ]
+}

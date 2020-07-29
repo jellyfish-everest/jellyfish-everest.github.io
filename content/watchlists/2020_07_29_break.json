@@ -1,0 +1,116 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz000863",
+      "type": "11",
+      "name": "三湘印象",
+      "picked": false,
+      "slope": 6.333333333333291
+    },
+    {
+      "sinaSymbol": "sz300575",
+      "type": "11",
+      "name": "中旗股份",
+      "picked": false,
+      "slope": 6.0316742081447785
+    },
+    {
+      "sinaSymbol": "sz002442",
+      "type": "11",
+      "name": "龙星化工",
+      "picked": false,
+      "slope": 4.999999999999972
+    },
+    {
+      "sinaSymbol": "sz000518",
+      "type": "11",
+      "name": "四环生物",
+      "picked": false,
+      "slope": 4.880000000000011
+    },
+    {
+      "sinaSymbol": "sh601615",
+      "type": "11",
+      "name": "明阳智能",
+      "picked": false,
+      "slope": 3.79775280898876
+    },
+    {
+      "sinaSymbol": "sz002242",
+      "type": "11",
+      "name": "九阳股份",
+      "picked": false,
+      "slope": 3.604240282685481
+    },
+    {
+      "sinaSymbol": "sz002151",
+      "type": "11",
+      "name": "北斗星通",
+      "picked": false,
+      "slope": 3.327464788732403
+    },
+    {
+      "sinaSymbol": "sz002431",
+      "type": "11",
+      "name": "棕榈股份",
+      "picked": false,
+      "slope": 3.099999999999973
+    },
+    {
+      "sinaSymbol": "sh600829",
+      "type": "11",
+      "name": "人民同泰",
+      "picked": false,
+      "slope": 2.080000000000038
+    },
+    {
+      "sinaSymbol": "sz000333",
+      "type": "11",
+      "name": "美的集团",
+      "picked": false,
+      "slope": 1.9718309859154843
+    },
+    {
+      "sinaSymbol": "sh600093",
+      "type": "11",
+      "name": "易见股份",
+      "picked": false,
+      "slope": 1.7972508591065282
+    },
+    {
+      "sinaSymbol": "sh601919",
+      "type": "11",
+      "name": "中远海控",
+      "picked": false,
+      "slope": 1.3333333333333348
+    },
+    {
+      "sinaSymbol": "sz300579",
+      "type": "11",
+      "name": "数字认证",
+      "picked": false,
+      "slope": 1.2996389891696725
+    },
+    {
+      "sinaSymbol": "sz002352",
+      "type": "11",
+      "name": "顺丰控股",
+      "picked": false,
+      "slope": 1.1547445255474436
+    },
+    {
+      "sinaSymbol": "sz300198",
+      "type": "11",
+      "name": "纳川股份",
+      "picked": false,
+      "slope": -9.61538461538456
+    },
+    {
+      "sinaSymbol": "sh600331",
+      "type": "11",
+      "name": "宏达股份",
+      "picked": false,
+      "slope": -32.749999999998984
+    }
+  ]
+}

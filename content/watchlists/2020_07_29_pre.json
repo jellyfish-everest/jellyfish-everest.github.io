@@ -1,0 +1,164 @@
+{
+  "watchingStocks": [
+    {
+      "sinaSymbol": "sz002541",
+      "type": "11",
+      "name": "鸿路钢构",
+      "picked": false,
+      "targetPrice": 42.79352941176471,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh601100",
+      "type": "11",
+      "name": "恒立液压",
+      "picked": false,
+      "targetPrice": 65.69,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002749",
+      "type": "11",
+      "name": "国光股份",
+      "picked": false,
+      "targetPrice": 14.645,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002515",
+      "type": "11",
+      "name": "金字火腿",
+      "picked": false,
+      "targetPrice": 7.881111111111112,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002318",
+      "type": "11",
+      "name": "久立特材",
+      "picked": false,
+      "targetPrice": 9.123999999999999,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz000636",
+      "type": "11",
+      "name": "风华高科",
+      "picked": false,
+      "targetPrice": 37.89399999999999,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603663",
+      "type": "11",
+      "name": "三祥新材",
+      "picked": false,
+      "targetPrice": 19.823333333333327,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300157",
+      "type": "11",
+      "name": "恒泰艾普",
+      "picked": false,
+      "targetPrice": 3.658333333333333,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300018",
+      "type": "11",
+      "name": "中元股份",
+      "picked": false,
+      "targetPrice": 7.197647058823529,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600714",
+      "type": "11",
+      "name": "金瑞矿业",
+      "picked": false,
+      "targetPrice": 6.792307692307691,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002444",
+      "type": "11",
+      "name": "巨星科技",
+      "picked": false,
+      "targetPrice": 17.654999999999998,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600939",
+      "type": "11",
+      "name": "重庆建工",
+      "picked": false,
+      "targetPrice": 4.699301859195213,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300354",
+      "type": "11",
+      "name": "东华测试",
+      "picked": false,
+      "targetPrice": 14.50666666666666,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002275",
+      "type": "11",
+      "name": "桂林三金",
+      "picked": false,
+      "targetPrice": 16.317857142857143,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300306",
+      "type": "11",
+      "name": "远方信息",
+      "picked": false,
+      "targetPrice": 11.1092,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh600141",
+      "type": "11",
+      "name": "兴发集团",
+      "picked": false,
+      "targetPrice": 11.149999999999999,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002705",
+      "type": "11",
+      "name": "新宝股份",
+      "picked": false,
+      "targetPrice": 53.775000000000006,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz002027",
+      "type": "11",
+      "name": "分众传媒",
+      "picked": false,
+      "targetPrice": 6.660708639196055,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sz300143",
+      "type": "11",
+      "name": "盈康生命",
+      "picked": false,
+      "targetPrice": 23.244444444444444,
+      "sellPrice": null
+    },
+    {
+      "sinaSymbol": "sh603601",
+      "type": "11",
+      "name": "再升科技",
+      "picked": false,
+      "targetPrice": 15.90504247076918,
+      "sellPrice": null
+    }
+  ]
+}

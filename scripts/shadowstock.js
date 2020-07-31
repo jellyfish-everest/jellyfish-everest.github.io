@@ -577,6 +577,13 @@
                 addUserProfile();
                 populateUserProfileDropList();
             });
+            // Bind Enter key to add profile button
+            $("#add-user-profile-name").on("keyup", function (e) {
+                if (e.key == "Enter") {
+                    $("#add-user-profile").click();
+                    e.preventDefault();
+                }
+            });
 
             $("#profile-drop-list li").contextMenu({
                 menuSelector: "#contextMenu",

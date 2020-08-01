@@ -593,11 +593,71 @@
                     console.log(msg);
                     if (selectedMenu.attr('id') == 'delete'){
                         let profileIdToBeDeleted = parseInt(invokedOn.attr('data-id'));
+                        let isProfileSelected = profileIdToBeDeleted == _userProfileId;
+
                         deleteUserProfile(profileIdToBeDeleted);
                         populateUserProfileDropList();
+
+                        // update the table right away if we deleted the one that was selected
+                        if(isProfileSelected){
+                            stockRequest();
+                        }
+                    }
+
+                    if (selectedMenu.attr('id') == 'rename'){
+                        let profileIdToBeRenamed = parseInt(invokedOn.attr('data-id'));
+                        let profileDropdownDom = $("#profile-dropdown")[0];
+                        // hide menu item and show text box
+                        $("    <form action=\"#\">\n" +
+                            "      <input id=\"rename-user-profile-name\" class=\"form-control\" />\n" +
+                            "      <input type=\"submit\" value=\"\" style=\"display:none\">\n" +
+                            "    </form>")
+                            .appendTo(invokedOn.parent())
+                            .focusout(function (e) {
+                                let newProfileName = $(this).find("#rename-user-profile-name").val();
+                                renameUserProfile(profileIdToBeRenamed, newProfileName);
+                                populateUserProfileDropList();
+                                $(this).remove(); // remove the input form
+                                profileDropdownDom.closable = true; // the dropdown can close now
+                            }).on("submit", function (e) {
+                                $(this).focusout();
+                                e.preventDefault();
+                            }).on("keyup", function (e) {
+                                // Cancel the input on escape key
+                                if(e.key == "Escape"){
+                                    invokedOn.show();
+                                    $(this).remove();
+                                    profileDropdownDom.closable = true; // the dropdown can close now
+                                }
+                            })
+                            .on("contextmenu", function () {
+                                // stop responding on "contextmenu" right click on rename textbox
+                                return false;
+                            });
+                        $("#rename-user-profile-name").focus().val(invokedOn.text()).select();
+                        invokedOn.hide();
+                        profileDropdownDom.closable = false; // keep the dropdown open
                     }
                 }
             });
+        },
+
+        initUserProfileDropList = function () {
+            // make profile-dropdown closable controlled by .closable
+            $("#profile-dropdown").on({
+                "shown.bs.dropdown": function () {
+                    this.closable = true;
+                },
+                "click": function () {
+                    this.closable = true;
+                },
+                "hide.bs.dropdown": function () {
+                    // make profile-dropdown closable controlled by .closable
+                    return this.closable;
+                }
+            });
+
+            populateUserProfileDropList();
         },
 
         getUserProfileMap = function(){
@@ -619,7 +679,7 @@
 
             _userProfileId = newUserProfileId;
             let newProfileName = $("#add-user-profile-name").val();
-            userProfileMap[newUserProfileId] = newProfileName ? newProfileName : "用户配置"+_userProfileId;
+            userProfileMap[newUserProfileId] = newProfileName ? newProfileName : "新用户配置"+_userProfileId;
             saveUserProfileMap(userProfileMap);
 
             // set user setting to store the new profile data
@@ -636,6 +696,18 @@
             deleteUserSetting(profileIdToDelete)
         },
 
+        renameUserProfile = function(profileIdToRenamed, newProfileName){
+            if(newProfileName)
+            {
+                let userProfileMap = getUserProfileMap();
+                if (profileIdToRenamed in userProfileMap){
+                    userProfileMap[profileIdToRenamed] = newProfileName;
+                    saveUserProfileMap(userProfileMap);
+                }
+            }
+
+        },
+
         stockRetriever = $('<iframe class="hidden"></iframe>'),
         suggestionRetriever = $('<iframe class="hidden"></iframe>'),
         _init = function () {
@@ -648,7 +720,7 @@
             // Init ResetWatchlistDropList
             initResetWatchlistDropList();
 
-            populateUserProfileDropList();
+            initUserProfileDropList();
         },
         _start = function () {
             // 启动
